@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "slug": "mastering-sports-betting-bankroll-management",
+    "title": "Mastering Sports Betting: The Ultimate Guide to Bankroll Management",
+    "excerpt": "Learn the proven bankroll management strategies that professional bettors use to stay profitable long-term and avoid the pitfalls that destroy most casual bettors.",
+    "content": "<p>Bankroll management is widely considered the single most important skill a sports bettor can develop. Yet it remains the most neglected. Most bettors spend hours handicapping games and almost no time thinking about how much to wager.</p><h2>What Is a Bankroll?</h2><p>Your bankroll is the total amount of money you have set aside exclusively for betting. It should be money you can afford to lose without affecting your daily life — never bet with rent money or funds earmarked for bills.</p><h2>The 1–3% Rule</h2><p>Professional bettors rarely risk more than 1–3% of their total bankroll on any single bet. This flat-betting approach means a losing streak won't wipe you out, and variance is absorbed over hundreds of bets.</p><h2>Units vs. Dollar Amounts</h2><p>Tracking your performance in <strong>units</strong> rather than dollar amounts lets you measure success independent of stake size. One unit equals 1% of your starting bankroll. Pros aim for 2–5 units profit per month.</p><h2>When to Resize Your Bankroll</h2><p>Resize when your bankroll grows or shrinks by 25%. If you started with $1,000 and are now at $1,250, your unit size moves from $10 to $12.50. This compounds your gains while keeping losses manageable.</p><h2>Common Mistakes to Avoid</h2><ul><li>Chasing losses by doubling bets</li><li>Betting more when on a win streak (overconfidence)</li><li>Mixing recreational and betting funds</li><li>No tracking — if you don't record it, you can't improve it</li></ul><p>Done correctly, bankroll management won't make you a winner by itself — but it will keep you in the game long enough to become one.</p>",
+    "category": "Strategy",
+    "author": "James Okafor",
+    "coverImage": "https://images.unsplash.com/photo-1611348586804-61bf6c080437?w=800&auto=format&fit=crop",
+    "publishedAt": "2026-03-10T10:00:00Z",
+    "seoTitle": "Bankroll Management for Sports Betting — Complete 2026 Guide",
+    "seoDescription": "Discover the professional bankroll management strategies that keep successful sports bettors profitable. Flat betting, unit sizing, and more explained.",
+    "keywords": ["bankroll management", "sports betting strategy", "betting units", "flat betting"]
+  },
+  {
+    "id": "2",
+    "slug": "understanding-betting-odds-explained",
+    "title": "Understanding Betting Odds: American, Decimal & Fractional Explained",
+    "excerpt": "Confused by the three different odds formats? This guide breaks them all down so you can instantly calculate your potential payout no matter which format a sportsbook uses.",
+    "content": "<p>Odds are the language of sports betting. Before you place a single wager you need to speak them fluently, because odds tell you two things: the implied probability of an outcome <em>and</em> how much you stand to win.</p><h2>American Odds (Moneyline)</h2><p>American odds use a plus or minus sign relative to a $100 base. <strong>-110</strong> means you need to risk $110 to win $100. <strong>+150</strong> means a $100 bet wins you $150.</p><h2>Decimal Odds</h2><p>Decimal odds represent total return per $1 staked, including your stake. Odds of <strong>2.50</strong> mean a $10 bet returns $25 (profit of $15). The formula: Payout = Stake × Decimal Odds.</p><h2>Fractional Odds</h2><p>Common in UK and Irish racing, fractional odds show profit relative to stake. <strong>5/2</strong> means for every £2 you bet you profit £5. Convert to decimal by dividing the fraction and adding 1: 5/2 = 2.5 + 1 = 3.50.</p><h2>Implied Probability</h2><p>Every odds format implies a win probability. For American odds: Negative: |odds| / (|odds| + 100). Positive: 100 / (odds + 100). Finding bets where your estimated probability exceeds implied probability is the essence of value betting.</p><h2>Calculating Value</h2><p>Value = (Your Probability × Decimal Odds) − 1. Any positive value is a theoretically profitable bet in the long run. Build this mental model and you'll approach every bet differently.</p>",
+    "category": "Basics",
+    "author": "Sarah Williams",
+    "coverImage": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&auto=format&fit=crop",
+    "publishedAt": "2026-03-15T09:00:00Z",
+    "seoTitle": "Betting Odds Explained: American, Decimal & Fractional Guide 2026",
+    "seoDescription": "Learn how to read and convert American, decimal, and fractional betting odds. Understand implied probability and find real value in your bets.",
+    "keywords": ["betting odds", "moneyline odds", "decimal odds", "fractional odds", "implied probability"]
+  },
+  {
+    "id": "3",
+    "slug": "top-5-football-betting-strategies-2026",
+    "title": "Top 5 Football Betting Strategies That Actually Work in 2026",
+    "excerpt": "From Asian handicaps to over/under systems — these five football betting strategies are backed by data and used by sharp bettors to maintain an edge over the bookmakers.",
+    "content": "<p>Football is the most bet-on sport in the world, which means there's more data, more markets, and more opportunity — but also more competition — than any other sport. Here are five strategies that give sharp bettors an edge.</p><h2>1. Asian Handicap Betting</h2><p>Asian handicaps eliminate the draw as an outcome by giving one team a virtual advantage. They reduce the vig (bookmaker margin) and open up dozens of edges invisible in traditional 1X2 markets.</p><h2>2. Both Teams to Score (BTTS)</h2><p>BTTS markets focus purely on whether both sides score, removing the result. Teams with leaky defences and prolific attacks land BTTS at rates that often outstrip the implied odds.</p><h2>3. First Half Betting</h2><p>Many bookmakers price first-half lines less efficiently than full-match lines. Research shows certain managers set up conservatively in the first half, creating exploitable patterns over time.</p><h2>4. Away Team Value</h2><p>Casual bettors over-back home teams, causing sportsbooks to shade home lines. Sharp bettors routinely find value on away teams, especially mid-table teams visiting large, noisy stadiums.</p><h2>5. Correct Score Accumulators</h2><p>Correct score markets carry the worst margins but the highest payouts. Combining two or three highly correlated correct-score bets in related markets can deliver positive EV when researched deeply.</p><p>No strategy eliminates variance, but these frameworks, applied consistently with good bankroll management, give you a systematic edge the casual bettor simply doesn't have.</p>",
+    "category": "Football",
+    "author": "James Okafor",
+    "coverImage": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop",
+    "publishedAt": "2026-03-20T08:00:00Z",
+    "seoTitle": "5 Football Betting Strategies That Work in 2026 | Expert Picks",
+    "seoDescription": "Discover the top 5 football betting strategies used by sharp bettors in 2026: Asian handicaps, BTTS, first half betting, away value, and more.",
+    "keywords": ["football betting strategy", "asian handicap", "BTTS", "soccer betting tips", "football betting 2026"]
+  }
+]
