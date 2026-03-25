@@ -2,13 +2,14 @@ import { getAllPosts, BlogPost } from "@/app/lib/posts";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { Newspaper } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog",
   description:
     "Expert sports betting strategies, tips, odds guides, and winning techniques — all in one place.",
   openGraph: {
-    title: "Dice Betting Blog — Expert Sports Betting Strategies",
+    title: "Marya Betting Blog — Expert Sports Betting Strategies",
     description:
       "Expert sports betting strategies, tips, odds guides, and winning techniques — all in one place.",
     type: "website",
@@ -85,26 +86,22 @@ export default function BlogPage() {
 
   return (
     <div className="blog-page">
-      {/* Header */}
-      <header className="blog-header">
-        <div className="blog-header__inner">
-          <Link href="/" className="blog-header__logo">
-            🎲 Dice Bets
-          </Link>
-          <nav className="blog-header__nav">
-            <Link href="/blog">Blog</Link>
-            <Link href="/admin" className="btn-admin">
-              Admin
-            </Link>
-          </nav>
-        </div>
-      </header>
+
 
       <main className="blog-main">
         {/* Hero */}
-        <section className="blog-hero">
-          <div className="blog-hero__inner">
-            <div className="blog-hero__eyebrow">📰 Betting Insights</div>
+        <section className="blog-hero" style={{ position: "relative" }}>
+          <Image 
+            src="/blog_hero_sports.png" 
+            alt="Sports Action Collage" 
+            fill 
+            style={{ objectFit: "cover", opacity: 0.15, pointerEvents: "none" }} 
+            priority
+          />
+          <div className="blog-hero__inner" style={{ position: "relative", zIndex: 1 }}>
+            <div className="blog-hero__eyebrow" style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <Newspaper size={16} /> Betting Insights
+            </div>
             <h1 className="blog-hero__title">Bet Smarter, Win More</h1>
             <p className="blog-hero__sub">
               Expert strategies, odds breakdowns, and insider tips from
@@ -144,10 +141,6 @@ export default function BlogPage() {
           )}
         </div>
       </main>
-
-      <footer className="blog-footer">
-        <p>© {new Date().getFullYear()} Dice Bets · All rights reserved</p>
-      </footer>
     </div>
   );
 }

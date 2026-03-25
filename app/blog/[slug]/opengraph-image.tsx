@@ -12,7 +12,7 @@ export default async function Image({
   const { slug } = await params;
   const post = getPostBySlug(slug);
 
-  const title = post?.title ?? "Dice Bets Blog";
+  const title = post?.title ?? "Marya Bet Blog";
   const category = post?.category ?? "";
   const author = post?.author ?? "";
 
@@ -98,7 +98,7 @@ export default async function Image({
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ color: "#e2e8f0", fontSize: 18, fontWeight: 600 }}>
-              {author || "Dice Bets"}
+              {author || "Marya Bet"}
             </span>
             <span style={{ color: "#94a3b8", fontSize: 16 }}>
               dicebets.com

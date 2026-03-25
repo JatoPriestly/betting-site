@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Dice Bets",
-    default: "Dice Bets — Sports Betting Blog",
+    template: "%s | Marya Bet",
+    default: "Marya Bet — Sports Betting Blog",
   },
   description:
     "Expert sports betting strategies, tips, odds guides, and insider knowledge to help you bet smarter.",
@@ -20,7 +26,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.variable} antialiased`}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const storedTheme = localStorage.getItem('theme');
+                if (storedTheme) {
+                  document.documentElement.setAttribute('data-theme', storedTheme);
+                } else {
+                  document.documentElement.setAttribute('data-theme', 'light');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

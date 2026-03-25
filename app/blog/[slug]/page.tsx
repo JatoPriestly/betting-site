@@ -79,7 +79,7 @@ export default async function BlogPostPage({
     url: `${siteUrl}/blog/${post.slug}`,
     publisher: {
       "@type": "Organization",
-      name: "Dice Bets",
+      name: "Marya Bet",
       logo: { "@type": "ImageObject", url: `${siteUrl}/favicon.ico` },
     },
   };
@@ -89,8 +89,9 @@ export default async function BlogPostPage({
       {/* Header */}
       <header className="blog-header">
         <div className="blog-header__inner">
-          <Link href="/" className="blog-header__logo">
-            🎲 Dice Bets
+          <Link href="/" className="blog-header__logo" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <Image src="/logo.png" alt="Marya Bet Logo" width={28} height={28} style={{ borderRadius: "6px" }} />
+            MARYA BET
           </Link>
           <nav className="blog-header__nav">
             <Link href="/blog">← Blog</Link>
@@ -156,10 +157,6 @@ export default async function BlogPostPage({
           </Link>
         </div>
       </main>
-
-      <footer className="blog-footer">
-        <p>© {new Date().getFullYear()} Dice Bets · All rights reserved</p>
-      </footer>
     </div>
   );
 }

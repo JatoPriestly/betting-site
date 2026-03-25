@@ -1,0 +1,76 @@
+[
+  {
+    "id": "1",
+    "rank": 1,
+    "bookmaker": "Stake",
+    "logoText": "Stake",
+    "logoColor": "#00b27d",
+    "logoUrl": "https://stake.com/_app/immutable/assets/stake-full.tLL7usOz.svg",
+    "promoCode": "DICEVIP",
+    "bonusAmount": "€500",
+    "bonusLabel": "Bonus up to",
+    "rating": 9.5,
+    "category": "Welcome Bonus",
+    "affiliateUrl": "https://stake.com",
+    "description": "Use this exclusive promo code to claim your welcome bonus at Stake. New customers only.",
+    "termsText": "New customers only. 18+ age limit. T&Cs apply. Wagering requirements apply.",
+    "validUntil": "2026-12-31",
+    "verified": true,
+    "exclusive": true,
+    "tags": [
+      "Welcome Bonus",
+      "Sports",
+      "Casino"
+    ],
+    "active": true
+  },
+  {
+    "id": "2",
+    "rank": 2,
+    "bookmaker": "1xBet",
+    "logoText": "1XBET",
+    "logoColor": "#003082",
+    "logoUrl": "",
+    "promoCode": "DICEVIP",
+    "bonusAmount": "$200",
+    "bonusLabel": "Bonus up to",
+    "rating": 9,
+    "category": "Welcome Bonus",
+    "affiliateUrl": "https://1xbet.com",
+    "description": "Get up to $200 welcome bonus with this exclusive 1xBet promo code. Valid for new accounts.",
+    "termsText": "New customers only. 18+. Min deposit $10. T&Cs apply.",
+    "validUntil": "2026-12-31",
+    "verified": true,
+    "exclusive": true,
+    "tags": [
+      "Welcome Bonus",
+      "Sports"
+    ],
+    "active": true
+  },
+  {
+    "id": "3",
+    "rank": 3,
+    "bookmaker": "Betway",
+    "logoText": "betway",
+    "logoColor": "#00a651",
+    "logoUrl": "",
+    "promoCode": "DICEVIP",
+    "bonusAmount": "€150",
+    "bonusLabel": "Bonus up to",
+    "rating": 8.5,
+    "category": "Welcome Bonus",
+    "affiliateUrl": "https://betway.com",
+    "description": "Claim your €150 welcome bonus at Betway sports using our exclusive promo code.",
+    "termsText": "18+. New customers. Min deposit €10. Wagering requirement 5x. T&Cs apply.",
+    "validUntil": "2026-12-31",
+    "verified": true,
+    "exclusive": false,
+    "tags": [
+      "Welcome Bonus",
+      "Sports",
+      "Football"
+    ],
+    "active": true
+  }
+]
