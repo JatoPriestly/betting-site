@@ -1,0 +1,15 @@
+[
+  {
+    "id": "touchpoint-vip-1",
+    "title": "Fast Track Your <span>TouchPoint</span> Payouts",
+    "description": "Don't wait in line. Connect directly with our admin on WhatsApp for priority processing on large withdrawals and instant account top-ups.",
+    "badgeText": "VIP Access",
+    "imageUrl": "/hero-coins.png",
+    "ctaText": "Contact Admin",
+    "ctaUrl": "https://wa.me/237654720955?text=Hello%21%20I%20need%20information%20regarding%20TouchPoint%20payouts%20and%20top-ups.",
+    "delaySeconds": 10,
+    "placement": "global",
+    "active": true,
+    "createdAt": "2026-04-29T16:33:44.221Z"
+  }
+]

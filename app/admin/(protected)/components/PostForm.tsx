@@ -52,8 +52,35 @@ export default function PostForm({ initialData, mode, slug }: Props) {
     ...initialData,
   });
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
   const [autoSlug, setAutoSlug] = useState(mode === "create");
+
+  async function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+    setError("");
+
+    const data = new FormData();
+    data.append("file", file);
+
+    try {
+      const res = await fetch("/api/admin/upload", {
+        method: "POST",
+        body: data,
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || "Upload failed");
+      
+      setForm({ ...form, coverImage: json.url });
+    } catch (err: any) {
+      setError(err.message || "Failed to upload image");
+    } finally {
+      setUploading(false);
+    }
+  }
 
   function handleChange(
     e: React.ChangeEvent<
@@ -193,14 +220,27 @@ export default function PostForm({ initialData, mode, slug }: Props) {
 
         {/* Cover Image */}
         <div className="form-field form-field--full">
-          <label htmlFor="coverImage">Cover Image URL</label>
-          <input
-            id="coverImage"
-            name="coverImage"
-            value={form.coverImage}
-            onChange={handleChange}
-            placeholder="https://images.unsplash.com/…"
-          />
+          <label htmlFor="coverImage">Cover Image</label>
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: form.coverImage ? '12px' : '0' }}>
+            <input
+              id="coverImage"
+              name="coverImage"
+              value={form.coverImage}
+              onChange={handleChange}
+              placeholder="https://images.unsplash.com/… or upload local file"
+              style={{ flex: 1 }}
+            />
+            <label className="admin-btn-secondary" style={{ cursor: uploading ? 'not-allowed' : 'pointer', margin: 0, padding: '8px 16px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+              {uploading ? "Uploading..." : "Upload File"}
+              <input 
+                type="file" 
+                accept="image/*" 
+                onChange={handleFileUpload} 
+                style={{ display: 'none' }} 
+                disabled={uploading}
+              />
+            </label>
+          </div>
           {form.coverImage && (
             // eslint-disable-next-line @next/next/no-img-element
             <img

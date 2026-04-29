@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "sports": "Deportes",
+    "live": "En Vivo",
+    "promos": "Promos",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title1": "LA PRINCIPAL",
+    "title2": "CASA DE APUESTAS",
+    "title3": "DEPORTIVAS.",
+    "desc": "Obtenga la máxima ventaja con cuotas exclusivas, pagos instantáneos y los códigos promocionales de mayor valor de la industria.",
+    "btn": "EMPIEZA A GANAR"
+  },
+  "ticker": {
+    "promos": "PROMOS",
+    "offers": "OFERTAS",
+    "bonuses": "BONOS",
+    "codes": "CÓDIGOS",
+    "boosts": "MEJORAS",
+    "rewards": "RECOMPENSAS"
+  },
+  "features": {
+    "title": "Por Qué Elegir MARYA",
+    "subtitle": "No nos limitamos a enumerar códigos. Negociamos los bonos de bienvenida más altos posibles en todas las principales plataformas de apuestas para que comiences con una ventaja injusta.",
+    "feat1_title": "Asociaciones Exclusivas",
+    "feat1_desc": "Nuestros códigos ofrecen porcentajes de coincidencia más altos y requisitos de apuesta más bajos que las ofertas públicas estándar.",
+    "feat2_title": "Verificado Diariamente",
+    "feat2_desc": "Cada código promocional se prueba cada 24 horas. Sin códigos caducados, sin enlaces inválidos, solo valor inmediato puro.",
+    "feat3_title": "Todas Las Plataformas Cubiertas",
+    "feat3_desc": "Ya sea que prefieras plataformas de apuestas avanzadas o casas de apuestas tradicionales, tenemos el código maestro definitivo para tu plataforma preferida.",
+    "feat4_title": "Retiros Touch Point",
+    "feat4_desc": "Experimenta un acceso sin problemas a tus ganancias. Los usuarios pueden retirar sus fondos de forma directa y segura a través de nuestro sistema dedicado de soporte Touch Point."
+  },
+  "steps": {
+    "title": "Reclama Tu Ventaja",
+    "step1_title": "Selecciona Tu Plataforma",
+    "step1_desc": "Explora nuestra lista seleccionada de las mejores casas de apuestas y plataformas. Solo presentamos plataformas con historiales de pago comprobados y excelentes cuotas.",
+    "step2_title": "Copia El Código Maestro",
+    "step2_desc": "Toma el código promocional exclusivo de MARYA. Este código específico activa el nivel de bonificación elevado durante tu registro.",
+    "step3_title": "Maximiza Tus Fondos",
+    "step3_desc": "Pega el código al registrarte, haz tu primer depósito y recibe instantáneamente tus fondos multiplicados. Ahora estás listo para dominar."
+  },
+  "leaderboard": {
+    "title": "Mejores Códigos Activos",
+    "subtitle": "Los códigos promocionales verificados más lucrativos disponibles ahora mismo.",
+    "code1_name": "1XBET GLOBAL",
+    "code1_offer": "200% de bonificación por primer depósito hasta $130",
+    "code1_val": "MARYVIP",
+    "code2_name": "STAKE CASINO",
+    "code2_offer": "5% de Rakeback instantáneo + $25 de juego gratis",
+    "code2_val": "MARYA25",
+    "code3_name": "BETMGM SPORTS",
+    "code3_offer": "Hasta $1500 devueltos en apuestas de bonificación",
+    "code3_val": "MARYMGM"
+  },
+  "stats": {
+    "claimed": "Bonos Reclamados",
+    "platforms": "Plataformas Verificadas",
+    "bettors": "Apostadores Activos"
+  },
+  "cta": {
+    "title": "Deja De Apostar Con Menos De Lo Que Mereces.",
+    "btn": "VER TODOS LOS CÓDIGOS PROMO"
+  },
+  "map": {
+    "title": "Operaciones Globales",
+    "subtitle": "Destacando nuestros principales territorios con licencia en África y en todo el mundo.",
+    "active": "TERRITORIOS CON LICENCIA",
+    "upcoming": "RESTO DEL MUNDO"
+  },
+  "sports": {
+    "subtitle": "Explore los encuentros mundiales y los calendarios de partidos",
+    "no_fixtures": "No hay partidos programados para hoy. Vuelva mañana.",
+    "games_count": "PARTIDOS",
+    "search_placeholder": "Buscar equipos, ligas...",
+    "select_platform": "Seleccionar plataforma",
+    "bet_now": "APOSTAR EN",
+    "secure": "TRANSACCIÓN SEGURA"
+  }
+}

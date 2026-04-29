@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { PlusCircle, Pencil, Trash2 } from "lucide-react";
 
 interface Promo {
   id: string;
@@ -18,6 +19,7 @@ export default function AdminPromosPage() {
   const [promos, setPromos] = useState<Promo[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState<string | null>(null);
+  const [toggling, setToggling] = useState<string | null>(null);
   const router = useRouter();
 
   async function fetchPromos() {
@@ -39,11 +41,13 @@ export default function AdminPromosPage() {
   }
 
   async function handleToggleActive(promo: Promo) {
+    setToggling(promo.id);
     await fetch(`/api/admin/promos/${promo.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ active: !promo.active }),
     });
+    setToggling(null);
     fetchPromos();
   }
 
@@ -52,15 +56,20 @@ export default function AdminPromosPage() {
       <div className="admin-page__header">
         <div>
           <h1 className="admin-page__title">Promo Codes</h1>
-          <p style={{ color: "var(--color-text-muted)", fontSize: "0.875rem", marginTop: 4 }}>
-            Manage bookmaker promo codes shown on{" "}
-            <a href="/promos" target="_blank" style={{ color: "#a78bfa" }}>
+          <p style={{ color: "var(--mb-muted)", fontSize: "0.875rem", marginTop: 4 }}>
+            Manage bookmaker codes shown on{" "}
+            <a
+              href="/promos"
+              target="_blank"
+              style={{ color: "var(--mb-gold)", textDecoration: "none" }}
+            >
               /promos ↗
             </a>
           </p>
         </div>
         <Link href="/admin/promos/new" className="admin-btn-primary">
-          + New Promo
+          <PlusCircle size={15} />
+          New Promo
         </Link>
       </div>
 
@@ -69,8 +78,8 @@ export default function AdminPromosPage() {
       ) : promos.length === 0 ? (
         <div className="admin-empty">
           <p>No promo codes yet.</p>
-          <Link href="/admin/promos/new" className="admin-btn-primary mt-4">
-            Add your first promo code
+          <Link href="/admin/promos/new" className="admin-btn-primary">
+            <PlusCircle size={15} /> Add Promo
           </Link>
         </div>
       ) : (
@@ -83,44 +92,81 @@ export default function AdminPromosPage() {
                 <th>Code</th>
                 <th>Bonus</th>
                 <th>Rating</th>
-                <th>Active</th>
+                <th>Status</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               {promos.map((promo) => (
                 <tr key={promo.id}>
-                  <td style={{ fontWeight: 700, color: "#a78bfa" }}>
-                    #{promo.rank}
+                  <td>
+                    <span
+                      style={{
+                        fontWeight: 700,
+                        color: "var(--mb-gold)",
+                        fontVariantNumeric: "tabular-nums",
+                      }}
+                    >
+                      #{promo.rank}
+                    </span>
                   </td>
                   <td style={{ fontWeight: 600 }}>{promo.bookmaker}</td>
                   <td>
                     <span
                       style={{
                         fontFamily: "monospace",
-                        background: "rgba(124,58,237,0.15)",
+                        background: "rgba(212,175,55,0.08)",
+                        border: "1px solid rgba(212,175,55,0.15)",
                         padding: "3px 10px",
-                        borderRadius: 4,
-                        fontSize: "0.85rem",
-                        color: "#c4b5fd",
+                        borderRadius: 6,
+                        fontSize: "0.82rem",
+                        color: "var(--mb-gold-light)",
+                        letterSpacing: "0.05em",
                       }}
                     >
                       {promo.promoCode}
                     </span>
                   </td>
-                  <td style={{ color: "#fbbf24", fontWeight: 700 }}>
+                  <td
+                    style={{
+                      color: "#fbbf24",
+                      fontWeight: 700,
+                      fontSize: "0.875rem",
+                    }}
+                  >
                     {promo.bonusAmount}
                   </td>
-                  <td>{promo.rating}/10</td>
+                  <td style={{ color: "var(--mb-muted)", fontSize: "0.85rem" }}>
+                    {promo.rating}/10
+                  </td>
                   <td>
                     <button
                       onClick={() => handleToggleActive(promo)}
-                      className={
-                        promo.active ? "admin-btn-edit" : "admin-btn-delete"
-                      }
-                      style={{ minWidth: 72, justifyContent: "center" }}
+                      disabled={toggling === promo.id}
+                      style={{
+                        padding: "4px 12px",
+                        borderRadius: 20,
+                        border: "1px solid",
+                        fontSize: "0.75rem",
+                        fontWeight: 700,
+                        cursor: "pointer",
+                        fontFamily: "inherit",
+                        transition: "all 0.15s",
+                        background: promo.active
+                          ? "rgba(34,197,94,0.08)"
+                          : "rgba(255,255,255,0.04)",
+                        color: promo.active ? "var(--mb-green)" : "var(--mb-muted)",
+                        borderColor: promo.active
+                          ? "rgba(34,197,94,0.2)"
+                          : "var(--mb-border)",
+                        opacity: toggling === promo.id ? 0.5 : 1,
+                      }}
                     >
-                      {promo.active ? "Live ✓" : "Off"}
+                      {toggling === promo.id
+                        ? "…"
+                        : promo.active
+                        ? "● Live"
+                        : "○ Off"}
                     </button>
                   </td>
                   <td>
@@ -130,14 +176,25 @@ export default function AdminPromosPage() {
                           router.push(`/admin/promos/${promo.id}/edit`)
                         }
                         className="admin-btn-edit"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: 5,
+                        }}
                       >
-                        Edit
+                        <Pencil size={12} /> Edit
                       </button>
                       <button
                         onClick={() => handleDelete(promo.id, promo.bookmaker)}
                         className="admin-btn-delete"
                         disabled={deleting === promo.id}
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: 5,
+                        }}
                       >
+                        <Trash2 size={12} />
                         {deleting === promo.id ? "Deleting…" : "Delete"}
                       </button>
                     </div>

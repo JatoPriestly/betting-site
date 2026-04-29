@@ -1,0 +1,2752 @@
+{
+    "11129":  {
+                  "ccode":  "INT",
+                  "name":  "UEFA Women\u0027s Europa Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11129.png"
+              },
+    "147":  {
+                "ccode":  "ITA",
+                "name":  "Serie C",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/147.png"
+            },
+    "10650":  {
+                  "ccode":  "GER",
+                  "name":  "DFB Pokal Frauen",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10650.png"
+              },
+    "522":  {
+                "ccode":  "GHA",
+                "name":  "Premier League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/522.png"
+            },
+    "11026":  {
+                  "ccode":  "UAE",
+                  "name":  "Super Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11026.png"
+              },
+    "11157":  {
+                  "ccode":  "USA",
+                  "name":  "Baller League",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11157.png"
+              },
+    "10307":  {
+                  "ccode":  "IRL",
+                  "name":  "FAI Women\u0027s Cup (W)",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10307.png"
+              },
+    "536":  {
+                "ccode":  "KSA",
+                "name":  "Saudi Pro League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/536.png"
+            },
+    "10917":  {
+                  "ccode":  "MAR",
+                  "name":  "Botola Pro Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10917.png"
+              },
+    "9039":  {
+                 "ccode":  "PAN",
+                 "name":  "LPF",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9039.png"
+             },
+    "9741":  {
+                 "ccode":  "INT",
+                 "name":  "UEFA Youth League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9741.png"
+             },
+    "11019":  {
+                  "ccode":  "SCO",
+                  "name":  "SWPL Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11019.png"
+              },
+    "9530":  {
+                 "ccode":  "MDA",
+                 "name":  "Cupa Moldova",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9530.png"
+             },
+    "9851":  {
+                 "ccode":  "NED",
+                 "name":  "Tweede Divisie Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9851.png"
+             },
+    "441":  {
+                "ccode":  "UKR",
+                "name":  "Premier League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/441.png"
+            },
+    "10343":  {
+                  "ccode":  "URU",
+                  "name":  "Supercopa",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10343.png"
+              },
+    "10259":  {
+                  "ccode":  "PAR",
+                  "name":  "Supercopa",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10259.png"
+              },
+    "9493":  {
+                 "ccode":  "LTU",
+                 "name":  "Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9493.png"
+             },
+    "492":  {
+                "ccode":  "SVN",
+                "name":  "Prva Liga Qualification",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/492.png"
+            },
+    "192":  {
+                "ccode":  "ROU",
+                "name":  "Supercupa",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/192.png"
+            },
+    "119":  {
+                "ccode":  "AUT",
+                "name":  "2. Liga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/119.png"
+            },
+    "111":  {
+                "ccode":  "NED",
+                "name":  "Eerste Divisie",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/111.png"
+            },
+    "122":  {
+                "ccode":  "CZE",
+                "name":  "1. Liga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/122.png"
+            },
+    "9907":  {
+                 "ccode":  "ESP",
+                 "name":  "Liga F",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9907.png"
+             },
+    "133":  {
+                "ccode":  "ENG",
+                "name":  "EFL Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/133.png"
+            },
+    "9084":  {
+                 "ccode":  "ENG",
+                 "name":  "Premier League 2",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9084.png"
+             },
+    "11697":  {
+                  "ccode":  "CHI",
+                  "name":  "Copa de la Liga",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11697.png"
+              },
+    "9097":  {
+                 "ccode":  "ISR",
+                 "name":  "State Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9097.png"
+             },
+    "10342":  {
+                  "ccode":  "URU",
+                  "name":  "Copa Uruguay",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10342.png"
+              },
+    "9113":  {
+                 "ccode":  "ROU",
+                 "name":  "Liga II",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9113.png"
+             },
+    "140":  {
+                "ccode":  "ESP",
+                "name":  "LaLiga2",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/140.png"
+            },
+    "10290":  {
+                  "ccode":  "BRA",
+                  "name":  "Baiano",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10290.png"
+              },
+    "10433":  {
+                  "ccode":  "SUI",
+                  "name":  "Challenge League Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10433.png"
+              },
+    "11013":  {
+                  "ccode":  "INT",
+                  "name":  "CONCACAF W Champions Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11013.png"
+              },
+    "180":  {
+                "ccode":  "SCO",
+                "name":  "League Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/180.png"
+            },
+    "9178":  {
+                 "ccode":  "MNE",
+                 "name":  "1. CFL Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9178.png"
+             },
+    "11194":  {
+                  "ccode":  "SWE",
+                  "name":  "Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11194.png"
+              },
+    "11016":  {
+                  "ccode":  "QAT",
+                  "name":  "Qatar Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11016.png"
+              },
+    "293":  {
+                "ccode":  "INT",
+                "name":  "Women\u0027s Friendlies",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/293.png"
+            },
+    "10791":  {
+                  "ccode":  "SCO",
+                  "name":  "SWPL 1",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10791.png"
+              },
+    "10626":  {
+                  "ccode":  "ENG",
+                  "name":  "FA Cup Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10626.png"
+              },
+    "11034":  {
+                  "ccode":  "GER",
+                  "name":  "Supercup der Frauen",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11034.png"
+              },
+    "10615":  {
+                  "ccode":  "INT",
+                  "name":  "Conference League Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10615.png"
+              },
+    "222":  {
+                "ccode":  "ITA",
+                "name":  "Supercoppa",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/222.png"
+            },
+    "301":  {
+                "ccode":  "INT",
+                "name":  "UEFA U17 Championship",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/301.png"
+            },
+    "11315":  {
+                  "ccode":  "INT",
+                  "name":  "Concacaf W Qualifiers",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11315.png"
+              },
+    "53":  {
+               "ccode":  "FRA",
+               "name":  "Ligue 1",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/53.png"
+           },
+    "42":  {
+               "ccode":  "INT",
+               "name":  "Champions League",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/42.png"
+           },
+    "139":  {
+                "ccode":  "ESP",
+                "name":  "Supercopa de España",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/139.png"
+            },
+    "9389":  {
+                 "ccode":  "NIR",
+                 "name":  "Irish Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9389.png"
+             },
+    "8985":  {
+                 "ccode":  "MAS",
+                 "name":  "Liga Super",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8985.png"
+             },
+    "250":  {
+                "ccode":  "FRO",
+                "name":  "Premier League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/250.png"
+            },
+    "440":  {
+                "ccode":  "JPN",
+                "name":  "Super Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/440.png"
+            },
+    "149":  {
+                "ccode":  "BEL",
+                "name":  "Belgian Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/149.png"
+            },
+    "134":  {
+                "ccode":  "FRA",
+                "name":  "Coupe de France",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/134.png"
+            },
+    "9807":  {
+                 "ccode":  "INT",
+                 "name":  "UEFA Nations League B",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9807.png"
+             },
+    "9116":  {
+                 "ccode":  "KOR",
+                 "name":  "K League 2",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9116.png"
+             },
+    "10872":  {
+                  "ccode":  "CAN",
+                  "name":  "Northern Super League",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10872.png"
+              },
+    "9661":  {
+                 "ccode":  "QAT",
+                 "name":  "Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9661.png"
+             },
+    "8971":  {
+                 "ccode":  "BRA",
+                 "name":  "Serie C",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8971.png"
+             },
+    "8816":  {
+                 "ccode":  "GRE",
+                 "name":  "Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8816.png"
+             },
+    "533":  {
+                "ccode":  "NGA",
+                "name":  "Professional Football League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/533.png"
+            },
+    "11023":  {
+                  "ccode":  "THA",
+                  "name":  "FA Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11023.png"
+              },
+    "109":  {
+                "ccode":  "ENG",
+                "name":  "League Two",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/109.png"
+            },
+    "9849":  {
+                 "ccode":  "INT",
+                 "name":  "COSAFA Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9849.png"
+             },
+    "292":  {
+                "ccode":  "INT",
+                "name":  "UEFA Women\u0027s EURO",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/292.png"
+            },
+    "235":  {
+                "ccode":  "NED",
+                "name":  "KNVB Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/235.png"
+            },
+    "10075":  {
+                  "ccode":  "ARG",
+                  "name":  "Torneo de Verano",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10075.png"
+              },
+    "224":  {
+                "ccode":  "JPN",
+                "name":  "J. League Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/224.png"
+            },
+    "9628":  {
+                 "ccode":  "VIE",
+                 "name":  "V-League Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9628.png"
+             },
+    "217":  {
+                "ccode":  "ISL",
+                "name":  "Icelandic Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/217.png"
+            },
+    "10007":  {
+                  "ccode":  "ARG",
+                  "name":  "Copa de la Liga Profesional",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10007.png"
+              },
+    "9875":  {
+                 "ccode":  "INT",
+                 "name":  "Campeones Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9875.png"
+             },
+    "333":  {
+                "ccode":  "NOR",
+                "name":  "Cup (Women)",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/333.png"
+            },
+    "10641":  {
+                  "ccode":  "INT",
+                  "name":  "Women\u0027s EURO Qualification League B",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10641.png"
+              },
+    "187":  {
+                "ccode":  "POR",
+                "name":  "League Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/187.png"
+            },
+    "143":  {
+                "ccode":  "FIN",
+                "name":  "Suomen Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/143.png"
+            },
+    "61":  {
+               "ccode":  "POR",
+               "name":  "Liga Portugal",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/61.png"
+           },
+    "9862":  {
+                 "ccode":  "ISR",
+                 "name":  "Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9862.png"
+             },
+    "10196":  {
+                  "ccode":  "INT",
+                  "name":  "World Cup Qualification CAF",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10196.png"
+              },
+    "9117":  {
+                 "ccode":  "HUN",
+                 "name":  "NB II",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9117.png"
+             },
+    "10023":  {
+                  "ccode":  "UKR",
+                  "name":  "1. Division Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10023.png"
+              },
+    "10654":  {
+                  "ccode":  "USA",
+                  "name":  "USL Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10654.png"
+              },
+    "169":  {
+                "ccode":  "SWE",
+                "name":  "Ettan",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/169.png"
+            },
+    "9658":  {
+                 "ccode":  "BLR",
+                 "name":  "Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9658.png"
+             },
+    "9495":  {
+                 "ccode":  "AUS",
+                 "name":  "A-League Women",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9495.png"
+             },
+    "8815":  {
+                 "ccode":  "GRE",
+                 "name":  "Super League 2",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8815.png"
+             },
+    "209":  {
+                "ccode":  "GER",
+                "name":  "DFB Pokal",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/209.png"
+            },
+    "11014":  {
+                  "ccode":  "ITA",
+                  "name":  "Coppa Italia Women",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11014.png"
+              },
+    "9537":  {
+                 "ccode":  "KOR",
+                 "name":  "K League 3",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9537.png"
+             },
+    "11030":  {
+                  "ccode":  "QAT",
+                  "name":  "Second Division",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11030.png"
+              },
+    "10737":  {
+                  "ccode":  "VIE",
+                  "name":  "Super Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10737.png"
+              },
+    "490":  {
+                "ccode":  "ARM",
+                "name":  "Armenian Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/490.png"
+            },
+    "10458":  {
+                  "ccode":  "INT",
+                  "name":  "UEFA Women\u0027s Nations League B",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10458.png"
+              },
+    "10282":  {
+                  "ccode":  "USA",
+                  "name":  "MLS Next Pro",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10282.png"
+              },
+    "519":  {
+                "ccode":  "EGY",
+                "name":  "Premier League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/519.png"
+            },
+    "8979":  {
+                 "ccode":  "NIR",
+                 "name":  "Premiership Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8979.png"
+             },
+    "276":  {
+                "ccode":  "CRO",
+                "name":  "Super Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/276.png"
+            },
+    "9809":  {
+                 "ccode":  "INT",
+                 "name":  "UEFA Nations League D",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9809.png"
+             },
+    "267":  {
+                "ccode":  "BIH",
+                "name":  "Premier League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/267.png"
+            },
+    "45":  {
+               "ccode":  "INT",
+               "name":  "Copa Libertadores",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/45.png"
+           },
+    "254":  {
+                "ccode":  "CZE",
+                "name":  "Czech Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/254.png"
+            },
+    "76":  {
+               "ccode":  "INT",
+               "name":  "Women\u0027s World Cup",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/76.png"
+           },
+    "9265":  {
+                 "ccode":  "INT",
+                 "name":  "ASEAN Championship",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9265.png"
+             },
+    "67":  {
+               "ccode":  "SWE",
+               "name":  "Allsvenskan",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/67.png"
+           },
+    "10642":  {
+                  "ccode":  "INT",
+                  "name":  "Women\u0027s EURO Qualification League C",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10642.png"
+              },
+    "10289":  {
+                  "ccode":  "NED",
+                  "name":  "Eredivisie Vrouwen",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10289.png"
+              },
+    "461":  {
+                "ccode":  "SIN",
+                "name":  "Premier League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/461.png"
+            },
+    "142":  {
+                "ccode":  "ENG",
+                "name":  "EFL Trophy",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/142.png"
+            },
+    "9375":  {
+                 "ccode":  "INT",
+                 "name":  "Women\u0027s Champions League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9375.png"
+             },
+    "248":  {
+                "ccode":  "EST",
+                "name":  "Regular Season",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/248.png"
+            },
+    "8870":  {
+                 "ccode":  "NZL",
+                 "name":  "Championship",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8870.png"
+             },
+    "171":  {
+                "ccode":  "SWE",
+                "name":  "Svenska Cupen",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/171.png"
+            },
+    "8969":  {
+                 "ccode":  "FIN",
+                 "name":  "Ykkonen",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8969.png"
+             },
+    "8978":  {
+                 "ccode":  "NIR",
+                 "name":  "League Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8978.png"
+             },
+    "207":  {
+                "ccode":  "FRA",
+                "name":  "Trophée des champions",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/207.png"
+            },
+    "9125":  {
+                 "ccode":  "COL",
+                 "name":  "Primera B",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9125.png"
+             },
+    "9134":  {
+                 "ccode":  "USA",
+                 "name":  "NWSL",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9134.png"
+             },
+    "71":  {
+               "ccode":  "TUR",
+               "name":  "Süper Lig",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/71.png"
+           },
+    "10226":  {
+                  "ccode":  "ISL",
+                  "name":  "2. Deild",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10226.png"
+              },
+    "9845":  {
+                 "ccode":  "SVK",
+                 "name":  "Super Liga Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9845.png"
+             },
+    "10434":  {
+                  "ccode":  "ITA",
+                  "name":  "Serie A Femminile Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10434.png"
+              },
+    "9469":  {
+                 "ccode":  "INT",
+                 "name":  "AFC Champions League Two",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9469.png"
+             },
+    "10174":  {
+                  "ccode":  "FIN",
+                  "name":  "Kansallinen (Women)",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10174.png"
+              },
+    "335":  {
+                "ccode":  "SLV",
+                "name":  "Primera Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/335.png"
+            },
+    "10457":  {
+                  "ccode":  "INT",
+                  "name":  "UEFA Women\u0027s Nations League A",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10457.png"
+              },
+    "11027":  {
+                  "ccode":  "UAE",
+                  "name":  "League Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11027.png"
+              },
+    "516":  {
+                "ccode":  "ALG",
+                "name":  "Ligue 1",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/516.png"
+            },
+    "525":  {
+                "ccode":  "INT",
+                "name":  "AFC Champions League Elite",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/525.png"
+            },
+    "249":  {
+                "ccode":  "MKD",
+                "name":  "Prva Liga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/249.png"
+            },
+    "10640":  {
+                  "ccode":  "INT",
+                  "name":  "Women\u0027s EURO Qualification League A",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10640.png"
+              },
+    "246":  {
+                "ccode":  "ECU",
+                "name":  "Serie A",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/246.png"
+            },
+    "68":  {
+               "ccode":  "SWE",
+               "name":  "Allsvenskan Qualification",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/68.png"
+           },
+    "11032":  {
+                  "ccode":  "INT",
+                  "name":  "FIFA U20 Intercontinental Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11032.png"
+              },
+    "64":  {
+               "ccode":  "SCO",
+               "name":  "Premiership",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/64.png"
+           },
+    "38":  {
+               "ccode":  "AUT",
+               "name":  "Bundesliga",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/38.png"
+           },
+    "285":  {
+                "ccode":  "AUT",
+                "name":  "Landesliga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/285.png"
+            },
+    "8944":  {
+                 "ccode":  "ENG",
+                 "name":  "National North \u0026 South",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8944.png"
+             },
+    "11029":  {
+                  "ccode":  "NED",
+                  "name":  "Super Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11029.png"
+              },
+    "113":  {
+                "ccode":  "AUS",
+                "name":  "A-League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/113.png"
+            },
+    "10437":  {
+                  "ccode":  "INT",
+                  "name":  "EURO U-21 Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10437.png"
+              },
+    "10608":  {
+                  "ccode":  "INT",
+                  "name":  "Africa Cup of Nations Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10608.png"
+              },
+    "57":  {
+               "ccode":  "NED",
+               "name":  "Eredivisie",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/57.png"
+           },
+    "9334":  {
+                 "ccode":  "BOL",
+                 "name":  "Primera Division Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9334.png"
+             },
+    "10611":  {
+                  "ccode":  "INT",
+                  "name":  "Champions League Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10611.png"
+              },
+    "9738":  {
+                 "ccode":  "SCO",
+                 "name":  "League One Playoff",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9738.png"
+             },
+    "489":  {
+                "ccode":  "INT",
+                "name":  "Club friendlies",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/489.png"
+            },
+    "9986":  {
+                 "ccode":  "CAN",
+                 "name":  "Premier League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9986.png"
+             },
+    "11018":  {
+                  "ccode":  "QAT",
+                  "name":  "Amir of Qatar Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11018.png"
+              },
+    "9468":  {
+                 "ccode":  "INT",
+                 "name":  "CAF Confed Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9468.png"
+             },
+    "9841":  {
+                 "ccode":  "INT",
+                 "name":  "AFC U20 Asian Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9841.png"
+             },
+    "10613":  {
+                  "ccode":  "INT",
+                  "name":  "Europa League Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10613.png"
+              },
+    "9504":  {
+                 "ccode":  "KAZ",
+                 "name":  "Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9504.png"
+             },
+    "9523":  {
+                 "ccode":  "FRO",
+                 "name":  "Løgmanssteypið",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9523.png"
+             },
+    "9584":  {
+                 "ccode":  "BUL",
+                 "name":  "First professional league Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9584.png"
+             },
+    "10658":  {
+                  "ccode":  "INT",
+                  "name":  "Women\u0027s EURO U19 Round 1 League B Grp. 1",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10658.png"
+              },
+    "123":  {
+                "ccode":  "SCO",
+                "name":  "Championship",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/123.png"
+            },
+    "132":  {
+                "ccode":  "ENG",
+                "name":  "FA Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/132.png"
+            },
+    "195":  {
+                "ccode":  "RUS",
+                "name":  "Super Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/195.png"
+            },
+    "10557":  {
+                  "ccode":  "INT",
+                  "name":  "UEFA Nations League A Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10557.png"
+              },
+    "9473":  {
+                 "ccode":  "RSA",
+                 "name":  "Nedbank Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9473.png"
+             },
+    "10025":  {
+                  "ccode":  "CZE",
+                  "name":  "1. Liga qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10025.png"
+              },
+    "10034":  {
+                  "ccode":  "EST",
+                  "name":  "Meistriliiga Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10034.png"
+              },
+    "10359":  {
+                  "ccode":  "INT",
+                  "name":  "World Cup Qualification (W) Inter-Confederation",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10359.png"
+              },
+    "8970":  {
+                 "ccode":  "FRA",
+                 "name":  "National",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8970.png"
+             },
+    "10043":  {
+                  "ccode":  "INT",
+                  "name":  "Leagues Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10043.png"
+              },
+    "10721":  {
+                  "ccode":  "KSA",
+                  "name":  "Saudi First Division",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10721.png"
+              },
+    "11012":  {
+                  "ccode":  "INT",
+                  "name":  "ASEAN Club Championship",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11012.png"
+              },
+    "9253":  {
+                 "ccode":  "ENG",
+                 "name":  "FA Trophy",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9253.png"
+             },
+    "11021":  {
+                  "ccode":  "INT",
+                  "name":  "Copa Libertadores Femenina",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11021.png"
+              },
+    "10699":  {
+                  "ccode":  "USA",
+                  "name":  "USL Super League Women",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10699.png"
+              },
+    "10059":  {
+                  "ccode":  "IDN",
+                  "name":  "President\u0027s Cup Grp. A",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10059.png"
+              },
+    "10621":  {
+                  "ccode":  "INT",
+                  "name":  "CONCACAF Championship U20 Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10621.png"
+              },
+    "237":  {
+                "ccode":  "NED",
+                "name":  "Super Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/237.png"
+            },
+    "10612":  {
+                  "ccode":  "INT",
+                  "name":  "Women\u0027s Champions League Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10612.png"
+              },
+    "226":  {
+                "ccode":  "LVA",
+                "name":  "Virsliga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/226.png"
+            },
+    "10084":  {
+                  "ccode":  "USA",
+                  "name":  "NISA",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10084.png"
+              },
+    "215":  {
+                "ccode":  "ISL",
+                "name":  "Besta deildin",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/215.png"
+            },
+    "10316":  {
+                  "ccode":  "SWE",
+                  "name":  "Damallsvenskan Qualification (W)",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10316.png"
+              },
+    "526":  {
+                "ccode":  "INT",
+                "name":  "CAF Champions League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/526.png"
+            },
+    "10656":  {
+                  "ccode":  "INT",
+                  "name":  "Beta Squad vs Amp Charity",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10656.png"
+              },
+    "11536":  {
+                  "ccode":  "COL",
+                  "name":  "Superliga",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11536.png"
+              },
+    "129":  {
+                "ccode":  "NIR",
+                "name":  "Premiership",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/129.png"
+            },
+    "145":  {
+                "ccode":  "GRE",
+                "name":  "Greece Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/145.png"
+            },
+    "138":  {
+                "ccode":  "ESP",
+                "name":  "Copa del Rey",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/138.png"
+            },
+    "193":  {
+                "ccode":  "RUS",
+                "name":  "Russian Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/193.png"
+            },
+    "10198":  {
+                  "ccode":  "INT",
+                  "name":  "World Cup Qualification CONCACAF",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10198.png"
+              },
+    "10832":  {
+                  "ccode":  "ARG",
+                  "name":  "Supercopa",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10832.png"
+              },
+    "168":  {
+                "ccode":  "SWE",
+                "name":  "Superettan",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/168.png"
+            },
+    "179":  {
+                "ccode":  "SCO",
+                "name":  "Challenge Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/179.png"
+            },
+    "9498":  {
+                 "ccode":  "THA",
+                 "name":  "Thai League 2",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9498.png"
+             },
+    "186":  {
+                "ccode":  "POR",
+                "name":  "Taça de Portugal",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/186.png"
+            },
+    "10840":  {
+                  "ccode":  "GER",
+                  "name":  "Baller League",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10840.png"
+              },
+    "10623":  {
+                  "ccode":  "INT",
+                  "name":  "Copa Sudamericana Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10623.png"
+              },
+    "10053":  {
+                  "ccode":  "ARG",
+                  "name":  "Trofeo de Campeones",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10053.png"
+              },
+    "239":  {
+                "ccode":  "DEN",
+                "name":  "2. Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/239.png"
+            },
+    "108":  {
+                "ccode":  "ENG",
+                "name":  "League One",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/108.png"
+            },
+    "10713":  {
+                  "ccode":  "FIN",
+                  "name":  "Ykkosliiga Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10713.png"
+              },
+    "10618":  {
+                  "ccode":  "INT",
+                  "name":  "Copa Libertadores Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10618.png"
+              },
+    "10065":  {
+                  "ccode":  "MDA",
+                  "name":  "National Division Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10065.png"
+              },
+    "530":  {
+                "ccode":  "MAR",
+                "name":  "Botola Pro",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/530.png"
+            },
+    "8984":  {
+                 "ccode":  "THA",
+                 "name":  "Thai League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8984.png"
+             },
+    "278":  {
+                "ccode":  "AUT",
+                "name":  "Austrian Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/278.png"
+            },
+    "10783":  {
+                  "ccode":  "KSA",
+                  "name":  "Women\u0027s Premier League",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10783.png"
+              },
+    "47":  {
+               "ccode":  "ENG",
+               "name":  "Premier League",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/47.png"
+           },
+    "9310":  {
+                 "ccode":  "GEO",
+                 "name":  "Erovnuli Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9310.png"
+             },
+    "74":  {
+               "ccode":  "INT",
+               "name":  "UEFA Super Cup",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/74.png"
+           },
+    "10651":  {
+                  "ccode":  "ESP",
+                  "name":  "Copa de la Reina",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10651.png"
+              },
+    "9806":  {
+                 "ccode":  "INT",
+                 "name":  "UEFA Nations League A",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9806.png"
+             },
+    "144":  {
+                "ccode":  "BOL",
+                "name":  "Primera Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/144.png"
+            },
+    "11031":  {
+                  "ccode":  "VEN",
+                  "name":  "Supercopa",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11031.png"
+              },
+    "9170":  {
+                 "ccode":  "ARG",
+                 "name":  "Argentina Promotion/Relegation",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9170.png"
+             },
+    "166":  {
+                "ccode":  "TUR",
+                "name":  "Super Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/166.png"
+            },
+    "9676":  {
+                 "ccode":  "GER",
+                 "name":  "Frauen Bundesliga",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9676.png"
+             },
+    "177":  {
+                "ccode":  "SVK",
+                "name":  "FA Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/177.png"
+            },
+    "188":  {
+                "ccode":  "POR",
+                "name":  "Super Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/188.png"
+            },
+    "9372":  {
+                 "ccode":  "IRN",
+                 "name":  "Azadegan League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9372.png"
+             },
+    "9550":  {
+                 "ccode":  "CHN",
+                 "name":  "Chinese FA Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9550.png"
+             },
+    "205":  {
+                "ccode":  "NOR",
+                "name":  "Norsk Tipping-ligaen",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/205.png"
+            },
+    "9632":  {
+                 "ccode":  "LTU",
+                 "name":  "A Lyga Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9632.png"
+             },
+    "9682":  {
+                 "ccode":  "INT",
+                 "name":  "CONCACAF Central American Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9682.png"
+             },
+    "10719":  {
+                  "ccode":  "INT",
+                  "name":  "UEFA Nations League C Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10719.png"
+              },
+    "10074":  {
+                  "ccode":  "KSA",
+                  "name":  "Super Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10074.png"
+              },
+    "85":  {
+               "ccode":  "DEN",
+               "name":  "1. Division",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/85.png"
+           },
+    "337":  {
+                "ccode":  "HON",
+                "name":  "Liga Nacional",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/337.png"
+            },
+    "229":  {
+                "ccode":  "LUX",
+                "name":  "National Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/229.png"
+            },
+    "10459":  {
+                  "ccode":  "INT",
+                  "name":  "UEFA Women\u0027s Nations League C",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10459.png"
+              },
+    "10714":  {
+                  "ccode":  "NOR",
+                  "name":  "1. divisjon kvinner kvalifisering",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10714.png"
+              },
+    "10448":  {
+                  "ccode":  "POR",
+                  "name":  "Liga Revelação",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10448.png"
+              },
+    "58":  {
+               "ccode":  "NED",
+               "name":  "Eredivisie Qualification",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/58.png"
+           },
+    "272":  {
+                "ccode":  "BUL",
+                "name":  "Super Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/272.png"
+            },
+    "9011":  {
+                 "ccode":  "JPN",
+                 "name":  "Emperor Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9011.png"
+             },
+    "9069":  {
+                 "ccode":  "EST",
+                 "name":  "Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9069.png"
+             },
+    "9096":  {
+                 "ccode":  "BUL",
+                 "name":  "Second Professional League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9096.png"
+             },
+    "9821":  {
+                 "ccode":  "INT",
+                 "name":  "CONCACAF Nations League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9821.png"
+             },
+    "266":  {
+                "ccode":  "BEL",
+                "name":  "Super Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/266.png"
+            },
+    "44":  {
+               "ccode":  "INT",
+               "name":  "Copa America",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/44.png"
+           },
+    "54":  {
+               "ccode":  "GER",
+               "name":  "Bundesliga",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/54.png"
+           },
+    "77":  {
+               "ccode":  "INT",
+               "name":  "FIFA World Cup",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/77.png"
+           },
+    "66":  {
+               "ccode":  "INT",
+               "name":  "Summer Olympics",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/66.png"
+           },
+    "10288":  {
+                  "ccode":  "IRN",
+                  "name":  "Super Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10288.png"
+              },
+    "9666":  {
+                 "ccode":  "FRA",
+                 "name":  "Ligue 1 Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9666.png"
+             },
+    "9677":  {
+                 "ccode":  "FRA",
+                 "name":  "Première Ligue Féminine",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9677.png"
+             },
+    "161":  {
+                "ccode":  "URU",
+                "name":  "Primera Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/161.png"
+            },
+    "10244":  {
+                  "ccode":  "BRA",
+                  "name":  "Paulista A1",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10244.png"
+              },
+    "9527":  {
+                 "ccode":  "LUX",
+                 "name":  "Coupe de Luxembourg",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9527.png"
+             },
+    "300":  {
+                "ccode":  "INT",
+                "name":  "East Asian Championship",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/300.png"
+            },
+    "204":  {
+                "ccode":  "NOR",
+                "name":  "PostNord-ligaen",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/204.png"
+            },
+    "10161":  {
+                  "ccode":  "VIE",
+                  "name":  "Cúp Quốc gia",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10161.png"
+              },
+    "8924":  {
+                 "ccode":  "GER",
+                 "name":  "Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8924.png"
+             },
+    "8983":  {
+                 "ccode":  "IDN",
+                 "name":  "Super League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8983.png"
+             },
+    "8935":  {
+                 "ccode":  "POL",
+                 "name":  "II Liga",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8935.png"
+             },
+    "10178":  {
+                  "ccode":  "ITA",
+                  "name":  "Serie A Femminile",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10178.png"
+              },
+    "339":  {
+                "ccode":  "VEN",
+                "name":  "Primera Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/339.png"
+            },
+    "9195":  {
+                 "ccode":  "NED",
+                 "name":  "Tweede Divisie",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9195.png"
+             },
+    "130":  {
+                "ccode":  "USA",
+                "name":  "MLS",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/130.png"
+            },
+    "8938":  {
+                 "ccode":  "AUS",
+                 "name":  "Australia Championship",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8938.png"
+             },
+    "9067":  {
+                 "ccode":  "BRA",
+                 "name":  "Copa do Brasil",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9067.png"
+             },
+    "512":  {
+                "ccode":  "GER",
+                "name":  "Regionalliga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/512.png"
+            },
+    "10449":  {
+                  "ccode":  "POR",
+                  "name":  "Nacional Feminino",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10449.png"
+              },
+    "521":  {
+                "ccode":  "CYP",
+                "name":  "Super Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/521.png"
+            },
+    "271":  {
+                "ccode":  "BUL",
+                "name":  "Bulgarian Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/271.png"
+            },
+    "253":  {
+                "ccode":  "CZE",
+                "name":  "FNL",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/253.png"
+            },
+    "10304":  {
+                  "ccode":  "INT",
+                  "name":  "Finalissima",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10304.png"
+              },
+    "242":  {
+                "ccode":  "DEN",
+                "name":  "DBU Pokalen",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/242.png"
+            },
+    "9734":  {
+                 "ccode":  "GER",
+                 "name":  "2. Bundesliga Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9734.png"
+             },
+    "69":  {
+               "ccode":  "SUI",
+               "name":  "Super League",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/69.png"
+           },
+    "10622":  {
+                  "ccode":  "INT",
+                  "name":  "AFC Champions League Elite Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10622.png"
+              },
+    "9470":  {
+                 "ccode":  "INT",
+                 "name":  "AFC Challenge League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9470.png"
+             },
+    "10967":  {
+                  "ccode":  "POL",
+                  "name":  "II Liga Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10967.png"
+              },
+    "298":  {
+                "ccode":  "INT",
+                "name":  "CONCACAF Gold Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/298.png"
+            },
+    "9296":  {
+                 "ccode":  "USA",
+                 "name":  "USL League One",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9296.png"
+             },
+    "10508":  {
+                  "ccode":  "INT",
+                  "name":  "African Football League",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10508.png"
+              },
+    "305":  {
+                "ccode":  "INT",
+                "name":  "Maurice Revello Tournament ",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/305.png"
+            },
+    "331":  {
+                "ccode":  "NOR",
+                "name":  "Toppserien",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/331.png"
+            },
+    "10215":  {
+                  "ccode":  "POR",
+                  "name":  "Liga Portugal Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10215.png"
+              },
+    "9521":  {
+                 "ccode":  "BLR",
+                 "name":  "Belarusian Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9521.png"
+             },
+    "10223":  {
+                  "ccode":  "CRC",
+                  "name":  "Super cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10223.png"
+              },
+    "523":  {
+                "ccode":  "IRN",
+                "name":  "Persian Gulf",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/523.png"
+            },
+    "112":  {
+                "ccode":  "ARG",
+                "name":  "Liga Profesional",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/112.png"
+            },
+    "121":  {
+                "ccode":  "CRC",
+                "name":  "Primera Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/121.png"
+            },
+    "9634":  {
+                 "ccode":  "SWE",
+                 "name":  "1. Division Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9634.png"
+             },
+    "172":  {
+                "ccode":  "SWE",
+                "name":  "Superettan Qualification",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/172.png"
+            },
+    "10443":  {
+                  "ccode":  "BAN",
+                  "name":  "Premier League",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10443.png"
+              },
+    "9166":  {
+                 "ccode":  "WAL",
+                 "name":  "Welsh Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9166.png"
+             },
+    "11156":  {
+                  "ccode":  "INT",
+                  "name":  "Arab Cup Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11156.png"
+              },
+    "10369":  {
+                  "ccode":  "INT",
+                  "name":  "FIFA U-20 World Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10369.png"
+              },
+    "189":  {
+                "ccode":  "ROU",
+                "name":  "Liga I",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/189.png"
+            },
+    "252":  {
+                "ccode":  "CRO",
+                "name":  "HNL",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/252.png"
+            },
+    "10308":  {
+                  "ccode":  "SWE",
+                  "name":  "Eliteettan (W)",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10308.png"
+              },
+    "11548":  {
+                  "ccode":  "INT",
+                  "name":  "Choose One - adidas Predator or F50",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11548.png"
+              },
+    "9213":  {
+                 "ccode":  "ARG",
+                 "name":  "Primera B Metropolitana \u0026 Torneo Federal A",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9213.png"
+             },
+    "10366":  {
+                  "ccode":  "IND",
+                  "name":  "Super Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10366.png"
+              },
+    "540":  {
+                "ccode":  "UZB",
+                "name":  "Superliga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/540.png"
+            },
+    "231":  {
+                "ccode":  "MDA",
+                "name":  "National Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/231.png"
+            },
+    "10068":  {
+                  "ccode":  "ENG",
+                  "name":  "Premier League U18",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10068.png"
+              },
+    "11028":  {
+                  "ccode":  "FRA",
+                  "name":  "Coupe de France Féminine",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11028.png"
+              },
+    "9478":  {
+                 "ccode":  "IND",
+                 "name":  "Indian Super League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9478.png"
+             },
+    "344":  {
+                "ccode":  "INT",
+                "name":  "Friendlies U21",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/344.png"
+            },
+    "9487":  {
+                 "ccode":  "IRN",
+                 "name":  "Hazfi cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9487.png"
+             },
+    "9431":  {
+                 "ccode":  "IRL",
+                 "name":  "Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9431.png"
+             },
+    "306":  {
+                "ccode":  "INT",
+                "name":  "World Cup U17",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/306.png"
+            },
+    "270":  {
+                "ccode":  "BUL",
+                "name":  "First Professional League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/270.png"
+            },
+    "114":  {
+                "ccode":  "INT",
+                "name":  "Friendlies",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/114.png"
+            },
+    "10210":  {
+                  "ccode":  "IRL",
+                  "name":  "Women\u0027s Premier Division",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10210.png"
+              },
+    "127":  {
+                "ccode":  "ISR",
+                "name":  "Ligat ha\u0027Al",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/127.png"
+            },
+    "10314":  {
+                  "ccode":  "EGY",
+                  "name":  "Super Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10314.png"
+              },
+    "136":  {
+                "ccode":  "CYP",
+                "name":  "1. Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/136.png"
+            },
+    "10659":  {
+                  "ccode":  "INT",
+                  "name":  "Women\u0027s EURO U17 Round 1 League B Grp. 1",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10659.png"
+              },
+    "10269":  {
+                  "ccode":  "INT",
+                  "name":  "Womens Asian Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10269.png"
+              },
+    "9942":  {
+                 "ccode":  "KSA",
+                 "name":  "King\u0027s Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9942.png"
+             },
+    "131":  {
+                "ccode":  "PER",
+                "name":  "Liga 1",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/131.png"
+            },
+    "125":  {
+                "ccode":  "SCO",
+                "name":  "League Two",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/125.png"
+            },
+    "10022":  {
+                  "ccode":  "GER",
+                  "name":  "Regionalliga Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10022.png"
+              },
+    "342":  {
+                "ccode":  "FIN",
+                "name":  "Finland Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/342.png"
+            },
+    "247":  {
+                "ccode":  "ENG",
+                "name":  "Community Shield",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/247.png"
+            },
+    "9123":  {
+                 "ccode":  "RUS",
+                 "name":  "Second League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9123.png"
+             },
+    "10368":  {
+                  "ccode":  "INT",
+                  "name":  "Copa America Femenina",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10368.png"
+              },
+    "11648":  {
+                  "ccode":  "INT",
+                  "name":  "Soccer Aid",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11648.png"
+              },
+    "289":  {
+                "ccode":  "INT",
+                "name":  "Africa Cup of Nations",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/289.png"
+            },
+    "9467":  {
+                 "ccode":  "INT",
+                 "name":  "CAF Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9467.png"
+             },
+    "10270":  {
+                  "ccode":  "EGY",
+                  "name":  "League Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10270.png"
+              },
+    "9906":  {
+                 "ccode":  "MEX",
+                 "name":  "Liga MX Femenil",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9906.png"
+             },
+    "10609":  {
+                  "ccode":  "INT",
+                  "name":  "Asian Cup  Qualification Playoff",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10609.png"
+              },
+    "221":  {
+                "ccode":  "IRL",
+                "name":  "Premier Division Qualification",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/221.png"
+            },
+    "9080":  {
+                 "ccode":  "KOR",
+                 "name":  "K League 1",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9080.png"
+             },
+    "212":  {
+                "ccode":  "HUN",
+                "name":  "Nemzeti Bajnokság I",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/212.png"
+            },
+    "9486":  {
+                 "ccode":  "LVA",
+                 "name":  "Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9486.png"
+             },
+    "9088":  {
+                 "ccode":  "VIE",
+                 "name":  "V-League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9088.png"
+             },
+    "41":  {
+               "ccode":  "BEL",
+               "name":  "First Division A Qualification",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/41.png"
+           },
+    "9545":  {
+                 "ccode":  "SCO",
+                 "name":  "Highland / Lowland",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9545.png"
+             },
+    "10312":  {
+                  "ccode":  "INT",
+                  "name":  "Sidemen Charity Match",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10312.png"
+              },
+    "260":  {
+                "ccode":  "ALB",
+                "name":  "Kategoria Superiore",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/260.png"
+            },
+    "9829":  {
+                 "ccode":  "UKR",
+                 "name":  "Premier League Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9829.png"
+             },
+    "439":  {
+                "ccode":  "GEO",
+                "name":  "Erovnuli Liga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/439.png"
+            },
+    "126":  {
+                "ccode":  "IRL",
+                "name":  "Premier Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/126.png"
+            },
+    "146":  {
+                "ccode":  "GER",
+                "name":  "2. Bundesliga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/146.png"
+            },
+    "137":  {
+                "ccode":  "SCO",
+                "name":  "Scottish Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/137.png"
+            },
+    "10291":  {
+                  "ccode":  "BRA",
+                  "name":  "Goiano",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10291.png"
+              },
+    "10649":  {
+                  "ccode":  "INT",
+                  "name":  "NWSL x Liga MX",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10649.png"
+              },
+    "8947":  {
+                 "ccode":  "ENG",
+                 "name":  "Premier Division",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8947.png"
+             },
+    "10028":  {
+                  "ccode":  "TAN",
+                  "name":  "Premier League Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10028.png"
+              },
+    "10357":  {
+                  "ccode":  "INT",
+                  "name":  "World Cup Qualification (W) UEFA",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10357.png"
+              },
+    "8965":  {
+                 "ccode":  "ARG",
+                 "name":  "Primera B Nacional",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8965.png"
+             },
+    "8974":  {
+                 "ccode":  "JPN",
+                 "name":  "J. League 2",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8974.png"
+             },
+    "9173":  {
+                 "ccode":  "ALB",
+                 "name":  "Superiore Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9173.png"
+             },
+    "225":  {
+                "ccode":  "KAZ",
+                "name":  "Premier League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/225.png"
+            },
+    "196":  {
+                "ccode":  "POL",
+                "name":  "Ekstraklasa",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/196.png"
+            },
+    "332":  {
+                "ccode":  "NOR",
+                "name":  "1. Division Kvinner",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/332.png"
+            },
+    "128":  {
+                "ccode":  "ISR",
+                "name":  "Leumit League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/128.png"
+            },
+    "10607":  {
+                  "ccode":  "INT",
+                  "name":  "EURO Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10607.png"
+              },
+    "10708":  {
+                  "ccode":  "RSA",
+                  "name":  "League Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10708.png"
+              },
+    "9305":  {
+                 "ccode":  "ARG",
+                 "name":  "Copa Argentina",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9305.png"
+             },
+    "10619":  {
+                  "ccode":  "INT",
+                  "name":  "CAF Champions League Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10619.png"
+              },
+    "218":  {
+                "ccode":  "IRL",
+                "name":  "First Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/218.png"
+            },
+    "9551":  {
+                 "ccode":  "KOR",
+                 "name":  "Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9551.png"
+             },
+    "9407":  {
+                 "ccode":  "CHI",
+                 "name":  "Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9407.png"
+             },
+    "529":  {
+                "ccode":  "KUW",
+                "name":  "Premier League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/529.png"
+            },
+    "10009":  {
+                  "ccode":  "ISL",
+                  "name":  "Super Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10009.png"
+              },
+    "268":  {
+                "ccode":  "BRA",
+                "name":  "Serie A",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/268.png"
+            },
+    "46":  {
+               "ccode":  "DEN",
+               "name":  "Superligaen",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/46.png"
+           },
+    "9333":  {
+                 "ccode":  "RUS",
+                 "name":  "Premier League Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9333.png"
+             },
+    "10195":  {
+                  "ccode":  "INT",
+                  "name":  "World Cup Qualification UEFA",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10195.png"
+              },
+    "9122":  {
+                 "ccode":  "URU",
+                 "name":  "Segunda Division",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9122.png"
+             },
+    "10913":  {
+                  "ccode":  "INT",
+                  "name":  "FIFA Club World Cup Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10913.png"
+              },
+    "9668":  {
+                 "ccode":  "POR",
+                 "name":  "Liga Portugal 2 Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9668.png"
+             },
+    "52":  {
+               "ccode":  "FIN",
+               "name":  "Veikkausliiga Qualification",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/52.png"
+           },
+    "176":  {
+                "ccode":  "SVK",
+                "name":  "1. liga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/176.png"
+            },
+    "199":  {
+                "ccode":  "PAR",
+                "name":  "Division Profesional",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/199.png"
+            },
+    "198":  {
+                "ccode":  "POL",
+                "name":  "Puchar Polski",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/198.png"
+            },
+    "9571":  {
+                 "ccode":  "INT",
+                 "name":  "AFC U23 Asian Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9571.png"
+             },
+    "9754":  {
+                 "ccode":  "NOR",
+                 "name":  "OBOS-ligaen Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9754.png"
+             },
+    "10167":  {
+                  "ccode":  "USA",
+                  "name":  "NWSL Challenge Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10167.png"
+              },
+    "10176":  {
+                  "ccode":  "ENG",
+                  "name":  "Premier League 2 Div 2",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10176.png"
+              },
+    "9808":  {
+                 "ccode":  "INT",
+                 "name":  "UEFA Nations League C",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9808.png"
+             },
+    "9587":  {
+                 "ccode":  "ROU",
+                 "name":  "Liga I Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9587.png"
+             },
+    "10718":  {
+                  "ccode":  "INT",
+                  "name":  "UEFA Nations League B Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10718.png"
+              },
+    "8976":  {
+                 "ccode":  "MEX",
+                 "name":  "Liga de Expansión MX",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8976.png"
+             },
+    "336":  {
+                "ccode":  "GUA",
+                "name":  "Liga Nacional",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/336.png"
+            },
+    "11039":  {
+                  "ccode":  "MEX",
+                  "name":  "Campeón de Campeones",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11039.png"
+              },
+    "59":  {
+               "ccode":  "NOR",
+               "name":  "Eliteserien",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/59.png"
+           },
+    "273":  {
+                "ccode":  "CHI",
+                "name":  "Liga de Primera",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/273.png"
+            },
+    "48":  {
+               "ccode":  "ENG",
+               "name":  "Championship",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/48.png"
+           },
+    "262":  {
+                "ccode":  "AZE",
+                "name":  "Premier League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/262.png"
+            },
+    "11527":  {
+                  "ccode":  "INT",
+                  "name":  "OFC Pro League",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11527.png"
+              },
+    "251":  {
+                "ccode":  "FIN",
+                "name":  "Ykkosliiga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/251.png"
+            },
+    "9837":  {
+                 "ccode":  "CAN",
+                 "name":  "Canadian Championship",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9837.png"
+             },
+    "10583":  {
+                  "ccode":  "SRB",
+                  "name":  "Super Liga Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10583.png"
+              },
+    "11015":  {
+                  "ccode":  "ITA",
+                  "name":  "Supercoppa Italiana",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11015.png"
+              },
+    "65":  {
+               "ccode":  "INT",
+               "name":  "Summer Olympics Women",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/65.png"
+           },
+    "442":  {
+                "ccode":  "UKR",
+                "name":  "Ukraine Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/442.png"
+            },
+    "538":  {
+                "ccode":  "UAE",
+                "name":  "Pro League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/538.png"
+            },
+    "203":  {
+                "ccode":  "NOR",
+                "name":  "OBOS-ligaen",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/203.png"
+            },
+    "296":  {
+                "ccode":  "INT",
+                "name":  "World Cup U20",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/296.png"
+            },
+    "287":  {
+                "ccode":  "INT",
+                "name":  "UEFA U19 Championship",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/287.png"
+            },
+    "9428":  {
+                 "ccode":  "INT",
+                 "name":  "African Nations Championship",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9428.png"
+             },
+    "10199":  {
+                  "ccode":  "INT",
+                  "name":  "World Cup Qualification CONMEBOL",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10199.png"
+              },
+    "10216":  {
+                  "ccode":  "INT",
+                  "name":  "Conference League",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10216.png"
+              },
+    "228":  {
+                "ccode":  "LTU",
+                "name":  "Toplyga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/228.png"
+            },
+    "9441":  {
+                 "ccode":  "USA",
+                 "name":  "Open Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9441.png"
+             },
+    "197":  {
+                "ccode":  "POL",
+                "name":  "I Liga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/197.png"
+            },
+    "329":  {
+                "ccode":  "INT",
+                "name":  "Gulf Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/329.png"
+            },
+    "9471":  {
+                 "ccode":  "AUS",
+                 "name":  "Australia Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9471.png"
+             },
+    "338":  {
+                "ccode":  "RUS",
+                "name":  "1. Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/338.png"
+            },
+    "120":  {
+                "ccode":  "CHN",
+                "name":  "Super League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/120.png"
+            },
+    "87":  {
+               "ccode":  "ESP",
+               "name":  "LaLiga",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/87.png"
+           },
+    "544":  {
+                "ccode":  "TUN",
+                "name":  "Ligue I",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/544.png"
+            },
+    "9066":  {
+                 "ccode":  "TAN",
+                 "name":  "Premier League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9066.png"
+             },
+    "10498":  {
+                  "ccode":  "INT",
+                  "name":  "Summer Olympics Qualification CONCACAF (W)",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10498.png"
+              },
+    "10188":  {
+                  "ccode":  "KOR",
+                  "name":  "K League 3 Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10188.png"
+              },
+    "537":  {
+                "ccode":  "RSA",
+                "name":  "Premier Soccer League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/537.png"
+            },
+    "10310":  {
+                  "ccode":  "IRQ",
+                  "name":  "Stars League Relegation Playoff",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10310.png"
+              },
+    "263":  {
+                "ccode":  "BLR",
+                "name":  "Premier League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/263.png"
+            },
+    "241":  {
+                "ccode":  "DEN",
+                "name":  "Danmarksserien",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/241.png"
+            },
+    "9735":  {
+                 "ccode":  "ISR",
+                 "name":  "Leumit League Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9735.png"
+             },
+    "10371":  {
+                  "ccode":  "INT",
+                  "name":  "Women\u0027s Africa Cup of Nations",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10371.png"
+              },
+    "183":  {
+                "ccode":  "SRB",
+                "name":  "Kup Srbije",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/183.png"
+            },
+    "9717":  {
+                 "ccode":  "ENG",
+                 "name":  "Women\u0027s League Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9717.png"
+             },
+    "230":  {
+                "ccode":  "MEX",
+                "name":  "Liga MX",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/230.png"
+            },
+    "299":  {
+                "ccode":  "INT",
+                "name":  "Copa Sudamericana",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/299.png"
+            },
+    "200":  {
+                "ccode":  "POL",
+                "name":  "Superpuchar Polski",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/200.png"
+            },
+    "288":  {
+                "ccode":  "INT",
+                "name":  "EURO U21",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/288.png"
+            },
+    "50":  {
+               "ccode":  "INT",
+               "name":  "EURO",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/50.png"
+           },
+    "10511":  {
+                  "ccode":  "INT",
+                  "name":  "AFC Summer Olympics Qualification (Women)",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10511.png"
+              },
+    "116":  {
+                "ccode":  "WAL",
+                "name":  "Cymru Premier",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/116.png"
+            },
+    "10200":  {
+                  "ccode":  "INT",
+                  "name":  "World Cup Qualification OFC",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10200.png"
+              },
+    "9136":  {
+                 "ccode":  "JPN",
+                 "name":  "J. League 3",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9136.png"
+             },
+    "11020":  {
+                  "ccode":  "SCO",
+                  "name":  "SWF Scottish Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11020.png"
+              },
+    "8972":  {
+                 "ccode":  "USA",
+                 "name":  "USL Championship",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8972.png"
+             },
+    "182":  {
+                "ccode":  "SRB",
+                "name":  "Super Liga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/182.png"
+            },
+    "9227":  {
+                 "ccode":  "ENG",
+                 "name":  "WSL",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9227.png"
+             },
+    "10558":  {
+                  "ccode":  "INT",
+                  "name":  "UEFA Nations League B Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10558.png"
+              },
+    "9921":  {
+                 "ccode":  "INT",
+                 "name":  "SheBelieves Cup (W)",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9921.png"
+             },
+    "9112":  {
+                 "ccode":  "POR",
+                 "name":  "Liga 3",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9112.png"
+             },
+    "9098":  {
+                 "ccode":  "ISR",
+                 "name":  "Toto Cup Leumit",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9098.png"
+             },
+    "10309":  {
+                  "ccode":  "IND",
+                  "name":  "Durand Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10309.png"
+              },
+    "9089":  {
+                 "ccode":  "SWE",
+                 "name":  "Damallsvenskan (W)",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9089.png"
+             },
+    "10046":  {
+                  "ccode":  "ECU",
+                  "name":  "Copa Ecuador",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10046.png"
+              },
+    "9943":  {
+                 "ccode":  "UAE",
+                 "name":  "Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9943.png"
+             },
+    "11017":  {
+                  "ccode":  "QAT",
+                  "name":  "QSL Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11017.png"
+              },
+    "164":  {
+                "ccode":  "SUI",
+                "name":  "Swiss Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/164.png"
+            },
+    "11024":  {
+                  "ccode":  "THA",
+                  "name":  "League Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11024.png"
+              },
+    "9174":  {
+                 "ccode":  "LUX",
+                 "name":  "National Division Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9174.png"
+             },
+    "11035":  {
+                  "ccode":  "ECU",
+                  "name":  "Supercopa de Ecuador",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11035.png"
+              },
+    "9138":  {
+                 "ccode":  "ESP",
+                 "name":  "Segunda Federación",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9138.png"
+             },
+    "232":  {
+                "ccode":  "MNE",
+                "name":  "1. CFL",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/232.png"
+            },
+    "223":  {
+                "ccode":  "JPN",
+                "name":  "J. League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/223.png"
+            },
+    "10078":  {
+                  "ccode":  "BRA",
+                  "name":  "Recopa Gaúcha",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10078.png"
+              },
+    "11038":  {
+                  "ccode":  "INT",
+                  "name":  "King\u0027s Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11038.png"
+              },
+    "9491":  {
+                 "ccode":  "CHN",
+                 "name":  "Super Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9491.png"
+             },
+    "118":  {
+                "ccode":  "ARM",
+                "name":  "Premier League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/118.png"
+            },
+    "40":  {
+               "ccode":  "BEL",
+               "name":  "First Division A",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/40.png"
+           },
+    "117":  {
+                "ccode":  "ENG",
+                "name":  "National League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/117.png"
+            },
+    "124":  {
+                "ccode":  "SCO",
+                "name":  "League One",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/124.png"
+            },
+    "135":  {
+                "ccode":  "GRE",
+                "name":  "Super League 1",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/135.png"
+            },
+    "185":  {
+                "ccode":  "POR",
+                "name":  "Liga Portugal 2",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/185.png"
+            },
+    "8982":  {
+                 "ccode":  "IND",
+                 "name":  "Indian Football League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8982.png"
+             },
+    "190":  {
+                "ccode":  "ROU",
+                "name":  "Cupa României",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/190.png"
+            },
+    "290":  {
+                "ccode":  "INT",
+                "name":  "Asian Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/290.png"
+            },
+    "181":  {
+                "ccode":  "SCO",
+                "name":  "Premiership playoff",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/181.png"
+            },
+    "10584":  {
+                  "ccode":  "RSA",
+                  "name":  "South Africa League Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10584.png"
+              },
+    "11011":  {
+                  "ccode":  "INT",
+                  "name":  "CAF Women\u0027s Champions League",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11011.png"
+              },
+    "11022":  {
+                  "ccode":  "INT",
+                  "name":  "Copa Libertadores U20",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11022.png"
+              },
+    "9848":  {
+                 "ccode":  "INT",
+                 "name":  "CONMEBOL U20 Championship",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9848.png"
+             },
+    "9464":  {
+                 "ccode":  "BRA",
+                 "name":  "Serie D",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9464.png"
+             },
+    "9690":  {
+                 "ccode":  "INT",
+                 "name":  "Southeast Asian Games",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9690.png"
+             },
+    "10076":  {
+                  "ccode":  "ISL",
+                  "name":  "League Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10076.png"
+              },
+    "330":  {
+                "ccode":  "CYP",
+                "name":  "Cyprus Cup ",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/330.png"
+            },
+    "216":  {
+                "ccode":  "ISL",
+                "name":  "1. Deild",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/216.png"
+            },
+    "274":  {
+                "ccode":  "COL",
+                "name":  "Primera A",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/274.png"
+            },
+    "9100":  {
+                 "ccode":  "CYP",
+                 "name":  "2. Division",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9100.png"
+             },
+    "9876":  {
+                 "ccode":  "INT",
+                 "name":  "SAFF Championship",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9876.png"
+             },
+    "213":  {
+                "ccode":  "HUN",
+                "name":  "Magyar Kupa",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/213.png"
+            },
+    "51":  {
+               "ccode":  "FIN",
+               "name":  "Veikkausliiga",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/51.png"
+           },
+    "11499":  {
+                  "ccode":  "JPN",
+                  "name":  "Japan 2/3",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11499.png"
+              },
+    "73":  {
+               "ccode":  "INT",
+               "name":  "Europa League",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/73.png"
+           },
+    "10201":  {
+                  "ccode":  "INT",
+                  "name":  "World Cup Qualification Inter-confederation",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10201.png"
+              },
+    "10186":  {
+                  "ccode":  "FIN",
+                  "name":  "Kansallinen Qualification (Women)",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10186.png"
+              },
+    "10197":  {
+                  "ccode":  "INT",
+                  "name":  "World Cup Qualification AFC",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10197.png"
+              },
+    "10273":  {
+                  "ccode":  "BRA",
+                  "name":  "Mineiro",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10273.png"
+              },
+    "9490":  {
+                 "ccode":  "COL",
+                 "name":  "Copa Colombia",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9490.png"
+             },
+    "165":  {
+                "ccode":  "TUR",
+                "name":  "1. Lig",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/165.png"
+            },
+    "174":  {
+                "ccode":  "SVN",
+                "name":  "Slovenia Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/174.png"
+            },
+    "9143":  {
+                 "ccode":  "SIN",
+                 "name":  "Singapore Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9143.png"
+             },
+    "8973":  {
+                 "ccode":  "SVK",
+                 "name":  "2. Liga",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8973.png"
+             },
+    "9514":  {
+                 "ccode":  "INT",
+                 "name":  "The Atlantic Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9514.png"
+             },
+    "8814":  {
+                 "ccode":  "BRA",
+                 "name":  "Serie B",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8814.png"
+             },
+    "11746":  {
+                  "ccode":  "INT",
+                  "name":  "Korea Legends Match",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11746.png"
+              },
+    "9669":  {
+                 "ccode":  "TUN",
+                 "name":  "Ligue I Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9669.png"
+             },
+    "10776":  {
+                  "ccode":  "ESP",
+                  "name":  "Supercopa Femenina",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10776.png"
+              },
+    "256":  {
+                "ccode":  "DEN",
+                "name":  "A-Liga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/256.png"
+            },
+    "10628":  {
+                  "ccode":  "NOR",
+                  "name":  "Cup Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10628.png"
+              },
+    "10603":  {
+                  "ccode":  "INT",
+                  "name":  "CONCACAF Gold Cup Women",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10603.png"
+              },
+    "10716":  {
+                  "ccode":  "JPN",
+                  "name":  "J. League 3 Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10716.png"
+              },
+    "9429":  {
+                 "ccode":  "BRA",
+                 "name":  "Copa do Nordeste",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9429.png"
+             },
+    "9255":  {
+                 "ccode":  "BLR",
+                 "name":  "Premier League qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9255.png"
+             },
+    "10077":  {
+                  "ccode":  "BRA",
+                  "name":  "Supercopa do Brasil",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10077.png"
+              },
+    "9500":  {
+                 "ccode":  "JPN",
+                 "name":  "WE League",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9500.png"
+             },
+    "219":  {
+                "ccode":  "IRL",
+                "name":  "FAI Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/219.png"
+            },
+    "275":  {
+                "ccode":  "CRO",
+                "name":  "Croatian Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/275.png"
+            },
+    "264":  {
+                "ccode":  "BEL",
+                "name":  "First Division B",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/264.png"
+            },
+    "10657":  {
+                  "ccode":  "POR",
+                  "name":  "Nacional Feminino Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10657.png"
+              },
+    "9422":  {
+                 "ccode":  "KOR",
+                 "name":  "K League Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9422.png"
+             },
+    "9091":  {
+                 "ccode":  "CHI",
+                 "name":  "Copa Chile",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9091.png"
+             },
+    "9381":  {
+                 "ccode":  "ARG",
+                 "name":  "Super Copa International",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9381.png"
+             },
+    "10242":  {
+                  "ccode":  "INT",
+                  "name":  "FIFA Arab Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10242.png"
+              },
+    "141":  {
+                "ccode":  "ITA",
+                "name":  "Coppa Italia",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/141.png"
+            },
+    "63":  {
+               "ccode":  "RUS",
+               "name":  "Premier League",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/63.png"
+           },
+    "11542":  {
+                  "ccode":  "INT",
+                  "name":  "FIFA Women\u0027s Champions Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/11542.png"
+              },
+    "163":  {
+                "ccode":  "SUI",
+                "name":  "Challenge League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/163.png"
+            },
+    "10272":  {
+                  "ccode":  "BRA",
+                  "name":  "Carioca",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10272.png"
+              },
+    "8968":  {
+                 "ccode":  "ESP",
+                 "name":  "Primera Federación",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/8968.png"
+             },
+    "70":  {
+               "ccode":  "SUI",
+               "name":  "Super League Qualification",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/70.png"
+           },
+    "9137":  {
+                 "ccode":  "CHN",
+                 "name":  "China League One",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9137.png"
+             },
+    "206":  {
+                "ccode":  "NOR",
+                "name":  "Norgesmesterskapet",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/206.png"
+            },
+    "9126":  {
+                 "ccode":  "CHI",
+                 "name":  "Liga de Ascenso",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9126.png"
+             },
+    "240":  {
+                "ccode":  "DEN",
+                "name":  "3. Division",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/240.png"
+            },
+    "110":  {
+                "ccode":  "FRA",
+                "name":  "Ligue 2",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/110.png"
+            },
+    "491":  {
+                "ccode":  "INT",
+                "name":  "Recopa Sudamericana",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/491.png"
+            },
+    "60":  {
+               "ccode":  "NOR",
+               "name":  "Eliteserien Qualification",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/60.png"
+           },
+    "55":  {
+               "ccode":  "ITA",
+               "name":  "Serie A",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/55.png"
+           },
+    "9528":  {
+                 "ccode":  "MKD",
+                 "name":  "Macedonian Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9528.png"
+             },
+    "10175":  {
+                  "ccode":  "ALB",
+                  "name":  "Superkupa e Shqipërisë",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10175.png"
+              },
+    "10705":  {
+                  "ccode":  "ENG",
+                  "name":  "National League Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10705.png"
+              },
+    "86":  {
+               "ccode":  "ITA",
+               "name":  "Serie B",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/86.png"
+           },
+    "10082":  {
+                  "ccode":  "ENG",
+                  "name":  "FA Cup (Women)",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10082.png"
+              },
+    "10717":  {
+                  "ccode":  "INT",
+                  "name":  "UEFA Nations League A Qualification",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10717.png"
+              },
+    "9739":  {
+                 "ccode":  "SCO",
+                 "name":  "League Two Playoff",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9739.png"
+             },
+    "10474":  {
+                  "ccode":  "INT",
+                  "name":  "Arab Club Champions Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10474.png"
+              },
+    "9474":  {
+                 "ccode":  "RSA",
+                 "name":  "South Africa 8 Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9474.png"
+             },
+    "524":  {
+                "ccode":  "IRQ",
+                "name":  "Stars League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/524.png"
+            },
+    "10844":  {
+                  "ccode":  "ENG",
+                  "name":  "Baller League",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10844.png"
+              },
+    "535":  {
+                "ccode":  "QAT",
+                "name":  "Qatar Stars League",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/535.png"
+            },
+    "9833":  {
+                 "ccode":  "INT",
+                 "name":  "Asian Games",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9833.png"
+             },
+    "9294":  {
+                 "ccode":  "ENG",
+                 "name":  "WSL 2",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9294.png"
+             },
+    "78":  {
+               "ccode":  "INT",
+               "name":  "FIFA Club World Cup",
+               "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/78.png"
+           },
+    "9656":  {
+                 "ccode":  "INT",
+                 "name":  "CONCACAF Championship U20",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9656.png"
+             },
+    "9382":  {
+                 "ccode":  "NOR",
+                 "name":  "Toppserien Qualification (W)",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9382.png"
+             },
+    "9081":  {
+                 "ccode":  "GER",
+                 "name":  "Bundesliga Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9081.png"
+             },
+    "9737":  {
+                 "ccode":  "SCO",
+                 "name":  "Championship playoff",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9737.png"
+             },
+    "10274":  {
+                  "ccode":  "BRA",
+                  "name":  "Gaúcho",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10274.png"
+              },
+    "151":  {
+                "ccode":  "TUR",
+                "name":  "Turkish Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/151.png"
+            },
+    "10668":  {
+                  "ccode":  "NED",
+                  "name":  "KNVB Beker Women",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10668.png"
+              },
+    "173":  {
+                "ccode":  "SVN",
+                "name":  "Prva Liga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/173.png"
+            },
+    "9941":  {
+                 "ccode":  "EGY",
+                 "name":  "Egypt Cup",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9941.png"
+             },
+    "297":  {
+                "ccode":  "INT",
+                "name":  "CONCACAF Champions Cup",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/297.png"
+            },
+    "10230":  {
+                  "ccode":  "PAR",
+                  "name":  "Copa Paraguay",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10230.png"
+              },
+    "208":  {
+                "ccode":  "GER",
+                "name":  "3. Liga",
+                "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/208.png"
+            },
+    "9667":  {
+                 "ccode":  "FRA",
+                 "name":  "Ligue 2 Qualification",
+                 "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/9667.png"
+             },
+    "10703":  {
+                  "ccode":  "INT",
+                  "name":  "FIFA Intercontinental Cup",
+                  "logo":  "https://images.fotmob.com/image_resources/logo/leaguelogo/dark/10703.png"
+              }
+}

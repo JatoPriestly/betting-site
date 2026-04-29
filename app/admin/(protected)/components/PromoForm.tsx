@@ -58,7 +58,34 @@ export default function PromoForm({ initialData, mode, id }: Props) {
     ...initialData,
   });
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
+
+  async function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+    setError("");
+
+    const data = new FormData();
+    data.append("file", file);
+
+    try {
+      const res = await fetch("/api/admin/upload", {
+        method: "POST",
+        body: data,
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || "Upload failed");
+      
+      setForm({ ...form, logoUrl: json.url });
+    } catch (err: any) {
+      setError(err.message || "Failed to upload image");
+    } finally {
+      setUploading(false);
+    }
+  }
 
   function handleChange(
     e: React.ChangeEvent<
@@ -140,8 +167,20 @@ export default function PromoForm({ initialData, mode, id }: Props) {
           </div>
         </div>
         <div className="form-field form-field--full">
-          <label htmlFor="logoUrl">Logo Image URL <span className="form-field__hint">(Overrides text/color if provided)</span></label>
-          <input id="logoUrl" name="logoUrl" type="url" value={form.logoUrl} onChange={handleChange} placeholder="https://example.com/logo.png" />
+          <label htmlFor="logoUrl">Logo Image <span className="form-field__hint">(Overrides text/color if provided)</span></label>
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: form.logoUrl ? '12px' : '0' }}>
+            <input id="logoUrl" name="logoUrl" type="url" value={form.logoUrl} onChange={handleChange} placeholder="https://example.com/logo.png or upload file" style={{ flex: 1 }} />
+            <label className="admin-btn-secondary" style={{ cursor: uploading ? 'not-allowed' : 'pointer', margin: 0, padding: '8px 16px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+              {uploading ? "Uploading..." : "Upload File"}
+              <input 
+                type="file" 
+                accept="image/*" 
+                onChange={handleFileUpload} 
+                style={{ display: 'none' }} 
+                disabled={uploading}
+              />
+            </label>
+          </div>
           {form.logoUrl && (
             <img src={form.logoUrl} alt="Logo preview" className="cover-preview" style={{ height: 60, objectFit: "contain", background: form.logoColor, padding: 8 }} />
           )}

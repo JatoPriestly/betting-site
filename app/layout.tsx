@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import WhatsAppWidget from "./components/WhatsAppWidget";
+import SystemAdManager from "./components/SystemAdManager";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,13 +12,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     template: "%s | Marya Bet",
-    default: "Marya Bet — Sports Betting Blog",
+    default: "Marya Bet | Premium Sports Betting",
   },
-  description:
-    "Expert sports betting strategies, tips, odds guides, and insider knowledge to help you bet smarter.",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-  ),
+  description: "Experience the ultimate edge in sports betting.",
 };
 
 export default function RootLayout({
@@ -25,23 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased`}>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                const storedTheme = localStorage.getItem('theme');
-                if (storedTheme) {
-                  document.documentElement.setAttribute('data-theme', storedTheme);
-                } else {
-                  document.documentElement.setAttribute('data-theme', 'light');
-                }
-              } catch (e) {}
-            `,
-          }}
-        />
         {children}
+        <WhatsAppWidget />
+        <SystemAdManager />
       </body>
     </html>
   );

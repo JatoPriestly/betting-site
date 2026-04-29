@@ -19,11 +19,18 @@ export interface BlogPost {
 }
 
 function readPosts(): BlogPost[] {
-  const raw = fs.readFileSync(dataFilePath, "utf-8");
-  return JSON.parse(raw) as BlogPost[];
+  try {
+    if (!fs.existsSync(dataFilePath)) return [];
+    const raw = fs.readFileSync(dataFilePath, "utf-8");
+    return JSON.parse(raw) as BlogPost[];
+  } catch {
+    return [];
+  }
 }
 
 function writePosts(posts: BlogPost[]): void {
+  const dir = path.dirname(dataFilePath);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(dataFilePath, JSON.stringify(posts, null, 2), "utf-8");
 }
 

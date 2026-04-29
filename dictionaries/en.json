@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "sports": "Sports",
+    "live": "Live",
+    "promos": "Promos",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title1": "THE PREMIER",
+    "title2": "SPORTS",
+    "title3": "BOOK.",
+    "desc": "Get the ultimate edge with exclusive odds, instant payouts, and the industry's highest value promotional codes.",
+    "btn": "START WINNING NOW"
+  },
+  "ticker": {
+    "promos": "PROMOS",
+    "offers": "OFFERS",
+    "bonuses": "BONUSES",
+    "codes": "CODES",
+    "boosts": "BOOSTS",
+    "rewards": "REWARDS"
+  },
+  "features": {
+    "title": "Why Choose MARYA",
+    "subtitle": "We don't just list codes. We negotiate the highest possible welcome bonuses across every major betting platform so you start with an unfair advantage.",
+    "feat1_title": "Exclusive Partnerships",
+    "feat1_desc": "Our codes offer higher match percentages and lower wagering requirements than the standard public offers found elsewhere.",
+    "feat2_title": "Verified Daily",
+    "feat2_desc": "Every single promo code is tested every 24 hours. No expired codes, no invalid links, just pure immediate value.",
+    "feat3_title": "Every Platform Covered",
+    "feat3_desc": "Whether you prefer advanced betting platforms or traditional sportsbooks, we have the definitive master code for your platform of choice.",
+    "feat4_title": "Touch Point Withdrawals",
+    "feat4_desc": "Experience seamless access to your winnings. Users can withdraw their funds directly and securely through our dedicated Touch Point Support system."
+  },
+  "steps": {
+    "title": "Claim Your Edge",
+    "step1_title": "Select Your Platform",
+    "step1_desc": "Browse our curated list of top-tier sportsbooks and betting platforms. We only feature platforms with proven payout histories and excellent odds.",
+    "step2_title": "Copy The Master Code",
+    "step2_desc": "Grab the exclusive MARYA promo code. This specific code triggers the elevated bonus tier during your registration process.",
+    "step3_title": "Maximize Your Bankroll",
+    "step3_desc": "Paste the code at signup, make your first deposit, and instantly receive your multiplied bankroll. You are now ready to dominate."
+  },
+  "leaderboard": {
+    "title": "Top Active Codes",
+    "subtitle": "The most lucrative, verified promotional codes available right now.",
+    "code1_name": "1XBET GLOBAL",
+    "code1_offer": "200% First Deposit Match up to $130",
+    "code1_val": "MARYVIP",
+    "code2_name": "STAKE CASINO",
+    "code2_offer": "Instant 5% Rakeback + $25 Free Play",
+    "code2_val": "MARYA25",
+    "code3_name": "BETMGM SPORTS",
+    "code3_offer": "Up to $1500 Paid Back in Bonus Bets",
+    "code3_val": "MARYMGM"
+  },
+  "stats": {
+    "claimed": "Bonuses Claimed",
+    "platforms": "Verified Platforms",
+    "bettors": "Active Bettors"
+  },
+  "cta": {
+    "title": "Stop Betting With Less Than You Deserve.",
+    "btn": "BROWSE ALL PROMO CODES"
+  },
+  "map": {
+    "title": "Global Operations",
+    "subtitle": "Highlighting our primary licensed territories across Africa and the globe.",
+    "active": "LICENSED TERRITORIES",
+    "upcoming": "REST OF WORLD"
+  },
+  "sports": {
+    "subtitle": "Explore Global Fixtures & Match Day Schedules",
+    "no_fixtures": "No fixtures scheduled for today. Check back tomorrow.",
+    "games_count": "GAMES",
+    "search_placeholder": "Search teams, leagues...",
+    "select_platform": "Select Betting Platform",
+    "bet_now": "BET ON",
+    "secure": "SECURE TRANSACTION"
+  }
+}

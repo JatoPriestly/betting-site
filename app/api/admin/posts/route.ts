@@ -1,22 +1,22 @@
 import { getAllPosts, savePost, slugify } from "@/app/lib/posts";
 import { cookies } from "next/headers";
 import { NextRequest } from "next/server";
+import { verifySessionToken, SESSION_COOKIE } from "@/app/lib/adminSession";
 
-function isAuthorized(cookieStore: Awaited<ReturnType<typeof cookies>>) {
-  return cookieStore.get("admin_auth")?.value === process.env.ADMIN_PIN;
+async function isAuthorized() {
+  const store = await cookies();
+  return verifySessionToken(store.get(SESSION_COOKIE)?.value ?? "");
 }
 
 export async function GET() {
-  const cookieStore = await cookies();
-  if (!isAuthorized(cookieStore)) {
+  if (!(await isAuthorized())) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   return Response.json(getAllPosts());
 }
 
 export async function POST(request: NextRequest) {
-  const cookieStore = await cookies();
-  if (!isAuthorized(cookieStore)) {
+  if (!(await isAuthorized())) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
 

@@ -1,17 +1,18 @@
 import { getPromoById, savePromo, deletePromo } from "@/app/lib/promos";
 import { cookies } from "next/headers";
 import { NextRequest } from "next/server";
+import { verifySessionToken, SESSION_COOKIE } from "@/app/lib/adminSession";
 
-function isAuthorized(cookieStore: Awaited<ReturnType<typeof cookies>>) {
-  return cookieStore.get("admin_auth")?.value === process.env.ADMIN_PIN;
+async function isAuthorized() {
+  const store = await cookies();
+  return verifySessionToken(store.get(SESSION_COOKIE)?.value ?? "");
 }
 
 export async function GET(
   _req: NextRequest,
   ctx: RouteContext<"/api/admin/promos/[id]">
 ) {
-  const cookieStore = await cookies();
-  if (!isAuthorized(cookieStore)) {
+  if (!(await isAuthorized())) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { id } = await ctx.params;
@@ -24,8 +25,7 @@ export async function PUT(
   request: NextRequest,
   ctx: RouteContext<"/api/admin/promos/[id]">
 ) {
-  const cookieStore = await cookies();
-  if (!isAuthorized(cookieStore)) {
+  if (!(await isAuthorized())) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { id } = await ctx.params;
@@ -40,8 +40,7 @@ export async function DELETE(
   _req: NextRequest,
   ctx: RouteContext<"/api/admin/promos/[id]">
 ) {
-  const cookieStore = await cookies();
-  if (!isAuthorized(cookieStore)) {
+  if (!(await isAuthorized())) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { id } = await ctx.params;

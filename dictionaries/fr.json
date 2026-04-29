@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "sports": "Sports",
+    "live": "En Direct",
+    "promos": "Promos",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title1": "LE PREMIER",
+    "title2": "BOOKMAKER",
+    "title3": "SPORTIF.",
+    "desc": "Obtenez l'avantage ultime avec des cotes exclusives, des paiements instantanés et les codes promotionnels de la plus haute valeur de l'industrie.",
+    "btn": "COMMENCEZ À GAGNER"
+  },
+  "ticker": {
+    "promos": "PROMOS",
+    "offers": "OFFRES",
+    "bonuses": "BONUS",
+    "codes": "CODES",
+    "boosts": "BOOSTS",
+    "rewards": "RÉCOMPENSES"
+  },
+  "features": {
+    "title": "Pourquoi Choisir MARYA",
+    "subtitle": "Nous ne nous contentons pas de lister des codes. Nous négocions les bonus de bienvenue les plus élevés sur chaque plateforme de paris majeure pour que vous commenciez avec un avantage.",
+    "feat1_title": "Partenariats Exclusifs",
+    "feat1_desc": "Nos codes offrent des pourcentages de correspondance plus élevés et des exigences de mise plus faibles que les offres publiques standard.",
+    "feat2_title": "Vérifié Quotidiennement",
+    "feat2_desc": "Chaque code promo est testé toutes les 24 heures. Pas de codes expirés, pas de liens invalides, juste une valeur immédiate.",
+    "feat3_title": "Toutes Les Plateformes Couvertes",
+    "feat3_desc": "Que vous préfériez les plateformes de paris avancées ou les bookmakers traditionnels, nous avons le code maître pour votre plateforme de choix.",
+    "feat4_title": "Retraits Touch Point",
+    "feat4_desc": "Profitez d'un accès fluide à vos gains. Les utilisateurs peuvent retirer leurs fonds directement et en toute sécurité via notre système dédié de support Touch Point."
+  },
+  "steps": {
+    "title": "Réclamez Votre Avantage",
+    "step1_title": "Sélectionnez Votre Plateforme",
+    "step1_desc": "Parcourez notre liste sélectionnée de paris sportifs et de plateformes de premier plan. Nous ne présentons que des plateformes avec un historique de paiement prouvé et d'excellentes cotes.",
+    "step2_title": "Copiez Le Code Maître",
+    "step2_desc": "Prenez le code promo exclusif MARYA. Ce code spécifique déclenche le niveau de bonus élevé lors de votre inscription.",
+    "step3_title": "Maximisez Votre Capital",
+    "step3_desc": "Collez le code lors de l'inscription, effectuez votre premier dépôt et recevez instantanément votre capital multiplié. Vous êtes maintenant prêt à dominer."
+  },
+  "leaderboard": {
+    "title": "Meilleurs Codes Actifs",
+    "subtitle": "Les codes promotionnels vérifiés les plus lucratifs disponibles actuellement.",
+    "code1_name": "1XBET GLOBAL",
+    "code1_offer": "200% de bonus sur le premier dépôt jusqu'à 130 $",
+    "code1_val": "MARYVIP",
+    "code2_name": "STAKE CASINO",
+    "code2_offer": "Rakeback instantané de 5% + 25 $ de jeu gratuit",
+    "code2_val": "MARYA25",
+    "code3_name": "BETMGM SPORTS",
+    "code3_offer": "Jusqu'à 1500 $ remboursés en paris bonus",
+    "code3_val": "MARYMGM"
+  },
+  "stats": {
+    "claimed": "Bonus Réclamés",
+    "platforms": "Plateformes Vérifiées",
+    "bettors": "Parieurs Actifs"
+  },
+  "cta": {
+    "title": "Arrêtez De Parier Avec Moins Que Ce Que Vous Méritez.",
+    "btn": "PARCOURIR TOUS LES CODES PROMO"
+  },
+  "map": {
+    "title": "Opérations Mondiales",
+    "subtitle": "Présentation de nos principaux territoires sous licence en Afrique et dans le monde.",
+    "active": "TERRITOIRES SOUS LICENCE",
+    "upcoming": "RESTE DU MONDE"
+  },
+  "sports": {
+    "subtitle": "Explorez les rencontres mondiales et les calendriers des matchs",
+    "no_fixtures": "Aucun match prévu pour aujourd'hui. Revenez demain.",
+    "games_count": "MATCHS",
+    "search_placeholder": "Rechercher des équipes, des ligues...",
+    "select_platform": "Sélectionner la plateforme",
+    "bet_now": "PARIER SUR",
+    "secure": "TRANSACTION SÉCURISÉE"
+  }
+}
