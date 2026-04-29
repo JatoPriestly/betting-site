@@ -12,7 +12,7 @@ export async function GET() {
   if (!(await isAuthorized())) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
-  return Response.json(getAllPromos());
+  return Response.json(await getAllPromos());
 }
 
 export async function POST(request: NextRequest) {
@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
       { status: 400 }
     );
   }
-  const promo = savePromo({
+  const promo = await savePromo({
     id: Date.now().toString(),
     rank: body.rank || 99,
     bookmaker: body.bookmaker,
@@ -49,3 +49,4 @@ export async function POST(request: NextRequest) {
   });
   return Response.json(promo, { status: 201 });
 }
+

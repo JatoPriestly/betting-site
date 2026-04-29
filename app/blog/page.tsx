@@ -80,9 +80,10 @@ function PostCard({ post }: { post: BlogPost }) {
   );
 }
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+export default async function BlogPage() {
+  const posts = await getAllPosts();
   const [featured, ...rest] = posts;
+
 
   return (
     <div className="blog-page">

@@ -12,7 +12,7 @@ export async function GET() {
   if (!(await isAuthorized())) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
-  return Response.json(getAllAds());
+  return Response.json(await getAllAds());
 }
 
 export async function POST(req: Request) {
@@ -21,7 +21,7 @@ export async function POST(req: Request) {
   }
   
   const body = await req.json();
-  const ads = getAllAds();
+  const ads = await getAllAds();
   
   const newAd: SystemAd = {
     id: `ad-${Date.now()}`,
@@ -38,7 +38,8 @@ export async function POST(req: Request) {
   };
   
   ads.push(newAd);
-  saveAds(ads);
+  await saveAds(ads);
   
   return Response.json(newAd);
 }
+

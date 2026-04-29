@@ -8,7 +8,8 @@ export default async function EditPromoPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const promo = getPromoById(id);
+  const promo = await getPromoById(id);
+
   if (!promo) notFound();
 
   const initialData = {

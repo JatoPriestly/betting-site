@@ -1,7 +1,6 @@
-import fs from "fs";
-import path from "path";
+import { kvGetJson, kvPutJson } from "./cfKv";
 
-const dataFilePath = path.join(process.cwd(), "data", "promos.json");
+const KV_KEY_PROMOS = "system_promos";
 
 export interface PromoCode {
   id: string;
@@ -25,43 +24,47 @@ export interface PromoCode {
   active: boolean;
 }
 
-function readPromos(): PromoCode[] {
-  const raw = fs.readFileSync(dataFilePath, "utf-8");
-  return JSON.parse(raw) as PromoCode[];
+async function readPromos(): Promise<PromoCode[]> {
+  const promos = await kvGetJson<PromoCode[]>(KV_KEY_PROMOS);
+  return promos || [];
 }
 
-function writePromos(promos: PromoCode[]): void {
-  fs.writeFileSync(dataFilePath, JSON.stringify(promos, null, 2), "utf-8");
+async function writePromos(promos: PromoCode[]): Promise<void> {
+  await kvPutJson(KV_KEY_PROMOS, promos, 3600 * 24 * 365);
 }
 
-export function getAllPromos(): PromoCode[] {
-  return readPromos().sort((a, b) => a.rank - b.rank);
+export async function getAllPromos(): Promise<PromoCode[]> {
+  const promos = await readPromos();
+  return promos.sort((a, b) => a.rank - b.rank);
 }
 
-export function getActivePromos(): PromoCode[] {
-  return getAllPromos().filter((p) => p.active);
+export async function getActivePromos(): Promise<PromoCode[]> {
+  const promos = await getAllPromos();
+  return promos.filter((p) => p.active);
 }
 
-export function getPromoById(id: string): PromoCode | undefined {
-  return readPromos().find((p) => p.id === id);
+export async function getPromoById(id: string): Promise<PromoCode | undefined> {
+  const promos = await readPromos();
+  return promos.find((p) => p.id === id);
 }
 
-export function savePromo(promo: PromoCode): PromoCode {
-  const promos = readPromos();
+export async function savePromo(promo: PromoCode): Promise<PromoCode> {
+  const promos = await readPromos();
   const idx = promos.findIndex((p) => p.id === promo.id);
   if (idx >= 0) {
     promos[idx] = promo;
   } else {
     promos.push(promo);
   }
-  writePromos(promos);
+  await writePromos(promos);
   return promo;
 }
 
-export function deletePromo(id: string): boolean {
-  const promos = readPromos();
+export async function deletePromo(id: string): Promise<boolean> {
+  const promos = await readPromos();
   const filtered = promos.filter((p) => p.id !== id);
   if (filtered.length === promos.length) return false;
-  writePromos(filtered);
+  await writePromos(filtered);
   return true;
 }
+

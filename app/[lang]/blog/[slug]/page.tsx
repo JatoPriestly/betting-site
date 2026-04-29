@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 // Pre-generate all known post slugs at build time
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
   return posts.map((p) => ({ slug: p.slug }));
 }
 
@@ -16,8 +16,9 @@ export async function generateMetadata({
   params: Promise<{ lang: string; slug: string }>;
 }): Promise<Metadata> {
   const { lang, slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
+
 
   const canonical = `/${lang}/blog/${slug}`;
   return {
@@ -83,13 +84,14 @@ export default async function BlogPostPage({
   params: Promise<{ lang: string; slug: string }>;
 }) {
   const { lang, slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  const allPosts = getAllPosts();
+  const allPosts = await getAllPosts();
   const related = allPosts
     .filter((p) => p.slug !== slug && p.category === post.category)
     .slice(0, 3);
+
 
   const categoryColor = CATEGORY_COLORS[post.category] ?? "#e63946";
 

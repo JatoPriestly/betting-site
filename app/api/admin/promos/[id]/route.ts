@@ -16,7 +16,7 @@ export async function GET(
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { id } = await ctx.params;
-  const promo = getPromoById(id);
+  const promo = await getPromoById(id);
   if (!promo) return Response.json({ error: "Not found" }, { status: 404 });
   return Response.json(promo);
 }
@@ -29,10 +29,10 @@ export async function PUT(
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { id } = await ctx.params;
-  const existing = getPromoById(id);
+  const existing = await getPromoById(id);
   if (!existing) return Response.json({ error: "Not found" }, { status: 404 });
   const body = await request.json();
-  const updated = savePromo({ ...existing, ...body, id });
+  const updated = await savePromo({ ...existing, ...body, id });
   return Response.json(updated);
 }
 
@@ -44,7 +44,8 @@ export async function DELETE(
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { id } = await ctx.params;
-  const ok = deletePromo(id);
+  const ok = await deletePromo(id);
   if (!ok) return Response.json({ error: "Not found" }, { status: 404 });
   return Response.json({ ok: true });
 }
+

@@ -1,7 +1,6 @@
-import fs from "fs";
-import path from "path";
+import { kvGetJson, kvPutJson } from "./cfKv";
 
-const dataFilePath = path.join(process.cwd(), "data", "posts.json");
+const KV_KEY_POSTS = "blog_posts";
 
 export interface BlogPost {
   id: string;
@@ -18,50 +17,45 @@ export interface BlogPost {
   keywords: string[];
 }
 
-function readPosts(): BlogPost[] {
-  try {
-    if (!fs.existsSync(dataFilePath)) return [];
-    const raw = fs.readFileSync(dataFilePath, "utf-8");
-    return JSON.parse(raw) as BlogPost[];
-  } catch {
-    return [];
-  }
+async function readPosts(): Promise<BlogPost[]> {
+  const posts = await kvGetJson<BlogPost[]>(KV_KEY_POSTS);
+  return posts || [];
 }
 
-function writePosts(posts: BlogPost[]): void {
-  const dir = path.dirname(dataFilePath);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(dataFilePath, JSON.stringify(posts, null, 2), "utf-8");
+async function writePosts(posts: BlogPost[]): Promise<void> {
+  await kvPutJson(KV_KEY_POSTS, posts, 3600 * 24 * 365);
 }
 
-export function getAllPosts(): BlogPost[] {
-  return readPosts().sort(
+export async function getAllPosts(): Promise<BlogPost[]> {
+  const posts = await readPosts();
+  return posts.sort(
     (a, b) =>
       new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   );
 }
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
-  return readPosts().find((p) => p.slug === slug);
+export async function getPostBySlug(slug: string): Promise<BlogPost | undefined> {
+  const posts = await readPosts();
+  return posts.find((p) => p.slug === slug);
 }
 
-export function savePost(post: BlogPost): BlogPost {
-  const posts = readPosts();
+export async function savePost(post: BlogPost): Promise<BlogPost> {
+  const posts = await readPosts();
   const existingIndex = posts.findIndex((p) => p.slug === post.slug);
   if (existingIndex >= 0) {
     posts[existingIndex] = post;
   } else {
     posts.push(post);
   }
-  writePosts(posts);
+  await writePosts(posts);
   return post;
 }
 
-export function deletePost(slug: string): boolean {
-  const posts = readPosts();
+export async function deletePost(slug: string): Promise<boolean> {
+  const posts = await readPosts();
   const filtered = posts.filter((p) => p.slug !== slug);
   if (filtered.length === posts.length) return false;
-  writePosts(filtered);
+  await writePosts(filtered);
   return true;
 }
 
@@ -72,3 +66,4 @@ export function slugify(text: string): string {
     .replace(/[\s_-]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
+

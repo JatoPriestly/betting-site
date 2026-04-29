@@ -13,7 +13,8 @@ export const metadata: Metadata = {
 export default async function Home({ params }: { params: Promise<{ lang: 'en' | 'fr' | 'es' }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  const topPromos = getActivePromos().slice(0, 3);
+  const topPromos = (await getActivePromos()).slice(0, 3);
+
 
   return (
     <>

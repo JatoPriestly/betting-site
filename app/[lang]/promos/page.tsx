@@ -190,8 +190,9 @@ export default async function PromosPage({
 }) {
   const { lang } = await params;
   const dict = t[(lang as keyof typeof t)] ?? t.en;
-  const promos = getActivePromos();
+  const promos = await getActivePromos();
   const monthYear = new Date().toLocaleDateString(
+
     lang === "es" ? "es-ES" : lang === "fr" ? "fr-FR" : "en-GB",
     { month: "long", year: "numeric" }
   );

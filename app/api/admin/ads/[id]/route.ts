@@ -13,7 +13,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ id: stri
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { id } = await params;
-  const ad = getAllAds().find(a => a.id === id);
+  const ad = (await getAllAds()).find(a => a.id === id);
   if (!ad) return Response.json({ error: "Not found" }, { status: 404 });
   return Response.json(ad);
 }
@@ -25,13 +25,13 @@ export async function PUT(req: Request, { params }: { params: Promise<{ id: stri
   
   const { id } = await params;
   const body = await req.json();
-  let ads = getAllAds();
+  let ads = await getAllAds();
   
   const idx = ads.findIndex(a => a.id === id);
   if (idx === -1) return Response.json({ error: "Not found" }, { status: 404 });
   
   ads[idx] = { ...ads[idx], ...body };
-  saveAds(ads);
+  await saveAds(ads);
   
   return Response.json(ads[idx]);
 }
@@ -42,9 +42,10 @@ export async function DELETE(req: Request, { params }: { params: Promise<{ id: s
   }
   
   const { id } = await params;
-  let ads = getAllAds();
+  let ads = await getAllAds();
   ads = ads.filter(a => a.id !== id);
-  saveAds(ads);
+  await saveAds(ads);
   
   return Response.json({ ok: true });
 }
+

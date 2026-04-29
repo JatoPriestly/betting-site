@@ -12,7 +12,7 @@ export async function GET() {
   if (!(await isAuthorized())) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
-  return Response.json(getAllPosts());
+  return Response.json(await getAllPosts());
 }
 
 export async function POST(request: NextRequest) {
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
   const slug = body.slug?.trim() || slugify(body.title);
   const now = new Date().toISOString();
 
-  const post = savePost({
+  const post = await savePost({
     id: Date.now().toString(),
     slug,
     title: body.title,
@@ -46,3 +46,4 @@ export async function POST(request: NextRequest) {
 
   return Response.json(post, { status: 201 });
 }
+

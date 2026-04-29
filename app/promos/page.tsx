@@ -47,8 +47,9 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-export default function PromosPage() {
-  const promos = getActivePromos();
+export default async function PromosPage() {
+  const promos = await getActivePromos();
+
   const now = new Date();
   const monthYear = now.toLocaleDateString("en-US", {
     month: "long",

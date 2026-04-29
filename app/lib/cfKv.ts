@@ -17,59 +17,19 @@ const CF_ENABLED = !!(ACCOUNT_ID && NAMESPACE_ID && API_TOKEN);
 
 const BASE = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/storage/kv/namespaces/${NAMESPACE_ID}`;
 
-import fs from "fs";
-import path from "path";
-
-// ---------------------------------------------------------------------------
-// Local fallback: file-based JSON with TTL (persists across Next.js reloads)
-// ---------------------------------------------------------------------------
-interface LocalEntry {
-  value: string;
-  expiresAt: number;
-}
-
-const LOCAL_DB_PATH = path.join(process.cwd(), "data", "kv_fallback.json");
-
-function getLocalDb(): Record<string, LocalEntry> {
-  try {
-    if (fs.existsSync(LOCAL_DB_PATH)) {
-      return JSON.parse(fs.readFileSync(LOCAL_DB_PATH, "utf8"));
-    }
-  } catch (e) {}
-  return {};
-}
-
-function saveLocalDb(db: Record<string, LocalEntry>) {
-  try {
-    const dir = path.dirname(LOCAL_DB_PATH);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(LOCAL_DB_PATH, JSON.stringify(db, null, 2));
-  } catch (e) {}
-}
-
+// Local fallback is disabled in non-Node environments (Edge)
 function localGet(key: string): string | null {
-  const db = getLocalDb();
-  const e = db[key];
-  if (!e) return null;
-  if (e.expiresAt < Date.now()) {
-    delete db[key];
-    saveLocalDb(db);
-    return null;
-  }
-  return e.value;
+  return null;
 }
 
 function localPut(key: string, value: string, ttlSeconds: number): void {
-  const db = getLocalDb();
-  db[key] = { value, expiresAt: Date.now() + ttlSeconds * 1000 };
-  saveLocalDb(db);
+  // No-op in Edge
 }
 
 function localDelete(key: string): void {
-  const db = getLocalDb();
-  delete db[key];
-  saveLocalDb(db);
+  // No-op in Edge
 }
+
 
 // ---------------------------------------------------------------------------
 // Public API

@@ -16,7 +16,7 @@ export async function GET(
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { slug } = await ctx.params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) return Response.json({ error: "Not found" }, { status: 404 });
   return Response.json(post);
 }
@@ -29,11 +29,11 @@ export async function PUT(
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { slug } = await ctx.params;
-  const existing = getPostBySlug(slug);
+  const existing = await getPostBySlug(slug);
   if (!existing) return Response.json({ error: "Not found" }, { status: 404 });
 
   const body = await request.json();
-  const updated = savePost({ ...existing, ...body, slug });
+  const updated = await savePost({ ...existing, ...body, slug });
   return Response.json(updated);
 }
 
@@ -45,7 +45,8 @@ export async function DELETE(
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { slug } = await ctx.params;
-  const ok = deletePost(slug);
+  const ok = await deletePost(slug);
   if (!ok) return Response.json({ error: "Not found" }, { status: 404 });
   return Response.json({ ok: true });
 }
+

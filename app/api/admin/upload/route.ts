@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { verifySessionToken, SESSION_COOKIE } from "@/app/lib/adminSession";
-import fs from "fs";
-import path from "path";
+
 
 // Triggering Turbopack recompile to clear cached AWS SDK error
 

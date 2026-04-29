@@ -8,7 +8,8 @@ export default async function EditPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
+
   if (!post) notFound();
 
   // Convert keywords array to comma-separated string for the form

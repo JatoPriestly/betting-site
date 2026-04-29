@@ -62,7 +62,8 @@ export default async function BlogPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
+
 
   return (
     <>
