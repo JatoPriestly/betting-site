@@ -8,15 +8,20 @@ const rye = Rye({
   subsets: ["latin"],
 });
 
+import { getDictionary } from "./dictionaries";
+
 export const metadata: Metadata = {
   title: "MARYA BET | Premium Sports Betting",
   description: "Experience the ultimate edge in sports betting.",
 };
 
-export default function Home() {
+export default async function Home() {
+  const dict = await getDictionary('en');
+  
   return (
     <>
-      <Navbar />
+      <Navbar dict={dict} lang="en" />
+
       <style dangerouslySetInnerHTML={{__html: `
         .hero-section {
           min-height: 100vh;
