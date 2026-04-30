@@ -102,7 +102,7 @@ export default async function Image({
               {author || "Marya Bet"}
             </span>
             <span style={{ color: "#94a3b8", fontSize: 16 }}>
-              dicebets.com
+              MARYAbets.com
             </span>
           </div>
         </div>

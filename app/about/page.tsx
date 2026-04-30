@@ -16,7 +16,7 @@ export default function AboutPage() {
       <section className="about-section" style={{ marginBottom: "40px", padding: "32px", background: "var(--card-bg)", borderRadius: "16px", border: "1px solid var(--card-border)" }}>
         <h2 style={{ fontSize: "1.5rem", fontWeight: "700", marginBottom: "16px", color: "var(--text-home)" }}>Affiliate Disclosure</h2>
         <p style={{ color: "var(--text-home-muted)", lineHeight: "1.6", marginBottom: "16px" }}>
-          Transparency is our core value. Marya Bet is an independent affiliate website. This means we may earn a commission if you click on the links to our partnered sportsbooks (such as Stake, 1xBet, or Betway) and create an account. 
+          Transparency is our core value. Marya Bet is an independent affiliate website. This means we may earn a commission if you click on the links to our partnered sportsbooks (such as Stake, 1xBet, or Betway) and create an account.
         </p>
         <p style={{ color: "var(--text-home-muted)", lineHeight: "1.6" }}>
           This compensation helps keep our content, guides, and premium promo codes completely free for our users. Rest assured, this does not affect our independent reviews, nor does it alter the odds or services provided by the bookmakers.
@@ -35,7 +35,7 @@ export default function AboutPage() {
 
       <section className="about-section" style={{ textAlign: "center", marginTop: "60px" }}>
         <h2 style={{ fontSize: "1.5rem", fontWeight: "700", marginBottom: "16px", color: "var(--text-home)" }}>Want to get in touch?</h2>
-        <a href="mailto:contact@dicebets.example.com" className="home-btn home-btn--primary">Contact Us</a>
+        <a href="mailto:contact@MARYAbets.example.com" className="home-btn home-btn--primary">Contact Us</a>
       </section>
     </main>
   );

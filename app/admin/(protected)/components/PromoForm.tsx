@@ -78,7 +78,7 @@ export default function PromoForm({ initialData, mode, id }: Props) {
       });
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || "Upload failed");
-      
+
       setForm({ ...form, logoUrl: json.url });
     } catch (err: any) {
       setError(err.message || "Failed to upload image");
@@ -172,11 +172,11 @@ export default function PromoForm({ initialData, mode, id }: Props) {
             <input id="logoUrl" name="logoUrl" type="url" value={form.logoUrl} onChange={handleChange} placeholder="https://example.com/logo.png or upload file" style={{ flex: 1 }} />
             <label className="admin-btn-secondary" style={{ cursor: uploading ? 'not-allowed' : 'pointer', margin: 0, padding: '8px 16px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
               {uploading ? "Uploading..." : "Upload File"}
-              <input 
-                type="file" 
-                accept="image/*" 
-                onChange={handleFileUpload} 
-                style={{ display: 'none' }} 
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleFileUpload}
+                style={{ display: 'none' }}
                 disabled={uploading}
               />
             </label>
@@ -189,7 +189,7 @@ export default function PromoForm({ initialData, mode, id }: Props) {
         {/* Promo code */}
         <div className="form-field">
           <label htmlFor="promoCode">Promo Code *</label>
-          <input id="promoCode" name="promoCode" value={form.promoCode} onChange={handleChange} required placeholder="DICEVIP" style={{ fontFamily: "monospace", letterSpacing: 2, textTransform: "uppercase" }} />
+          <input id="promoCode" name="promoCode" value={form.promoCode} onChange={handleChange} required placeholder="MARYAVIP" style={{ fontFamily: "monospace", letterSpacing: 2, textTransform: "uppercase" }} />
         </div>
         <div className="form-field">
           <label htmlFor="category">Category</label>
@@ -215,7 +215,7 @@ export default function PromoForm({ initialData, mode, id }: Props) {
         </div>
         <div className="form-field">
           <label htmlFor="affiliateUrl">Affiliate / Offer URL</label>
-          <input id="affiliateUrl" name="affiliateUrl" type="url" value={form.affiliateUrl} onChange={handleChange} placeholder="https://bookmaker.com/?ref=dice" />
+          <input id="affiliateUrl" name="affiliateUrl" type="url" value={form.affiliateUrl} onChange={handleChange} placeholder="https://bookmaker.com/?ref=MARYA" />
         </div>
 
         {/* Description */}

@@ -14,9 +14,9 @@ export default function FAQPage() {
 
       <div className="faq-list" style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
         <div className="faq-item" style={{ background: "var(--card-bg)", padding: "32px", borderRadius: "16px", border: "1px solid var(--card-border)" }}>
-          <h3 style={{ fontSize: "1.2rem", fontWeight: "700", marginBottom: "12px", color: "var(--text-home)" }}>How do I claim the DICEVIP promo code?</h3>
+          <h3 style={{ fontSize: "1.2rem", fontWeight: "700", marginBottom: "12px", color: "var(--text-home)" }}>How do I claim the MARYAVIP promo code?</h3>
           <p style={{ color: "var(--text-home-muted)", lineHeight: "1.6" }}>
-            To claim your exclusive DICEVIP bonus, click the "Get Started" link next to your preferred bookmaker on our Promos page. During registration, ensure the code "DICEVIP" is entered in the promotional code field. Your welcome bonus will be automatically credited upon your first qualifying deposit.
+            To claim your exclusive MARYA VIP bonus, click the "Get Started" link next to your preferred bookmaker on our Promos page. During registration, ensure the code "MARYAVIP" is entered in the promotional code field. Your welcome bonus will be automatically credited upon your first qualifying deposit.
           </p>
         </div>
 
