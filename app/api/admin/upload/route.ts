@@ -24,11 +24,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "No file uploaded" }, { status: 400 });
     }
 
-    const buffer = Buffer.from(await file.arrayBuffer());
+    const arrayBuffer = await file.arrayBuffer();
+    const uint8Array = new Uint8Array(arrayBuffer);
     
     // Create a unique filename
-    const ext = file.name.split(".").pop() || "png";
-    const filename = `upload-${Date.now()}.${ext}`;
+    const originalName = file.name || "image.png";
+    const ext = originalName.split(".").pop() || "png";
+    const filename = `promo-${Date.now()}.${ext}`;
 
     const { S3Client, PutObjectCommand } = await import("@aws-sdk/client-s3");
     
@@ -45,17 +47,36 @@ export async function POST(req: NextRequest) {
       new PutObjectCommand({
         Bucket: process.env.CF_R2_BUCKET_NAME!,
         Key: filename,
-        Body: buffer,
+        Body: uint8Array,
         ContentType: file.type || "image/png",
       })
     );
 
-    // If you have a custom domain for R2, use it. Otherwise fallback to a public R2.dev URL or similar.
-    // Using the CF_R2_PUBLIC_URL from your .env.local
-    const baseUrl = process.env.CF_R2_PUBLIC_URL?.replace(/\/$/, "") || `https://${process.env.CF_R2_ACCOUNT_ID}.r2.cloudflarestorage.com/${process.env.CF_R2_BUCKET_NAME}`;
+    // Construction of the public URL
+    let baseUrl = process.env.CF_R2_PUBLIC_URL?.replace(/\/$/, "") || "";
+    
+    // If baseUrl is missing or looks like the S3 API endpoint (which is NOT public), 
+    // we attempt a fallback, but warn the user.
+    const isApiEndpoint = baseUrl.includes("r2.cloudflarestorage.com");
+    
+    if (!baseUrl || isApiEndpoint) {
+      console.warn(`[Upload] CF_R2_PUBLIC_URL is ${!baseUrl ? "missing" : "set to an API endpoint"}. Browsers will not be able to view images.`);
+      
+      // Attempting a common fallback format, though this often requires a worker or custom domain.
+      // The most reliable way is for the user to provide a pub-xxx.r2.dev or custom domain.
+      if (isApiEndpoint && !baseUrl.includes(process.env.CF_R2_BUCKET_NAME!)) {
+         // If it's the base account endpoint, add the bucket name
+         baseUrl = `${baseUrl}/${process.env.CF_R2_BUCKET_NAME}`;
+      }
+    }
+    
     const fileUrl = `${baseUrl}/${filename}`;
 
-    return NextResponse.json({ url: fileUrl });
+    return NextResponse.json({ 
+      url: fileUrl, 
+      filename,
+      note: isApiEndpoint ? "Warning: Your public URL is set to the R2 API endpoint. You must enable 'Public Bucket' or a 'Custom Domain' in Cloudflare dashboard and update CF_R2_PUBLIC_URL." : undefined
+    });
   } catch (error: any) {
     console.error("Upload error:", error);
     return NextResponse.json({ error: error.message || "Upload failed" }, { status: 500 });

@@ -2,6 +2,7 @@ import { getAllPromos, savePromo, deletePromo } from "@/app/lib/promos";
 import { cookies } from "next/headers";
 import { NextRequest } from "next/server";
 import { verifySessionToken, SESSION_COOKIE } from "@/app/lib/adminSession";
+import { revalidatePath } from "next/cache";
 
 async function isAuthorized() {
   const store = await cookies();
@@ -47,6 +48,8 @@ export async function POST(request: NextRequest) {
     tags: body.tags || [],
     active: body.active ?? true,
   });
+  revalidatePath("/[lang]/promos", "page");
+  revalidatePath("/", "page");
   return Response.json(promo, { status: 201 });
 }
 

@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import { getDictionary } from "../dictionaries";
 import { getActivePromos } from "@/app/lib/promos";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "MARYA | Premium Sports Betting",
   description: "Experience the ultimate edge in sports betting.",

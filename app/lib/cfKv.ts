@@ -65,16 +65,22 @@ export async function kvPut(
 
   if (!CF_ENABLED) return;
   try {
-    const form = new FormData();
-    form.append("value", value);
-    form.append("expiration_ttl", String(ttlSeconds));
-    const res = await fetch(`${BASE}/values/${encodeURIComponent(key)}`, {
+    const url = new URL(`${BASE}/values/${encodeURIComponent(key)}`);
+    if (ttlSeconds > 0) {
+      url.searchParams.set("expiration_ttl", String(ttlSeconds));
+    }
+
+    const res = await fetch(url.toString(), {
       method: "PUT",
-      headers: { Authorization: `Bearer ${API_TOKEN}` },
-      body: form,
+      headers: { 
+        Authorization: `Bearer ${API_TOKEN}`,
+        "Content-Type": "text/plain",
+      },
+      body: value,
     });
     if (!res.ok) {
-      console.warn(`[KV] PUT ${key} failed: ${res.status}`);
+      const errText = await res.text();
+      console.warn(`[KV] PUT ${key} failed: ${res.status} - ${errText}`);
     }
   } catch (err: any) {
     console.warn("[KV] PUT error:", err?.message);
