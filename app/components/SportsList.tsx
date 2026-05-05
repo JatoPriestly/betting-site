@@ -11,9 +11,9 @@ interface SportsListProps {
 }
 
 const PLATFORMS = [
-  { id: "betpawa", name: "Betpawa", color: "#00ff00" },
-  { id: "melbet", name: "Melbet", color: "#f5a623" },
-  { id: "1xbet", name: "1xbet", color: "#007bff" }
+  { id: "betpawa", name: "Betpawa", color: "#00ff00", url: "https://www.betpawa.com" },
+  { id: "melbet", name: "Melbet", color: "#f5a623", url: "https://www.melbet.com" },
+  { id: "1xbet", name: "1xbet", color: "#007bff", url: "https://bit.ly/3oNcJaS" }
 ];
 
 export default function SportsList({ initialLeagues, groupedFixtures, dict, lang }: SportsListProps) {
@@ -279,7 +279,7 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
                         {/* Bet Action */}
                         <div style={{ width: "200px", display: "flex", flexDirection: "column", gap: "8px", alignItems: "flex-end" }}>
                           <button 
-                            onClick={() => window.open(`https://www.${selectedPlatform.id}.com`, '_blank')}
+                            onClick={() => window.open(selectedPlatform.url, '_blank')}
                             style={{ 
                               background: selectedPlatform.color, 
                               color: "#000", 
