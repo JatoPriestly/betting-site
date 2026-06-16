@@ -6,6 +6,8 @@ import Link from "next/link";
 import { getLeagueMetadata, cleanLeagueName } from "../../lib/leagueUtils";
 import LiveMatchCard from "../../components/LiveMatchCard";
 
+export const dynamic = "force-dynamic";
+
 export default async function LivePage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang as any);

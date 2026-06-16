@@ -4,11 +4,7 @@ import Footer from "../../../components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-// Pre-generate all known post slugs at build time
-export async function generateStaticParams() {
-  const posts = await getAllPosts();
-  return posts.map((p) => ({ slug: p.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,

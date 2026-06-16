@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import CopyButton from "./CopyButton";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Best Betting Promo Codes",
   description:

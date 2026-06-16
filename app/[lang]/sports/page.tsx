@@ -5,6 +5,8 @@ import Footer from "../../components/Footer";
 import SportsList from "../../components/SportsList";
 import { getLeagueMetadata, cleanLeagueName } from "../../lib/leagueUtils";
 
+export const dynamic = "force-dynamic";
+
 export default async function SportsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang as any);

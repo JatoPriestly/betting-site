@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Newspaper } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Blog",
   description:

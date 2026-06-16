@@ -41,6 +41,7 @@ export async function kvGet(key: string): Promise<string | null> {
   try {
     const res = await fetch(`${BASE}/values/${encodeURIComponent(key)}`, {
       headers: { Authorization: `Bearer ${API_TOKEN}` },
+      cache: "no-store",
     });
     if (res.status === 404) return null;
     if (!res.ok) {
