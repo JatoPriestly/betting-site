@@ -40,38 +40,39 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
           display: flex;
           gap: 40px;
           font-weight: 700;
-          color: #FFFFFF;
+          color: #ffffff;
           text-transform: uppercase;
           letter-spacing: 0.05em;
-          background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+          background: linear-gradient(135deg, rgba(22, 86, 140, 0.85) 0%, rgba(18, 72, 115, 0.9) 100%);
           backdrop-filter: blur(16px);
           -webkit-backdrop-filter: blur(16px);
-          border: 1px solid rgba(255, 255, 255, 0.3);
-          border-top-color: rgba(255, 255, 255, 0.5);
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          border-top-color: rgba(255, 255, 255, 0.3);
           border-bottom-color: rgba(255, 255, 255, 0.1);
           border-radius: 9999px;
           padding: 14px 48px;
-          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 2px 4px 0 rgba(255, 255, 255, 0.6), inset 0 -2px 10px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 8px 32px 0 rgba(18, 72, 115, 0.3), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
           transition: all 0.3s ease;
         }
         .nav-link-item {
           text-decoration: none;
           color: inherit;
-          text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+          text-shadow: none;
           transition: all 0.2s;
         }
         .nav-link-item:hover {
-          text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+          color: var(--cyan);
+          text-shadow: 0 0 20px rgba(47, 165, 232, 0.6);
         }
         .locale-switcher {
           display: flex;
           gap: 12px;
           font-weight: bold;
-          background: rgba(0,0,0,0.6);
+          background: rgba(22, 86, 140, 0.9);
           padding: 10px 18px;
           border-radius: 12px;
           backdrop-filter: blur(8px);
-          border: 1px solid rgba(255,255,255,0.1);
+          border: 1px solid rgba(255, 255, 255, 0.18);
         }
         .locale-link {
           text-decoration: none;
@@ -81,11 +82,11 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
         .mobile-menu-btn {
           display: none;
           z-index: 101;
-          background: rgba(255,255,255,0.1);
-          border: 1px solid rgba(255,255,255,0.2);
+          background: rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(255, 255, 255, 0.2);
           padding: 8px 16px;
           border-radius: 9999px;
-          color: #fff;
+          color: #ffffff;
           font-weight: 800;
           cursor: pointer;
           backdrop-filter: blur(8px);
@@ -107,7 +108,7 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
             align-items: center;
             border-radius: 0;
             gap: 30px;
-            background: rgba(0,0,0,0.95);
+            background: rgba(18, 72, 115, 0.98);
             backdrop-filter: blur(24px);
             padding: 40px;
             font-size: 1.5rem;
@@ -137,10 +138,10 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
                   startOffset="50%"
                   textAnchor="middle"
                   style={{
-                    fill: "#FFFFFF",
+                    fill: "#ffffff",
                     fontSize: "36px",
                     letterSpacing: "0.05em",
-                    textShadow: "3px 3px 0px #333333"
+                    textShadow: "3px 3px 0px var(--cyan)"
                   }}
                 >
                   MARYA
@@ -165,9 +166,9 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
 
         {/* Locale Switcher - Right (Desktop) or Bottom (Mobile) */}
         <div className="locale-switcher">
-          <Link href="/en" className="locale-link" style={{ color: lang === "en" ? "#fff" : "#777" }}>EN</Link>
-          <Link href="/fr" className="locale-link" style={{ color: lang === "fr" ? "#fff" : "#777" }}>FR</Link>
-          <Link href="/es" className="locale-link" style={{ color: lang === "es" ? "#fff" : "#777" }}>ES</Link>
+          <Link href="/en" className="locale-link" style={{ color: lang === "en" ? "var(--cyan)" : "var(--text-muted)" }}>EN</Link>
+          <Link href="/fr" className="locale-link" style={{ color: lang === "fr" ? "var(--cyan)" : "var(--text-muted)" }}>FR</Link>
+          <Link href="/es" className="locale-link" style={{ color: lang === "es" ? "var(--cyan)" : "var(--text-muted)" }}>ES</Link>
         </div>
       </nav>
     </>

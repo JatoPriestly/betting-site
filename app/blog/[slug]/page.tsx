@@ -1,8 +1,10 @@
-import { getPostBySlug, getAllPosts } from "@/app/lib/posts";
-import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
+import { getAllPosts, getPostBySlug } from "@/app/lib/posts";
 import { notFound } from "next/navigation";
+import Footer from "@/app/components/Footer";
+import Link from "next/link";
+import type { Metadata } from "next";
+import { getActivePromos } from "@/app/lib/promos";
+import PromoCodeStrip from "@/app/components/PromoCodeStrip";
 
 export const dynamic = "force-dynamic";
 
@@ -13,47 +15,67 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-  if (!post) return {};
-
+  if (!post) return { title: "Post Not Found" };
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const canonical = `/blog/${slug}`;
 
   return {
     title: post.seoTitle || post.title,
     description: post.seoDescription || post.excerpt,
     keywords: post.keywords,
-    authors: [{ name: post.author }],
+    authors: post.author ? [{ name: post.author }] : undefined,
+    alternates: {
+      canonical,
+      languages: {
+        en: `/en/blog/${slug}`,
+        fr: `/fr/blog/${slug}`,
+        es: `/es/blog/${slug}`,
+      },
+    },
     openGraph: {
       title: post.seoTitle || post.title,
       description: post.seoDescription || post.excerpt,
       type: "article",
+      url: canonical,
       publishedTime: post.publishedAt,
-      authors: [post.author],
-      images: [
-        {
-          url: `${siteUrl}/blog/${post.slug}/opengraph-image`,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
+      authors: post.author ? [post.author] : undefined,
+      images: post.coverImage
+        ? [{ url: post.coverImage, width: 1200, height: 630, alt: post.title }]
+        : [],
     },
     twitter: {
       card: "summary_large_image",
       title: post.seoTitle || post.title,
       description: post.seoDescription || post.excerpt,
-      images: [`${siteUrl}/blog/${post.slug}/opengraph-image`],
+      images: post.coverImage ? [post.coverImage] : [],
     },
   };
 }
 
-function formatDate(iso: string) {
+function estimateReadTime(content: string): string {
+  const words = content.replace(/<[^>]*>/g, "").split(/\s+/).length;
+  return `${Math.max(1, Math.round(words / 200))} min read`;
+}
+
+function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
 }
+
+const CATEGORY_COLORS: Record<string, string> = {
+  Strategy: "#2fa5e8",
+  Football: "#ffd54f",
+  Basketball: "#ff9f1c",
+  Tennis: "#8338ec",
+  Crypto: "#3a86ff",
+  "Horse Racing": "#2fa5e8",
+  Basics: "#06d6a0",
+  General: "#adb5bd",
+};
 
 export default async function BlogPostPage({
   params,
@@ -64,7 +86,13 @@ export default async function BlogPostPage({
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
+  const allPosts = await getAllPosts();
+  const related = allPosts
+    .filter((p) => p.slug !== slug && p.category === post.category)
+    .slice(0, 3);
+  const promos = (await getActivePromos()).slice(0, 5);
 
+  const categoryColor = CATEGORY_COLORS[post.category] ?? "#2fa5e8";
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
   // JSON-LD structured data
@@ -72,91 +100,455 @@ export default async function BlogPostPage({
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
-    description: post.excerpt,
-    author: { "@type": "Person", name: post.author },
+    description: post.seoDescription || post.excerpt,
+    image: post.coverImage || undefined,
     datePublished: post.publishedAt,
-    image: post.coverImage,
+    author: { "@type": "Person", name: post.author || "Admin" },
+    keywords: post.keywords?.join(", "),
     url: `${siteUrl}/blog/${post.slug}`,
-    publisher: {
-      "@type": "Organization",
-      name: "Marya Bet",
-      logo: { "@type": "ImageObject", url: `${siteUrl}/favicon.ico` },
-    },
   };
 
   return (
-    <div className="post-page">
-      {/* Header */}
-      <header className="blog-header">
-        <div className="blog-header__inner">
-          <Link href="/" className="blog-header__logo" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <Image src="/logo.png" alt="Marya Bet Logo" width={28} height={28} style={{ borderRadius: "6px" }} />
-            MARYA BET
-          </Link>
-          <nav className="blog-header__nav">
-            <Link href="/blog">← Blog</Link>
-          </nav>
-        </div>
-      </header>
-
+    <>
       {/* JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="post-main">
-        {/* Cover image */}
-        {post.coverImage && (
-          <div className="post-cover">
-            <Image
-              src={post.coverImage}
-              alt={post.title}
-              fill
-              className="post-cover__img"
-              priority
-              sizes="100vw"
-            />
-            <div className="post-cover__overlay" />
-          </div>
-        )}
+      <main
+        style={{ minHeight: "100vh", background: "var(--navy-deep)", color: "var(--text-primary)", paddingTop: "100px" }}
+      >
+        {/* Hero */}
+        <header
+          style={{
+            position: "relative",
+            background: "var(--navy-deep)",
+            paddingBottom: "0",
+            minHeight: "80vh",
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "center",
+            overflow: "hidden",
+          }}
+        >
+          {/* Cover image as background */}
+          {post.coverImage && (
+            <>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={post.coverImage}
+                alt={post.title}
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  opacity: 0.4,
+                  transform: "scale(1.05)",
+                  animation: "subtleZoom 20s ease-out forwards",
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background:
+                    "linear-gradient(180deg, rgba(18, 72, 115, 0.1) 0%, rgba(18, 72, 115, 0.7) 40%, var(--navy-deep) 100%)",
+                }}
+              />
+            </>
+          )}
 
-        <article className="post-article">
-          {/* Meta */}
-          <div className="post-article__category">{post.category}</div>
-          <h1 className="post-article__title">{post.title}</h1>
-          <div className="post-article__meta">
-            <span>By {post.author}</span>
-            <span>·</span>
-            <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
-          </div>
-
-          <p className="post-article__excerpt">{post.excerpt}</p>
-
-          {/* Body */}
           <div
-            className="post-article__body"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+            style={{
+              position: "relative",
+              width: "100%",
+              maxWidth: "960px",
+              padding: "120px 24px 60px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+          >
+            {/* Category badge */}
+            <div style={{ marginBottom: "24px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "transparent",
+                  border: `1px solid ${categoryColor}`,
+                  color: categoryColor,
+                  padding: "6px 20px",
+                  borderRadius: "99px",
+                  fontSize: "0.75rem",
+                  fontWeight: 800,
+                  letterSpacing: "0.15em",
+                  textTransform: "uppercase",
+                  backdropFilter: "blur(4px)",
+                }}
+              >
+                {post.category}
+              </span>
+            </div>
 
-          {/* Keywords / tags */}
-          {post.keywords && post.keywords.length > 0 && (
-            <div className="post-article__tags">
-              {post.keywords.map((kw) => (
-                <span key={kw} className="tag">
-                  #{kw}
+            <h1
+              style={{
+                fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+                fontWeight: 900,
+                lineHeight: 1.05,
+                letterSpacing: "-0.03em",
+                marginBottom: "28px",
+                textShadow: "0 10px 30px rgba(18,72,115,0.8)",
+                maxWidth: "800px",
+              }}
+            >
+              {post.title}
+            </h1>
+
+            <p
+              style={{
+                fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
+                color: "#a0a0a0",
+                lineHeight: 1.6,
+                marginBottom: "40px",
+                maxWidth: "700px",
+                fontWeight: 400,
+                textShadow: "0 2px 10px rgba(18,72,115,0.8)",
+              }}
+            >
+              {post.excerpt}
+            </p>
+
+            {/* Meta row */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "24px",
+                flexWrap: "wrap",
+                fontSize: "0.9rem",
+                color: "#777",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                letterSpacing: "0.05em",
+              }}
+            >
+              {post.author && (
+                <span style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                  <span
+                    style={{
+                      width: "36px",
+                      height: "36px",
+                      borderRadius: "50%",
+                      background: `linear-gradient(135deg, ${categoryColor} 0%, var(--navy-deep) 100%)`,
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "#fff",
+                      fontWeight: 900,
+                      fontSize: "0.9rem",
+                      boxShadow: `0 0 15px ${categoryColor}40`,
+                    }}
+                  >
+                    {post.author[0].toUpperCase()}
+                  </span>
+                  <span style={{ color: "#fff", fontWeight: 800 }}>{post.author}</span>
                 </span>
-              ))}
+              )}
+              <span style={{ opacity: 0.5 }}>|</span>
+              <span>{formatDate(post.publishedAt)}</span>
+              <span style={{ opacity: 0.5 }}>|</span>
+              <span style={{ color: categoryColor }}>
+                {estimateReadTime(post.content)}
+              </span>
+            </div>
+            <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
+          </div>
+        </header>
+
+        {/* Article body */}
+        <article
+          style={{
+            maxWidth: "760px",
+            margin: "0 auto",
+            padding: "40px 24px 100px",
+          }}
+        >
+          {post.content ? (
+            <div
+              className="prose-content"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+          ) : (
+            <p style={{ color: "#555", textAlign: "center", padding: "60px 0" }}>
+              No content available for this post.
+            </p>
+          )}
+
+          {/* Keywords */}
+          {post.keywords && post.keywords.length > 0 && (
+            <div
+              style={{
+                marginTop: "60px",
+                paddingTop: "32px",
+                borderTop: "1px solid var(--border)",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "0.75rem",
+                  color: "#444",
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.1em",
+                  marginBottom: "12px",
+                }}
+              >
+                Topics
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+                {post.keywords.map((kw) => (
+                  <span
+                    key={kw}
+                    style={{
+                      background: "rgba(255,255,255,0.05)",
+                      border: "1px solid var(--border)",
+                      padding: "4px 14px",
+                      borderRadius: "20px",
+                      fontSize: "0.8rem",
+                      color: "#777",
+                    }}
+                  >
+                    {kw}
+                  </span>
+                ))}
+              </div>
             </div>
           )}
+
+          {/* Back link */}
+          <div style={{ marginTop: "48px" }}>
+            <Link
+              href="/blog"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                color: "#fff",
+                fontWeight: 800,
+                fontSize: "0.9rem",
+                textDecoration: "none",
+                border: "1px solid var(--border)",
+                padding: "12px 24px",
+                borderRadius: "10px",
+                transition: "border-color 0.2s",
+              }}
+            >
+              ← Back to Blog
+            </Link>
+          </div>
         </article>
 
-        <div className="post-back">
-          <Link href="/blog" className="btn-back">
-            ← Back to all articles
-          </Link>
-        </div>
+        {/* Related posts */}
+        {related.length > 0 && (
+          <section
+            style={{
+              background: "var(--navy)",
+              borderTop: "1px solid var(--border)",
+              padding: "64px 24px",
+            }}
+          >
+            <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+              <h2
+                style={{
+                  fontSize: "1.6rem",
+                  fontWeight: 900,
+                  marginBottom: "40px",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.05em",
+                }}
+              >
+                Related Articles
+              </h2>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+                  gap: "24px",
+                }}
+              >
+                {related.map((rel) => (
+                  <Link
+                    key={rel.slug}
+                    href={`/blog/${rel.slug}`}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <article
+                      style={{
+                        background: "#ffffff",
+                        border: "1px solid var(--border)",
+                        borderRadius: "14px",
+                        overflow: "hidden",
+                        transition: "transform 0.25s, border-color 0.25s",
+                        color: "var(--navy-deep)",
+                      }}
+                      className="blog-card"
+                    >
+                      <div
+                        style={{
+                          height: "180px",
+                          background: "var(--navy-light)",
+                          position: "relative",
+                        }}
+                      >
+                        {rel.coverImage ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={rel.coverImage}
+                            alt={rel.title}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                            }}
+                          />
+                        ) : null}
+                      </div>
+                      <div style={{ padding: "20px" }}>
+                        <p
+                          style={{
+                            fontSize: "0.7rem",
+                            color: "#557091",
+                            fontWeight: 700,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.06em",
+                            marginBottom: "8px",
+                          }}
+                        >
+                          {formatDate(rel.publishedAt)}
+                        </p>
+                        <h3
+                          style={{
+                            fontSize: "1rem",
+                            fontWeight: 800,
+                            lineHeight: 1.4,
+                          }}
+                        >
+                          {rel.title}
+                        </h3>
+                      </div>
+                    </article>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        <Footer />
       </main>
-    </div>
+
+      <style>{`
+        @keyframes subtleZoom {
+          from { transform: scale(1.02); }
+          to { transform: scale(1.1); }
+        }
+        .prose-content {
+          font-family: 'Inter', system-ui, sans-serif;
+          font-size: 1.15rem;
+          line-height: 1.9;
+          color: #d0d0d0;
+          font-weight: 400;
+        }
+        .prose-content h1,
+        .prose-content h2,
+        .prose-content h3,
+        .prose-content h4 {
+          color: #fff;
+          font-weight: 900;
+          line-height: 1.3;
+          margin: 2.5em 0 1em;
+          letter-spacing: -0.01em;
+        }
+        .prose-content h2 { font-size: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5em; }
+        .prose-content h3 { font-size: 1.5rem; }
+        .prose-content p { margin: 0 0 1.8em; }
+        .prose-content a { 
+          color: ${categoryColor}; 
+          text-decoration: none;
+          border-bottom: 1px solid ${categoryColor}80;
+          transition: border-color 0.2s, color 0.2s;
+        }
+        .prose-content a:hover {
+          border-bottom-color: ${categoryColor};
+          color: #fff;
+        }
+        .prose-content strong { color: #fff; font-weight: 700; }
+        .prose-content blockquote {
+          position: relative;
+          border-left: 4px solid ${categoryColor};
+          padding: 24px 32px;
+          margin: 3em 0;
+          background: linear-gradient(90deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+          border-radius: 0 12px 12px 0;
+          color: #fff;
+          font-style: italic;
+          font-size: 1.3rem;
+          line-height: 1.6;
+          font-weight: 300;
+        }
+        .prose-content ul,
+        .prose-content ol {
+          padding-left: 1.2em;
+          margin: 0 0 1.8em;
+        }
+        .prose-content li { margin: 0.6em 0; }
+        .prose-content li::marker { color: ${categoryColor}; font-weight: 900; }
+        .prose-content code {
+          background: rgba(255,255,255,0.08);
+          padding: 3px 8px;
+          border-radius: 6px;
+          font-size: 0.85em;
+          color: #fff;
+          font-family: monospace;
+        }
+        .prose-content pre {
+          background: var(--navy-deep);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 24px;
+          overflow-x: auto;
+          margin: 2.5em 0;
+          box-shadow: inset 0 0 20px rgba(18,72,115,0.5);
+        }
+        .prose-content pre code {
+          background: none;
+          padding: 0;
+          font-size: 0.9em;
+          color: #a0a0a0;
+        }
+        .prose-content img {
+          max-width: 100%;
+          border-radius: 16px;
+          margin: 3em 0;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .prose-content hr {
+          border: none;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+          margin: 4em 0;
+        }
+        .blog-card:hover {
+          transform: translateY(-5px);
+          border-color: var(--cyan) !important;
+          box-shadow: 0 20px 40px rgba(18,72,115,0.25);
+        }
+      `}</style>
+    </>
   );
 }

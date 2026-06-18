@@ -1,13 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  /* 1XBET-inspired blue & white theme (NO BLACK) */
+  --navy-deep: #124873;      /* Deep royal blue from 1XBET image background */
+  --navy: #16568c;           /* Standard 1XBET brand blue */
+  --navy-light: #1b65a4;     /* Slightly lighter blue for cards */
+  --navy-surface: #2275bc;   /* Active selection blue */
+  --cyan: #2fa5e8;           /* Vivid cyan-blue from 1XBET logo "BET" */
+  --cyan-glow: #64c0ff;      /* Cyan highlight glow */
+  --cyan-muted: #4ba8e6;
+  --electric: #2196f3;
+  --gold: #ffd54f;           /* Accent Gold */
+  --gold-dim: #c9a83e;
+  --text-primary: #ffffff;   /* Pure white text */
+  --text-secondary: #eef7ff; /* Very soft sky blue text */
+  --text-muted: #a3cdff;     /* Muted blue text */
+  --border: rgba(255, 255, 255, 0.18);
+  --border-hover: rgba(255, 255, 255, 0.4);
+  --glow-cyan: rgba(47, 165, 232, 0.25);
+  --glow-gold: rgba(255, 213, 79, 0.12);
+
+  /* Fallback aliases for guides & faq pages */
+  --bg-home: var(--navy-deep);
+  --card-bg: var(--navy);
+  --card-border: var(--border);
+  --text-home: var(--text-primary);
+  --text-home-muted: var(--text-muted);
+  --lime: var(--cyan);
+}
+
 html, body {
-  background: #000;
-  color: #fff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--navy-deep);
+  color: var(--text-primary);
+  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow-x: hidden;
   width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--cyan);
+  color: var(--navy-deep);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }

@@ -10,10 +10,10 @@ export default function Footer() {
     <>
       <style dangerouslySetInnerHTML={{ __html: `
         .site-footer {
-          background: #050505;
+          background: #0e3c63;
           color: #fff;
           padding: 100px 40px 40px;
-          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          border-top: 1px solid rgba(255, 255, 255, 0.15);
           font-family: system-ui, -apple-system, sans-serif;
           position: relative;
           overflow: hidden;
@@ -27,7 +27,7 @@ export default function Footer() {
           transform: translateX(-50%);
           width: 90%;
           height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
         }
 
         .site-footer__inner {
@@ -65,13 +65,13 @@ export default function Footer() {
           align-items: center;
           justify-content: center;
           position: relative;
-          box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
         }
 
         .nuro-logo__dot {
           width: 10px;
           height: 10px;
-          background: #000;
+          background: var(--navy);
           border-radius: 50%;
           animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
@@ -82,7 +82,7 @@ export default function Footer() {
         }
 
         .site-footer__desc {
-          color: #777;
+          color: #d1e8ff;
           line-height: 1.7;
           font-size: 1rem;
           max-width: 340px;
@@ -98,21 +98,21 @@ export default function Footer() {
           width: 44px;
           height: 44px;
           border-radius: 12px;
-          background: rgba(255, 255, 255, 0.03);
+          background: rgba(255, 255, 255, 0.08);
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #666;
+          color: #d1e8ff;
           transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          border: 1px solid rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .social-link:hover {
-          background: #fff;
-          color: #000;
+          background: var(--cyan);
+          color: #fff;
           transform: translateY(-8px) rotate(8deg);
-          box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
-          border-color: #fff;
+          box-shadow: 0 15px 30px rgba(47, 165, 232, 0.35);
+          border-color: var(--cyan);
         }
 
         .site-footer__title {
@@ -120,7 +120,7 @@ export default function Footer() {
           font-weight: 900;
           text-transform: uppercase;
           letter-spacing: 0.25em;
-          color: #444;
+          color: var(--cyan-muted);
           margin-bottom: 4px;
         }
 
@@ -131,7 +131,7 @@ export default function Footer() {
         }
 
         .site-footer__nav a {
-          color: #888;
+          color: #eef7ff;
           text-decoration: none;
           font-size: 0.95rem;
           transition: all 0.3s ease;
@@ -142,7 +142,7 @@ export default function Footer() {
         }
 
         .site-footer__nav a:hover {
-          color: #fff;
+          color: var(--cyan);
           transform: translateX(8px);
         }
 
@@ -160,10 +160,10 @@ export default function Footer() {
         }
 
         .site-footer__compliance {
-          background: rgba(255, 255, 255, 0.02);
+          background: rgba(255, 255, 255, 0.05);
           padding: 32px;
           border-radius: 24px;
-          border: 1px solid rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .compliance-badges {
@@ -174,8 +174,8 @@ export default function Footer() {
 
         .badge-18 {
           padding: 6px 14px;
-          border: 1px solid #ff4d4d;
-          color: #ff4d4d;
+          border: 1px solid #ff7a7a;
+          color: #ff7a7a;
           border-radius: 8px;
           font-weight: 900;
           font-size: 0.8rem;
@@ -184,7 +184,7 @@ export default function Footer() {
 
         .badge-secure {
           padding: 6px 14px;
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(255, 255, 255, 0.1);
           color: #fff;
           border-radius: 8px;
           font-weight: 800;
@@ -192,17 +192,17 @@ export default function Footer() {
           display: flex;
           align-items: center;
           gap: 8px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .site-footer__bottom {
           margin-top: 100px;
           padding-top: 40px;
-          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          border-top: 1px solid rgba(255, 255, 255, 0.15);
           display: flex;
           justify-content: space-between;
           align-items: center;
-          color: #444;
+          color: #a3cdff;
           font-size: 0.9rem;
         }
 
@@ -212,14 +212,14 @@ export default function Footer() {
         }
 
         .site-footer__bottom-links a {
-          color: #444;
+          color: #a3cdff;
           text-decoration: none;
           transition: color 0.3s;
           font-weight: 600;
         }
 
         .site-footer__bottom-links a:hover {
-          color: #fff;
+          color: var(--cyan);
         }
 
         @media (max-width: 1200px) {
@@ -308,8 +308,8 @@ export default function Footer() {
               <span className="badge-18">18+ ONLY</span>
               <span className="badge-secure"><ShieldCheck size={16} /> SSL SECURE</span>
             </div>
-            <p className="site-footer__desc" style={{ fontSize: "0.85rem", color: "#444", marginTop: "12px", maxWidth: "100%" }}>
-              Marya Bet advocates for responsible gambling. Betting should be entertaining, not a financial burden. If you need support, please contact <a href="https://www.begambleaware.org" target="_blank" rel="noreferrer" style={{ color: "#666", textDecoration: "underline" }}>BeGambleAware.org</a>.
+            <p className="site-footer__desc" style={{ fontSize: "0.85rem", color: "#d1e8ff", marginTop: "12px", maxWidth: "100%" }}>
+              Marya Bet advocates for responsible gambling. Betting should be entertaining, not a financial burden. If you need support, please contact <a href="https://www.begambleaware.org" target="_blank" rel="noreferrer" style={{ color: "var(--cyan)", textDecoration: "underline" }}>BeGambleAware.org</a>.
             </p>
           </div>
         </div>

@@ -34,7 +34,7 @@ function AdModal({ ad }: { ad: SystemAd }) {
         .tp-overlay {
           position: fixed;
           inset: 0;
-          background: rgba(0, 0, 0, 0.85);
+          background: rgba(14, 60, 99, 0.9);
           backdrop-filter: blur(8px);
           z-index: 10000;
           display: flex;
@@ -53,15 +53,15 @@ function AdModal({ ad }: { ad: SystemAd }) {
         .tp-modal {
           width: 100%;
           max-width: 800px;
-          background: #050505;
-          border: 1px solid #222;
+          background: var(--navy);
+          border: 1px solid var(--border);
           border-radius: 20px;
           overflow: hidden;
           display: flex;
           flex-direction: row;
           transform: translateY(20px) scale(0.95);
           transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 25px 50px -12px rgba(18, 72, 115, 0.5);
           position: relative;
         }
         .tp-overlay.is-open .tp-modal {
@@ -71,7 +71,7 @@ function AdModal({ ad }: { ad: SystemAd }) {
         .tp-image-col {
           flex: 1;
           position: relative;
-          background: #111;
+          background: var(--navy-light);
           min-height: 400px;
           overflow: hidden;
         }
@@ -80,7 +80,7 @@ function AdModal({ ad }: { ad: SystemAd }) {
           content: '';
           position: absolute;
           inset: 0;
-          background: linear-gradient(to right, transparent, #050505);
+          background: linear-gradient(to right, transparent, var(--navy));
         }
 
         .tp-content-col {
@@ -145,7 +145,7 @@ function AdModal({ ad }: { ad: SystemAd }) {
         }
 
         .tp-desc {
-          color: #888;
+          color: var(--text-muted);
           font-size: 0.95rem;
           line-height: 1.6;
           margin-bottom: 32px;
@@ -183,7 +183,7 @@ function AdModal({ ad }: { ad: SystemAd }) {
             min-height: 180px;
           }
           .tp-image-col::after {
-            background: linear-gradient(to bottom, transparent, #050505);
+            background: linear-gradient(to bottom, transparent, var(--navy));
           }
           .tp-content-col {
             padding: 32px 24px;

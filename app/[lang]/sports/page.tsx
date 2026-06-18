@@ -4,6 +4,8 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SportsList from "../../components/SportsList";
 import { getLeagueMetadata, cleanLeagueName } from "../../lib/leagueUtils";
+import { getActivePromos } from "../../lib/promos";
+import PromoCodeStrip from "../../components/PromoCodeStrip";
 
 export const dynamic = "force-dynamic";
 
@@ -18,11 +20,13 @@ export default async function SportsPage({ params }: { params: Promise<{ lang: s
   const dd = String(today.getDate()).padStart(2, '0');
   const dateStr = `${yyyy}${mm}${dd}`;
 
-  // Parallel fetch matches and leagues (leagues are cached for 1hr)
-  const [fixturesData, allLeagues] = await Promise.all([
+  // Parallel fetch matches, leagues and promos
+  const [fixturesData, allLeagues, activePromos] = await Promise.all([
     getMatchesByDate(dateStr, lang),
-    getAllLeagues(lang)
+    getAllLeagues(lang),
+    getActivePromos(),
   ]);
+  const promos = activePromos.slice(0, 5);
 
   const fixtures = Array.isArray(fixturesData) ? fixturesData : [];
   const leaguesMetadata = Array.isArray(allLeagues) ? allLeagues : [];
@@ -75,15 +79,18 @@ export default async function SportsPage({ params }: { params: Promise<{ lang: s
   return (
     <>
       <Navbar dict={dict} lang={lang} />
-      <main style={{ minHeight: "100vh", background: "#000", color: "#fff", paddingTop: "120px", paddingBottom: "60px" }}>
+      <main style={{ minHeight: "100vh", background: "var(--navy-deep)", color: "var(--text-primary)", paddingTop: "120px", paddingBottom: "60px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px" }}>
           <header style={{ marginBottom: "60px", textAlign: "center" }}>
             <h1 style={{ fontSize: "clamp(2.5rem, 8vw, 4rem)", fontWeight: "900", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "16px" }}>
               {dict.nav.sports}
             </h1>
-            <p style={{ color: "#666", fontSize: "1.1rem" }}>
+            <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
               {dict.sports.subtitle}
             </p>
+            <div style={{ marginTop: "20px" }}>
+              <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
+            </div>
           </header>
 
           <SportsList 

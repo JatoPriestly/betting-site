@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import Footer from "../../../components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getActivePromos } from "../../../lib/promos";
+import PromoCodeStrip from "../../../components/PromoCodeStrip";
+
 
 export const dynamic = "force-dynamic";
 
@@ -64,12 +67,12 @@ function formatDate(iso: string): string {
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
-  Strategy: "#e63946",
-  Football: "#2ec4b6",
+  Strategy: "#2fa5e8",
+  Football: "#ffd54f",
   Basketball: "#ff9f1c",
   Tennis: "#8338ec",
   Crypto: "#3a86ff",
-  "Horse Racing": "#fb5607",
+  "Horse Racing": "#2fa5e8",
   Basics: "#06d6a0",
   General: "#adb5bd",
 };
@@ -87,6 +90,8 @@ export default async function BlogPostPage({
   const related = allPosts
     .filter((p) => p.slug !== slug && p.category === post.category)
     .slice(0, 3);
+  const promos = (await getActivePromos()).slice(0, 5);
+
 
 
   const categoryColor = CATEGORY_COLORS[post.category] ?? "#e63946";
@@ -112,13 +117,13 @@ export default async function BlogPostPage({
       />
 
       <main
-        style={{ minHeight: "100vh", background: "#000", color: "#fff", paddingTop: "100px" }}
+        style={{ minHeight: "100vh", background: "var(--navy-deep)", color: "var(--text-primary)", paddingTop: "100px" }}
       >
         {/* Hero */}
         <header
           style={{
             position: "relative",
-            background: "#000",
+            background: "var(--navy-deep)",
             paddingBottom: "0",
             minHeight: "80vh",
             display: "flex",
@@ -150,7 +155,7 @@ export default async function BlogPostPage({
                   position: "absolute",
                   inset: 0,
                   background:
-                    "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 40%, #000 100%)",
+                    "linear-gradient(180deg, rgba(18, 72, 115, 0.1) 0%, rgba(18, 72, 115, 0.7) 40%, var(--navy-deep) 100%)",
                 }}
               />
             </>
@@ -196,7 +201,7 @@ export default async function BlogPostPage({
                 lineHeight: 1.05,
                 letterSpacing: "-0.03em",
                 marginBottom: "28px",
-                textShadow: "0 10px 30px rgba(0,0,0,0.8)",
+                textShadow: "0 10px 30px rgba(18,72,115,0.8)",
                 maxWidth: "800px",
               }}
             >
@@ -211,7 +216,7 @@ export default async function BlogPostPage({
                 marginBottom: "40px",
                 maxWidth: "700px",
                 fontWeight: 400,
-                textShadow: "0 2px 10px rgba(0,0,0,0.8)",
+                textShadow: "0 2px 10px rgba(18,72,115,0.8)",
               }}
             >
               {post.excerpt}
@@ -239,7 +244,7 @@ export default async function BlogPostPage({
                       width: "36px",
                       height: "36px",
                       borderRadius: "50%",
-                      background: `linear-gradient(135deg, ${categoryColor} 0%, #000 100%)`,
+                      background: `linear-gradient(135deg, ${categoryColor} 0%, var(--navy-deep) 100%)`,
                       display: "inline-flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -261,7 +266,9 @@ export default async function BlogPostPage({
                 {estimateReadTime(post.content)}
               </span>
             </div>
+            <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
           </div>
+
         </header>
 
         {/* Article body */}
@@ -289,7 +296,7 @@ export default async function BlogPostPage({
               style={{
                 marginTop: "60px",
                 paddingTop: "32px",
-                borderTop: "1px solid #111",
+                borderTop: "1px solid var(--border)",
               }}
             >
               <p
@@ -310,7 +317,7 @@ export default async function BlogPostPage({
                     key={kw}
                     style={{
                       background: "rgba(255,255,255,0.05)",
-                      border: "1px solid #222",
+                      border: "1px solid var(--border)",
                       padding: "4px 14px",
                       borderRadius: "20px",
                       fontSize: "0.8rem",
@@ -351,8 +358,8 @@ export default async function BlogPostPage({
         {related.length > 0 && (
           <section
             style={{
-              background: "#050505",
-              borderTop: "1px solid #111",
+              background: "var(--navy)",
+              borderTop: "1px solid var(--border)",
               padding: "64px 24px",
             }}
           >
@@ -383,18 +390,19 @@ export default async function BlogPostPage({
                   >
                     <article
                       style={{
-                        background: "rgba(255,255,255,0.02)",
-                        border: "1px solid #1a1a1a",
+                        background: "#ffffff",
+                        border: "1px solid var(--border)",
                         borderRadius: "14px",
                         overflow: "hidden",
                         transition: "transform 0.25s, border-color 0.25s",
+                        color: "var(--navy-deep)",
                       }}
                       className="blog-card"
                     >
                       <div
                         style={{
                           height: "180px",
-                          background: "#111",
+                          background: "var(--navy-light)",
                           position: "relative",
                         }}
                       >
@@ -415,7 +423,7 @@ export default async function BlogPostPage({
                         <p
                           style={{
                             fontSize: "0.7rem",
-                            color: "#555",
+                            color: "#557091",
                             fontWeight: 700,
                             textTransform: "uppercase",
                             letterSpacing: "0.06em",
@@ -510,13 +518,13 @@ export default async function BlogPostPage({
           font-family: monospace;
         }
         .prose-content pre {
-          background: #080808;
-          border: 1px solid #1a1a1a;
+          background: var(--navy-deep);
+          border: 1px solid var(--border);
           border-radius: 12px;
           padding: 24px;
           overflow-x: auto;
           margin: 2.5em 0;
-          box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+          box-shadow: inset 0 0 20px rgba(18,72,115,0.5);
         }
         .prose-content pre code {
           background: none;
@@ -538,8 +546,8 @@ export default async function BlogPostPage({
         }
         .blog-card:hover {
           transform: translateY(-5px);
-          border-color: #333 !important;
-          box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+          border-color: var(--cyan) !important;
+          box-shadow: 0 20px 40px rgba(18,72,115,0.25);
         }
       `}</style>
     </>

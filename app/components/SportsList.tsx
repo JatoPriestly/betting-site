@@ -39,10 +39,10 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
         display: "flex", 
         flexWrap: "wrap", 
         gap: "16px", 
-        background: "rgba(255,255,255,0.02)", 
+        background: "var(--navy)", 
         padding: "16px", 
         borderRadius: "24px", 
-        border: "1px solid #111",
+        border: "1px solid var(--border)",
         alignItems: "center",
         position: "sticky",
         top: "100px",
@@ -51,7 +51,7 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
       }}>
         {/* Search Input */}
         <div style={{ flex: 1, position: "relative", minWidth: "250px" }}>
-          <Search size={18} style={{ position: "absolute", left: "16px", top: "50%", transform: "translateY(-50%)", color: "#444" }} />
+          <Search size={18} style={{ position: "absolute", left: "16px", top: "50%", transform: "translateY(-50%)", color: "var(--text-muted)" }} />
           <input 
             type="text" 
             placeholder={dict.sports.search_placeholder} 
@@ -59,8 +59,8 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
             onChange={(e) => setSearchQuery(e.target.value)}
             style={{ 
               width: "100%", 
-              background: "#000", 
-              border: "1px solid #222", 
+              background: "var(--navy-deep)", 
+              border: "1px solid var(--border)", 
               padding: "12px 16px 12px 48px", 
               borderRadius: "16px", 
               color: "#fff",
@@ -79,8 +79,8 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
               display: "flex", 
               alignItems: "center", 
               justifyContent: "space-between", 
-              background: "#000", 
-              border: "1px solid #222", 
+              background: "var(--navy-deep)", 
+              border: "1px solid var(--border)", 
               padding: "12px 20px", 
               borderRadius: "16px", 
               cursor: "pointer",
@@ -100,12 +100,12 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
               top: "calc(100% + 8px)", 
               left: 0, 
               right: 0, 
-              background: "#0a0a0a", 
-              border: "1px solid #222", 
+              background: "var(--navy-light)", 
+              border: "1px solid var(--border)", 
               borderRadius: "16px", 
               overflow: "hidden", 
               zIndex: 20,
-              boxShadow: "0 10px 30px rgba(0,0,0,0.5)"
+              boxShadow: "0 10px 30px rgba(0,0,0,0.25)"
             }}>
               {PLATFORMS.map((platform) => (
                 <div 
@@ -125,7 +125,7 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
                   }}
                 >
                   <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: platform.color }}></div>
-                  <span style={{ fontWeight: "600", color: selectedPlatform.id === platform.id ? "#fff" : "#888" }}>{platform.name}</span>
+                  <span style={{ fontWeight: "600", color: selectedPlatform.id === platform.id ? "#fff" : "var(--text-muted)" }}>{platform.name}</span>
                 </div>
               ))}
             </div>
@@ -136,8 +136,8 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
       {/* Fixtures List */}
       <div style={{ display: "flex", flexDirection: "column", gap: "48px" }}>
         {filteredLeagues.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "100px 0", background: "rgba(255,255,255,0.02)", borderRadius: "24px", border: "1px solid #111" }}>
-            <p style={{ color: "#666", fontSize: "1.2rem" }}>{dict.sports.no_fixtures}</p>
+          <div style={{ textAlign: "center", padding: "100px 0", background: "var(--navy)", borderRadius: "24px", border: "1px solid var(--border)" }}>
+            <p style={{ color: "var(--text-muted)", fontSize: "1.2rem" }}>{dict.sports.no_fixtures}</p>
           </div>
         ) : (
           filteredLeagues.map((leagueName) => {
@@ -160,7 +160,7 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
                   justifyContent: "space-between",
                   marginBottom: "24px",
                   paddingBottom: "12px",
-                  borderBottom: "1px solid #111"
+                  borderBottom: "1px solid var(--border)"
                 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
                     {leagueLogo && (
@@ -176,12 +176,12 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
                     </h2>
                   </div>
                   <span style={{ 
-                    background: "rgba(255,255,255,0.1)", 
+                    background: "var(--navy-light)", 
                     padding: "4px 12px", 
                     borderRadius: "9999px", 
                     fontSize: "0.75rem", 
                     fontWeight: "800",
-                    color: "#888"
+                    color: "var(--text-muted)"
                   }}>
                     {filteredMatches.length} {dict.sports.games_count}
                   </span>
@@ -200,20 +200,20 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
                       <div 
                         key={index} 
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.background = "rgba(255,255,255,0.04)";
-                          e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
+                          e.currentTarget.style.background = "var(--navy-light)";
+                          e.currentTarget.style.borderColor = "var(--cyan)";
                           e.currentTarget.style.transform = "translateY(-2px)";
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.background = "rgba(255,255,255,0.02)";
-                          e.currentTarget.style.borderColor = "#111";
+                          e.currentTarget.style.background = "var(--navy)";
+                          e.currentTarget.style.borderColor = "var(--border)";
                           e.currentTarget.style.transform = "translateY(0)";
                         }}
                         style={{ 
-                          background: "rgba(255,255,255,0.02)", 
+                          background: "var(--navy)", 
                           borderRadius: "20px", 
                           padding: "24px 32px", 
-                          border: "1px solid #111",
+                          border: "1px solid var(--border)",
                           display: "flex",
                           flexWrap: "wrap",
                           alignItems: "center",
@@ -228,7 +228,7 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
                           <div style={{ fontSize: "1.1rem", fontWeight: "900", color: "#fff" }}>
                             {matchTime.split(' ').pop()}
                           </div>
-                          <div style={{ fontSize: "0.7rem", color: "#444", textTransform: "uppercase", fontWeight: "800", marginTop: "4px" }}>
+                          <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", textTransform: "uppercase", fontWeight: "800", marginTop: "4px" }}>
                             {status}
                           </div>
                         </div>
@@ -253,12 +253,12 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
                             display: "flex", 
                             alignItems: "center", 
                             justifyContent: "center", 
-                            background: "rgba(255,255,255,0.05)", 
+                            background: "var(--navy-surface)", 
                             borderRadius: "50%",
                             fontSize: "0.75rem",
                             fontWeight: "900",
-                            color: "#444",
-                            border: "1px solid rgba(255,255,255,0.05)"
+                            color: "var(--text-muted)",
+                            border: "1px solid var(--border)"
                           }}>
                             VS
                           </div>
@@ -300,7 +300,7 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
                             {dict.sports.bet_now} {selectedPlatform.name.toUpperCase()}
                             <ExternalLink size={14} />
                           </button>
-                          <div style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "0.65rem", color: "#444", fontWeight: "700" }}>
+                          <div style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "0.65rem", color: "var(--text-muted)", fontWeight: "700" }}>
                             <ShieldCheck size={10} /> {dict.sports.secure}
                           </div>
                         </div>

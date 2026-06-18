@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import CopyButton from "./CopyButton";
+import PromoCodeStrip from "@/app/components/PromoCodeStrip";
+
 
 export const dynamic = "force-dynamic";
 
@@ -49,6 +51,101 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
+const CSS = `
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+  *, *::before, *::after { box-sizing: border-box; }
+
+  .promo-page { min-height: 100vh; background: var(--navy-deep); color: #fff; font-family: 'Outfit', system-ui, sans-serif; padding-top: 80px; }
+  .promo-main { width: 100%; }
+
+  /* Hero */
+  .promo-hero { position: relative; overflow: hidden; background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.06) 0%, var(--navy-deep) 60%); border-bottom: 1px solid var(--border); padding: 80px 24px 60px; text-align: center; }
+  .promo-hero__inner { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
+  .breadcrumbs { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 28px; }
+  .breadcrumbs a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+  .breadcrumbs a:hover { color: #fff; }
+  
+  .promo-filters { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
+  .filter-chip { background: var(--navy); border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 18px; border-radius: 99px; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+  .filter-chip:hover { border-color: var(--cyan); background: var(--navy-light); }
+  .filter-chip--active { background: var(--cyan); border-color: var(--cyan); color: #fff; }
+  
+  .promo-hero__title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: -0.03em; text-transform: uppercase; color: #fff; margin-bottom: 16px; }
+  .promo-hero__disclaimer { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; border: 1px solid var(--border); display: inline-block; padding: 6px 16px; border-radius: 99px; margin-top: 8px; }
+
+  /* List */
+  .promo-list { max-width: 1000px; margin: 0 auto; padding: 48px 24px; display: flex; flex-direction: column; gap: 16px; }
+  .empty-state { text-align: center; padding: 80px 0; color: var(--text-muted); font-size: 1.1rem; }
+
+  /* Card */
+  .promo-card { background: var(--navy); border: 1px solid var(--border); border-radius: 16px; transition: background 0.15s, border-color 0.15s; }
+  .promo-card:hover { background: var(--navy-light); border-color: var(--cyan); }
+  .promo-card__rank-label { background: rgba(255, 255, 255, 0.04); border-bottom: 1px solid var(--border); border-radius: 16px 16px 0 0; padding: 8px 28px; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
+  .promo-card__inner { display: grid; grid-template-columns: 140px 1fr 180px; align-items: stretch; }
+
+  /* Left */
+  .promo-card__logo-col { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px 16px; border-right: 1px solid var(--border); }
+  .promo-card__logo-box { width: 80px; height: 80px; border-radius: 10px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; position: relative; font-size: 0.75rem; font-weight: 900; color: #fff; overflow: hidden; text-align: center; }
+  .promo-card__rank-badge { position: absolute; top: 4px; left: 4px; background: var(--cyan); color: #fff; font-size: 0.65rem; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; }
+  .promo-card__logo-img { width: 100%; height: 100%; object-fit: contain; }
+  .promo-card__logo-text { padding: 4px; line-height: 1.2; }
+
+  /* Center */
+  .promo-card__center { padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+  .promo-card__category-header { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--cyan); }
+  .promo-card__bonus-label { font-size: 0.8rem; color: var(--text-secondary); }
+  .promo-card__bonus-amount { font-size: 1.6rem; font-weight: 900; color: #fff; letter-spacing: -0.03em; line-height: 1; text-transform: uppercase; }
+  
+  .promo-card__badges { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; }
+  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 4px; font-size: 0.68rem; font-weight: 700; border: 1px solid var(--border); color: var(--text-muted); background: var(--navy-deep); }
+  .badge--green { color: #fff; border-color: var(--cyan); }
+  .badge--gold { color: var(--gold); border-color: var(--border); }
+  .badge--blue { color: var(--text-secondary); border-color: var(--border); }
+
+  .promo-card__cta { display: flex; align-items: center; justify-content: center; gap: 6px; max-width: 340px; padding: 12px 16px; background: var(--cyan); color: #fff; font-size: 0.75rem; font-weight: 900; text-decoration: none; border-radius: 6px; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 4px 20px rgba(47,165,232,0.2); }
+  .promo-card__cta:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(47,165,232,0.4); letter-spacing: 0.12em; background: var(--cyan-glow); }
+  .promo-card__terms { font-size: 0.65rem; color: var(--text-muted); line-height: 1.4; }
+
+  /* Right */
+  .promo-card__rating-col { padding: 28px 24px; display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; gap: 12px; border-left: 1px solid var(--border); }
+  .promo-card__rating-score { text-align: right; }
+  .rating-number { font-size: 2.2rem; font-weight: 900; color: #fff; letter-spacing: -0.05em; line-height: 1; }
+  .rating-denom { font-size: 0.9rem; color: var(--text-muted); }
+  .promo-card__review-link { font-size: 0.75rem; color: var(--cyan); text-decoration: none; font-weight: 700; text-transform: uppercase; }
+  .promo-card__review-link:hover { text-decoration: underline; color: #fff; }
+  
+  .promo-card__tags { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }
+  .promo-tag { background: var(--navy-deep); color: var(--text-secondary); padding: 2px 8px; border: 1px solid var(--border); border-radius: 4px; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* SEO */
+  .promo-seo-block { max-width: 1000px; margin: 0 auto; padding: 0 24px 80px; }
+  .promo-seo-block__inner { background: var(--navy); border: 1px solid var(--border); padding: 48px; border-radius: 20px; }
+  .promo-seo-block h2 { font-size: 1.6rem; font-weight: 900; color: #fff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: -0.02em; }
+  .promo-seo-block p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; font-size: 0.9rem; }
+  .promo-seo-block h3 { font-size: 0.85rem; font-weight: 800; color: #fff; margin: 24px 0 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .promo-seo-block ol { padding-left: 20px; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+  .promo-seo-block li { color: var(--text-secondary); line-height: 1.6; font-size: 0.9rem; }
+  .promo-seo-block li strong { color: #fff; }
+  .promo-seo-block__disclaimer { margin-top: 28px; padding: 16px 20px; border: 1px solid var(--border); font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; border-radius: 12px; }
+  .promo-seo-block__disclaimer a { color: var(--cyan); text-decoration: underline; }
+  .promo-seo-block__disclaimer a:hover { color: #fff; }
+
+  .star-rating { display: flex; gap: 3px; }
+  .star { font-size: 0.9rem; }
+  .star--full { color: #fff; }
+  .star--half { color: var(--text-muted); }
+  .star--empty { color: var(--navy-deep); }
+
+  @media (max-width: 700px) {
+    .promo-card__inner { grid-template-columns: 1fr; }
+    .promo-card__logo-col { border-right: none; border-bottom: 1px solid var(--border); flex-direction: row; justify-content: flex-start; padding: 16px 20px; }
+    .promo-card__rating-col { border-left: none; border-top: 1px solid var(--border); align-items: flex-start; }
+    .promo-card__terms { text-align: left; }
+    .promo-card__tags { justify-content: flex-start; }
+    .promo-seo-block__inner { padding: 24px; }
+  }
+`;
+
 export default async function PromosPage() {
   const promos = await getActivePromos();
 
@@ -59,7 +156,9 @@ export default async function PromosPage() {
   });
 
   return (
-    <div className="promo-page">
+    <>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
+      <div className="promo-page">
 
       <main className="promo-main">
         {/* Hero */}
@@ -90,6 +189,8 @@ export default async function PromosPage() {
               New customers only · Commercial content · 18+ age limit ·
               T&amp;Cs apply
             </p>
+            <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
+
           </div>
         </section>
 
@@ -271,5 +372,6 @@ export default async function PromosPage() {
         </section>
       </main>
     </div>
+    </>
   );
 }

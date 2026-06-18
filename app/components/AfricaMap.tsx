@@ -38,7 +38,7 @@ const AfricaMap = ({ dict }: { dict: any }) => {
         <h2 style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)", fontWeight: "900", textTransform: "uppercase", letterSpacing: "0.1em" }}>
           {dict.map.title}
         </h2>
-        <p style={{ color: "#666", fontSize: "0.9rem", marginTop: "8px" }}>
+        <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", marginTop: "8px" }}>
           {dict.map.subtitle}
         </p>
       </div>
@@ -64,8 +64,8 @@ const AfricaMap = ({ dict }: { dict: any }) => {
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
-                      fill={isLicensed ? "#FFFFFF" : "#080808"}
-                      stroke={isLicensed ? "#FFFFFF" : "#1a1a1a"}
+                      fill={isLicensed ? "#FFFFFF" : "var(--navy)"}
+                      stroke={isLicensed ? "#FFFFFF" : "var(--border)"}
                       strokeWidth={0.5}
                       style={{
                         default: { outline: "none", transition: "all 0.3s" },
@@ -90,11 +90,11 @@ const AfricaMap = ({ dict }: { dict: any }) => {
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           <div style={{ width: "12px", height: "12px", background: "#fff", borderRadius: "2px" }}></div>
-          <span style={{ fontSize: "0.7rem", fontWeight: "800", color: "#444", letterSpacing: "0.1em" }}>{dict.map.active}</span>
+          <span style={{ fontSize: "0.7rem", fontWeight: "800", color: "var(--text-muted)", letterSpacing: "0.1em" }}>{dict.map.active}</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <div style={{ width: "12px", height: "12px", background: "#080808", border: "1px solid #1a1a1a", borderRadius: "2px" }}></div>
-          <span style={{ fontSize: "0.7rem", fontWeight: "800", color: "#444", letterSpacing: "0.1em" }}>{dict.map.upcoming}</span>
+          <div style={{ width: "12px", height: "12px", background: "var(--navy)", border: "1px solid var(--border)", borderRadius: "2px" }}></div>
+          <span style={{ fontSize: "0.7rem", fontWeight: "800", color: "var(--text-muted)", letterSpacing: "0.1em" }}>{dict.map.upcoming}</span>
         </div>
       </div>
     </div>

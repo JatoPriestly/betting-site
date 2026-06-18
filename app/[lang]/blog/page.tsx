@@ -1,7 +1,9 @@
 import { getAllPosts } from "../../lib/posts";
+import { getActivePromos } from "../../lib/promos";
 import Link from "next/link";
 import Footer from "../../components/Footer";
 import type { Metadata } from "next";
+import PromoCodeStrip from "../../components/PromoCodeStrip";
 
 export const dynamic = "force-dynamic";
 
@@ -34,12 +36,12 @@ export async function generateMetadata({
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
-  Strategy: "#e63946",
-  Football: "#2ec4b6",
+  Strategy: "#2fa5e8",
+  Football: "#ffd54f",
   Basketball: "#ff9f1c",
   Tennis: "#8338ec",
   Crypto: "#3a86ff",
-  "Horse Racing": "#fb5607",
+  "Horse Racing": "#2fa5e8",
   Basics: "#06d6a0",
   General: "#adb5bd",
 };
@@ -65,6 +67,7 @@ export default async function BlogPage({
 }) {
   const { lang } = await params;
   const posts = await getAllPosts();
+  const promos = (await getActivePromos()).slice(0, 5);
 
 
   return (
@@ -72,8 +75,8 @@ export default async function BlogPage({
       <main
         style={{
           minHeight: "100vh",
-          background: "#000",
-          color: "#fff",
+          background: "var(--navy-deep)",
+          color: "var(--text-primary)",
           paddingTop: "120px",
           paddingBottom: "0",
         }}
@@ -90,9 +93,9 @@ export default async function BlogPage({
           <p
             style={{
               display: "inline-block",
-              background: "rgba(230,57,70,0.12)",
-              border: "1px solid rgba(230,57,70,0.3)",
-              color: "#e63946",
+              background: "rgba(47, 165, 232, 0.12)",
+              border: "1px solid rgba(47, 165, 232, 0.3)",
+              color: "var(--cyan)",
               padding: "6px 18px",
               borderRadius: "9999px",
               fontSize: "0.75rem",
@@ -115,7 +118,7 @@ export default async function BlogPage({
           >
             Betting Insights &amp;
             <br />
-            <span style={{ color: "#e63946" }}>Winning Strategies</span>
+            <span style={{ color: "var(--cyan)" }}>Winning Strategies</span>
           </h1>
           <p
             style={{
@@ -129,6 +132,7 @@ export default async function BlogPage({
             Professional analysis, tactical breakdowns, and actionable tips from
             our team of expert analysts.
           </p>
+          <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
         </section>
 
         {/* Post grid */}
@@ -162,12 +166,13 @@ export default async function BlogPage({
                     display: "grid",
                     gridTemplateColumns: "1fr 1fr",
                     gap: "0",
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid #1a1a1a",
+                    background: "#ffffff",
+                    border: "1px solid var(--border)",
                     borderRadius: "20px",
                     overflow: "hidden",
                     marginBottom: "48px",
                     transition: "transform 0.3s ease, border-color 0.3s ease",
+                    color: "var(--navy-deep)",
                   }}
                   className="blog-featured-card"
                 >
@@ -175,7 +180,7 @@ export default async function BlogPage({
                   <div
                     style={{
                       position: "relative",
-                      background: "#111",
+                      background: "var(--navy)",
                       minHeight: "380px",
                     }}
                   >
@@ -198,7 +203,7 @@ export default async function BlogPage({
                           position: "absolute",
                           inset: 0,
                           background:
-                            "linear-gradient(135deg,#1a0a0a 0%,#2a0a0a 100%)",
+                            "linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%)",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
@@ -214,7 +219,7 @@ export default async function BlogPage({
                         top: "20px",
                         left: "20px",
                         background:
-                          CATEGORY_COLORS[posts[0].category] ?? "#e63946",
+                          CATEGORY_COLORS[posts[0].category] ?? "var(--cyan)",
                         color: "#fff",
                         padding: "4px 14px",
                         borderRadius: "6px",
@@ -241,7 +246,7 @@ export default async function BlogPage({
                         display: "flex",
                         gap: "16px",
                         fontSize: "0.8rem",
-                        color: "#555",
+                        color: "#557091",
                         fontWeight: 700,
                         marginBottom: "20px",
                         textTransform: "uppercase",
@@ -264,7 +269,7 @@ export default async function BlogPage({
                     </h2>
                     <p
                       style={{
-                        color: "#777",
+                        color: "#557091",
                         lineHeight: 1.75,
                         marginBottom: "32px",
                         fontSize: "1rem",
@@ -277,7 +282,7 @@ export default async function BlogPage({
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "8px",
-                        color: "#e63946",
+                        color: "var(--cyan)",
                         fontWeight: 900,
                         fontSize: "0.9rem",
                         letterSpacing: "0.06em",
@@ -308,8 +313,8 @@ export default async function BlogPage({
                     >
                       <article
                         style={{
-                          background: "rgba(255,255,255,0.02)",
-                          border: "1px solid #1a1a1a",
+                          background: "#ffffff",
+                          border: "1px solid var(--border)",
                           borderRadius: "16px",
                           overflow: "hidden",
                           height: "100%",
@@ -317,6 +322,7 @@ export default async function BlogPage({
                           flexDirection: "column",
                           transition:
                             "transform 0.25s ease, border-color 0.25s ease",
+                          color: "var(--navy-deep)",
                         }}
                         className="blog-card"
                       >
@@ -324,7 +330,7 @@ export default async function BlogPage({
                         <div
                           style={{
                             height: "210px",
-                            background: "#111",
+                           background: "var(--navy)",
                             position: "relative",
                             flexShrink: 0,
                           }}
@@ -346,7 +352,7 @@ export default async function BlogPage({
                                 width: "100%",
                                 height: "100%",
                                 background:
-                                  "linear-gradient(135deg,#111 0%,#1a1a1a 100%)",
+                                  "linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%)",
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
@@ -362,7 +368,7 @@ export default async function BlogPage({
                               top: "16px",
                               left: "16px",
                               background:
-                                CATEGORY_COLORS[post.category] ?? "#e63946",
+                                CATEGORY_COLORS[post.category] ?? "var(--cyan)",
                               color: "#fff",
                               padding: "3px 10px",
                               borderRadius: "5px",
@@ -390,7 +396,7 @@ export default async function BlogPage({
                               display: "flex",
                               gap: "12px",
                               fontSize: "0.75rem",
-                              color: "#555",
+                              color: "#557091",
                               fontWeight: 700,
                               marginBottom: "14px",
                               textTransform: "uppercase",
@@ -413,7 +419,7 @@ export default async function BlogPage({
                           </h2>
                           <p
                             style={{
-                              color: "#666",
+                              color: "#557091",
                               lineHeight: 1.65,
                               fontSize: "0.9rem",
                               flex: 1,
@@ -427,7 +433,7 @@ export default async function BlogPage({
                               display: "flex",
                               alignItems: "center",
                               gap: "6px",
-                              color: "#e63946",
+                              color: "var(--cyan)",
                               fontWeight: 800,
                               fontSize: "0.8rem",
                               letterSpacing: "0.06em",
@@ -450,13 +456,21 @@ export default async function BlogPage({
       </main>
 
       <style>{`
+        .blog-featured-card {
+          box-shadow: 0 10px 30px rgba(18, 72, 115, 0.15);
+        }
         .blog-featured-card:hover {
           transform: translateY(-3px);
-          border-color: #333 !important;
+          border-color: var(--cyan) !important;
+          box-shadow: 0 20px 48px rgba(18, 72, 115, 0.3);
+        }
+        .blog-card {
+          box-shadow: 0 8px 24px rgba(18, 72, 115, 0.1);
         }
         .blog-card:hover {
           transform: translateY(-4px);
-          border-color: #2a2a2a !important;
+          border-color: var(--cyan) !important;
+          box-shadow: 0 16px 36px rgba(18, 72, 115, 0.25);
         }
         @media (max-width: 768px) {
           .blog-featured-card {

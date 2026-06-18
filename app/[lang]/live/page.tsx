@@ -5,6 +5,9 @@ import Footer from "../../components/Footer";
 import Link from "next/link";
 import { getLeagueMetadata, cleanLeagueName } from "../../lib/leagueUtils";
 import LiveMatchCard from "../../components/LiveMatchCard";
+import { getActivePromos } from "../../lib/promos";
+import PromoCodeStrip from "../../components/PromoCodeStrip";
+
 
 export const dynamic = "force-dynamic";
 
@@ -12,11 +15,14 @@ export default async function LivePage({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   const dict = await getDictionary(lang as any);
   
-  // Parallel fetch live matches and leagues for metadata
-  const [matchesData, allLeagues] = await Promise.all([
+  // Parallel fetch live matches, leagues and promos
+  const [matchesData, allLeagues, activePromos] = await Promise.all([
     getLiveMatches(lang),
-    getAllLeagues(lang)
+    getAllLeagues(lang),
+    getActivePromos()
   ]);
+  const promos = activePromos.slice(0, 5);
+
 
   const matches = Array.isArray(matchesData) ? matchesData : [];
   const leaguesMetadata = Array.isArray(allLeagues) ? allLeagues : [];
@@ -51,7 +57,7 @@ export default async function LivePage({ params }: { params: Promise<{ lang: str
   return (
     <>
       <Navbar dict={dict} lang={lang} />
-      <main style={{ minHeight: "100vh", background: "#000", color: "#fff", paddingTop: "120px", paddingBottom: "60px" }}>
+      <main style={{ minHeight: "100vh", background: "var(--navy-deep)", color: "var(--text-primary)", paddingTop: "120px", paddingBottom: "60px" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px" }}>
         <header style={{ marginBottom: "60px", textAlign: "center" }}>
           <h1 style={{ fontSize: "clamp(2.5rem, 8vw, 4rem)", fontWeight: "900", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "16px" }}>
@@ -60,11 +66,13 @@ export default async function LivePage({ params }: { params: Promise<{ lang: str
           <div style={{ display: "inline-block", padding: "8px 20px", background: "rgba(255,0,0,0.1)", border: "1px solid rgba(255,0,0,0.3)", borderRadius: "9999px", color: "#ff4444", fontWeight: "700", fontSize: "0.9rem" }}>
             ● LIVE NOW
           </div>
+          <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
         </header>
 
+
         {matches.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "100px 0", background: "rgba(255,255,255,0.02)", borderRadius: "24px", border: "1px solid #111" }}>
-            <p style={{ color: "#666", fontSize: "1.2rem" }}>No live matches currently in progress. Check back shortly.</p>
+          <div style={{ textAlign: "center", padding: "100px 0", background: "rgba(255,255,255,0.02)", borderRadius: "24px", border: "1px solid var(--border)" }}>
+            <p style={{ color: "var(--text-muted)", fontSize: "1.2rem" }}>No live matches currently in progress. Check back shortly.</p>
             <Link href={`/${lang}/sports`} style={{ color: "#fff", textDecoration: "underline", marginTop: "20px", display: "inline-block" }}>
               View Upcoming Sports
             </Link>
@@ -82,7 +90,7 @@ export default async function LivePage({ params }: { params: Promise<{ lang: str
                     gap: "16px", 
                     marginBottom: "32px",
                     paddingBottom: "16px",
-                    borderBottom: "1px solid #111"
+                    borderBottom: "1px solid var(--border)"
                   }}>
                     {leagueLogo && (
                       <img src={leagueLogo} alt="" style={{ width: "32px", height: "32px", objectFit: "contain" }} />
