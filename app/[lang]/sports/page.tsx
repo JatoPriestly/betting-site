@@ -1,5 +1,6 @@
 import { getMatchesByDate, getAllLeagues } from "../../lib/footballApi";
 import { getDictionary } from "../../dictionaries";
+import { apiLang } from "../../i18n";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SportsList from "../../components/SportsList";
@@ -11,8 +12,10 @@ export const dynamic = "force-dynamic";
 
 export default async function SportsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang as any);
-  
+  const dict = await getDictionary(lang);
+  const feedLang = apiLang(lang);
+
+
   // Get today's date in YYYYMMDD format
   const today = new Date();
   const yyyy = today.getFullYear();
@@ -22,8 +25,8 @@ export default async function SportsPage({ params }: { params: Promise<{ lang: s
 
   // Parallel fetch matches, leagues and promos
   const [fixturesData, allLeagues, activePromos] = await Promise.all([
-    getMatchesByDate(dateStr, lang),
-    getAllLeagues(lang),
+    getMatchesByDate(dateStr, feedLang),
+    getAllLeagues(feedLang),
     getActivePromos(),
   ]);
   const promos = activePromos.slice(0, 5);
@@ -89,7 +92,7 @@ export default async function SportsPage({ params }: { params: Promise<{ lang: s
               {dict.sports.subtitle}
             </p>
             <div style={{ marginTop: "20px" }}>
-              <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
+              <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} dict={dict} />
             </div>
           </header>
 
@@ -100,7 +103,7 @@ export default async function SportsPage({ params }: { params: Promise<{ lang: s
             lang={lang} 
           />
         </div>
-        <Footer />
+        <Footer dict={dict} />
       </main>
     </>
   );

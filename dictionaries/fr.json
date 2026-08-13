@@ -77,5 +77,89 @@
     "select_platform": "Sélectionner la plateforme",
     "bet_now": "PARIER SUR",
     "secure": "TRANSACTION SÉCURISÉE"
+  },
+  "common": {
+    "home": "Accueil",
+    "copy": "Copier",
+    "copied": "Copié",
+    "copy_hint": "Cliquez pour copier",
+    "promo_code": "Code Promo"
+  },
+  "home": {
+    "badge": "Top 1% Exclusif · Vérifié Aujourd'hui",
+    "code_title": "CODE PROMO 1XBET",
+    "pitch_pre": "Saisissez le code",
+    "pitch_post": "lors de l'inscription et débloquez le bonus de bienvenue le plus élevé du secteur — négocié exclusivement pour les utilisateurs MARYA. Plus de valeur, moins de mise, activation instantanée.",
+    "claim_btn": "RÉCLAMER LE BONUS",
+    "view_all_btn": "VOIR TOUS LES CODES",
+    "trust_no_deposit": "Aucun dépôt requis à l'inscription",
+    "trust_verified": "Vérifié",
+    "trust_instant": "Activation instantanée",
+    "no_promos": "Aucun code promo actif pour le moment."
+  },
+  "live": {
+    "now": "EN DIRECT MAINTENANT",
+    "badge": "DIRECT",
+    "empty": "Aucun match en direct actuellement. Revenez bientôt.",
+    "view_upcoming": "Voir les matchs à venir",
+    "other_matches": "Autres matchs en direct",
+    "view_stats": "Voir les stats en direct",
+    "match_fallback": "Match en direct",
+    "league_fallback": "Ligue"
+  },
+  "match": {
+    "home_team": "Domicile",
+    "away_team": "Extérieur",
+    "vs": "VS",
+    "tbd": "À DÉFINIR"
+  },
+  "blog": {
+    "badge": "Analyse d'Expert",
+    "title1": "Analyses de Paris &",
+    "title2": "Stratégies Gagnantes",
+    "subtitle": "Analyses professionnelles, décryptages tactiques et conseils concrets de notre équipe d'analystes experts.",
+    "empty": "Aucun article publié pour le moment. Revenez bientôt.",
+    "read_article": "Lire l'article",
+    "read_more": "Lire la suite",
+    "read_time": "min de lecture",
+    "topics": "Sujets",
+    "back": "Retour au blog",
+    "related": "Articles similaires",
+    "no_content": "Aucun contenu disponible pour cet article.",
+    "not_found": "Article introuvable"
+  },
+  "footer": {
+    "desc": "Analyse précise des cotes, codes promotionnels vérifiés et informations premium sur les bookmakers pour le parieur professionnel.",
+    "platform": "Plateforme",
+    "live_dashboard": "Tableau de bord en direct",
+    "bonus_tracker": "Suivi des bonus",
+    "market_analysis": "Analyse du marché",
+    "expert_insights": "Analyses d'experts",
+    "assistance": "Assistance",
+    "support_center": "Centre d'aide",
+    "compliance": "Conformité",
+    "data_privacy": "Confidentialité des données",
+    "partner_login": "Espace partenaire",
+    "integrity": "Intégrité & Responsabilité",
+    "age_badge": "18+ UNIQUEMENT",
+    "ssl": "SSL SÉCURISÉ",
+    "responsible": "Marya Bet promeut le jeu responsable. Parier doit rester un divertissement, pas une charge financière. Si vous avez besoin d'aide, contactez",
+    "tagline": "Marya Bet. Conçu pour l'excellence.",
+    "preferences": "Préférences",
+    "sitemap": "Plan du site"
+  },
+  "widget": {
+    "vip_support": "Support VIP",
+    "support_line_pre": "Contactez-nous pour des informations exclusives et une assistance sur les",
+    "support_line_strong": "gros paiements",
+    "close": "Fermer",
+    "whatsapp_aria": "Contactez-nous sur WhatsApp",
+    "prefill": "Bonjour ! J'ai besoin d'informations/d'aide concernant les paiements."
+  },
+  "meta": {
+    "home_title": "MARYA | Paris Sportifs Premium",
+    "home_desc": "Découvrez l'avantage ultime dans les paris sportifs.",
+    "blog_title": "Blog — Analyses, stratégies et conseils de paris",
+    "blog_desc": "Articles professionnels sur les paris sportifs : stratégies, analyses, gestion de bankroll et derniers conseils football rédigés par des analystes experts."
   }
 }

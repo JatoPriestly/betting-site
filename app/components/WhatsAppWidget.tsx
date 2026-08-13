@@ -3,14 +3,16 @@
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useDictionary } from "../i18n-client";
 
 export default function WhatsAppWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const pathname = usePathname();
+  const t = useDictionary().widget;
 
   const phoneNumber = "+237654720955";
-  const message = encodeURIComponent("Hello! I need information/assistance with payouts.");
+  const message = encodeURIComponent(t.prefill);
   const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}?text=${message}`;
 
   useEffect(() => {
@@ -140,16 +142,16 @@ export default function WhatsAppWidget() {
         <div className={`wa-tooltip ${showTooltip ? 'wa-tooltip--visible' : ''}`}>
           <div>
             <div style={{ fontWeight: 800, marginBottom: 4, color: '#25D366', textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '0.05em' }}>
-              VIP Support
+              {t.vip_support}
             </div>
             <div style={{ color: '#ccc' }}>
-              Contact us for exclusive information & assistance with <strong style={{ color: '#fff' }}>large payouts</strong>.
+              {t.support_line_pre} <strong style={{ color: '#fff' }}>{t.support_line_strong}</strong>.
             </div>
           </div>
           <button 
             className="wa-tooltip-close" 
             onClick={() => setShowTooltip(false)}
-            aria-label="Close tooltip"
+            aria-label={t.close}
           >
             <X size={16} />
           </button>
@@ -160,7 +162,7 @@ export default function WhatsAppWidget() {
           target="_blank"
           rel="noopener noreferrer"
           className="wa-button"
-          aria-label="Contact us on WhatsApp"
+          aria-label={t.whatsapp_aria}
           onMouseEnter={() => setShowTooltip(true)}
         >
           <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

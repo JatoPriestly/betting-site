@@ -1,8 +1,9 @@
 import Navbar from "../components/Navbar";
 import { getDictionary } from "../dictionaries";
+import { locales } from "../i18n";
 
 export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'fr' }, { lang: 'es' }];
+  return locales.map((lang) => ({ lang }));
 }
 
 export default async function LangLayout({
@@ -13,7 +14,7 @@ export default async function LangLayout({
   params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
-  const dict = await getDictionary(lang as any);
+  const dict = await getDictionary(lang);
 
   return (
     <>

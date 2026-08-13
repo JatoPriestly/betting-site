@@ -5,15 +5,21 @@ import Footer from "../components/Footer";
 import { getDictionary } from "../dictionaries";
 import { getActivePromos } from "@/app/lib/promos";
 import PromoCodeStrip from "../components/PromoCodeStrip";
+import { intlLocale } from "../i18n";
 
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
-  title: "MARYA | Premium Sports Betting",
-  description: "Experience the ultimate edge in sports betting.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  return { title: dict.meta.home_title, description: dict.meta.home_desc };
+}
 
-export default async function Home({ params }: { params: Promise<{ lang: 'en' | 'fr' | 'es' }> }) {
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
   const topPromos = (await getActivePromos()).slice(0, 3);
@@ -389,12 +395,12 @@ export default async function Home({ params }: { params: Promise<{ lang: 'en' | 
             color: "var(--cyan)",
           }}>
             <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--cyan)", boxShadow: "0 0 8px var(--cyan)", display: "inline-block", animation: "pulse 1.8s ease-in-out infinite" }} />
-            Top 1% Exclusive · Verified Today
+            {dict.home.badge}
           </div>
 
           {/* Main headline */}
           <h1 className="hero-title" style={{ marginBottom: "16px" }}>
-            1XBET PROMO CODE<br />
+            {dict.home.code_title}<br />
             <span style={{
               fontFamily: "'Space Mono', monospace",
               background: "linear-gradient(135deg, var(--gold), #ffb300)",
@@ -428,7 +434,7 @@ export default async function Home({ params }: { params: Promise<{ lang: 'en' | 
 
           {/* Sales pitch */}
           <p className="hero-desc">
-            Enter code <strong style={{ color: "var(--cyan)", fontFamily: "'Space Mono', monospace" }}>{xbetPromo ? xbetPromo.promoCode : "MARYA"}</strong> at signup and unlock the industry&apos;s highest welcome bonus — exclusively negotiated for MARYA users. More value, lower wagering, instant activation.
+            {dict.home.pitch_pre} <strong style={{ color: "var(--cyan)", fontFamily: "'Space Mono', monospace" }}>{xbetPromo ? xbetPromo.promoCode : "MARYA"}</strong> {dict.home.pitch_post}
           </p>
 
           {/* CTA buttons */}
@@ -441,12 +447,12 @@ export default async function Home({ params }: { params: Promise<{ lang: 'en' | 
                 className="btn-primary"
                 style={{ textDecoration: "none", display: "inline-block" }}
               >
-                CLAIM BONUS NOW →
+                {dict.home.claim_btn} →
               </a>
             ) : (
-              <button className="btn-primary">CLAIM BONUS NOW →</button>
+              <button className="btn-primary">{dict.home.claim_btn} →</button>
             )}
-            <button className="btn-ghost">VIEW ALL CODES</button>
+            <button className="btn-ghost">{dict.home.view_all_btn}</button>
           </div>
 
           {/* Trust line */}
@@ -458,10 +464,11 @@ export default async function Home({ params }: { params: Promise<{ lang: 'en' | 
             textTransform: "uppercase",
             marginBottom: "24px",
           }}>
-            ✓ No Deposit Required to Register &nbsp;·&nbsp; ✓ Verified {new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" })} &nbsp;·&nbsp; ✓ Instant Activation
+            ✓ {dict.home.trust_no_deposit} &nbsp;·&nbsp; ✓ {dict.home.trust_verified}{" "}
+            {new Date().toLocaleDateString(intlLocale(lang), { month: "long", year: "numeric" })} &nbsp;·&nbsp; ✓ {dict.home.trust_instant}
           </p>
 
-          <PromoCodeStrip promos={topPromos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
+          <PromoCodeStrip promos={topPromos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} dict={dict} />
         </div>
       </section>
 
@@ -562,7 +569,7 @@ export default async function Home({ params }: { params: Promise<{ lang: 'en' | 
           ))}
           {topPromos.length === 0 && (
             <div style={{ color: '#888', textAlign: 'center', padding: '20px 0' }}>
-              No active promo codes available right now.
+              {dict.home.no_promos}
             </div>
           )}
         </div>
@@ -599,7 +606,7 @@ export default async function Home({ params }: { params: Promise<{ lang: 'en' | 
         </div>
       </section>
 
-      <Footer />
+      <Footer dict={dict} />
     </>
   );
 }

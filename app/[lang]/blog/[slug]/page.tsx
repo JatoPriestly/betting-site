@@ -4,6 +4,8 @@ import Footer from "../../../components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getActivePromos } from "../../../lib/promos";
+import { languageAlternates, intlLocale } from "../../../i18n";
+import { getDictionary } from "../../../dictionaries";
 import PromoCodeStrip from "../../../components/PromoCodeStrip";
 
 
@@ -16,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang, slug } = await params;
   const post = await getPostBySlug(slug);
-  if (!post) return { title: "Post Not Found" };
+  if (!post) return { title: (await getDictionary(lang)).blog.not_found };
 
 
   const canonical = `/${lang}/blog/${slug}`;
@@ -27,11 +29,7 @@ export async function generateMetadata({
     authors: post.author ? [{ name: post.author }] : undefined,
     alternates: {
       canonical,
-      languages: {
-        en: `/en/blog/${slug}`,
-        fr: `/fr/blog/${slug}`,
-        es: `/es/blog/${slug}`,
-      },
+      languages: languageAlternates((locale) => `/${locale}/blog/${slug}`),
     },
     openGraph: {
       title: post.seoTitle || post.title,
@@ -53,13 +51,13 @@ export async function generateMetadata({
   };
 }
 
-function estimateReadTime(content: string): string {
+function estimateReadTime(content: string, unit: string): string {
   const words = content.replace(/<[^>]*>/g, "").split(/\s+/).length;
-  return `${Math.max(1, Math.round(words / 200))} min read`;
+  return `${Math.max(1, Math.round(words / 200))} ${unit}`;
 }
 
-function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-US", {
+function formatDate(iso: string, lang: string): string {
+  return new Date(iso).toLocaleDateString(intlLocale(lang), {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -83,6 +81,7 @@ export default async function BlogPostPage({
   params: Promise<{ lang: string; slug: string }>;
 }) {
   const { lang, slug } = await params;
+  const dict = await getDictionary(lang);
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
@@ -260,13 +259,13 @@ export default async function BlogPostPage({
                 </span>
               )}
               <span style={{ opacity: 0.5 }}>|</span>
-              <span>{formatDate(post.publishedAt)}</span>
+              <span>{formatDate(post.publishedAt, lang)}</span>
               <span style={{ opacity: 0.5 }}>|</span>
               <span style={{ color: categoryColor }}>
-                {estimateReadTime(post.content)}
+                {estimateReadTime(post.content, dict.blog.read_time)}
               </span>
             </div>
-            <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
+            <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} dict={dict} />
           </div>
 
         </header>
@@ -286,7 +285,7 @@ export default async function BlogPostPage({
             />
           ) : (
             <p style={{ color: "#555", textAlign: "center", padding: "60px 0" }}>
-              No content available for this post.
+              {dict.blog.no_content}
             </p>
           )}
 
@@ -309,7 +308,7 @@ export default async function BlogPostPage({
                   marginBottom: "12px",
                 }}
               >
-                Topics
+                {dict.blog.topics}
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                 {post.keywords.map((kw) => (
@@ -349,7 +348,7 @@ export default async function BlogPostPage({
                 transition: "border-color 0.2s",
               }}
             >
-              ← Back to Blog
+              ← {dict.blog.back}
             </Link>
           </div>
         </article>
@@ -373,7 +372,7 @@ export default async function BlogPostPage({
                   letterSpacing: "0.05em",
                 }}
               >
-                Related Articles
+                {dict.blog.related}
               </h2>
               <div
                 style={{
@@ -430,7 +429,7 @@ export default async function BlogPostPage({
                             marginBottom: "8px",
                           }}
                         >
-                          {formatDate(rel.publishedAt)}
+                          {formatDate(rel.publishedAt, lang)}
                         </p>
                         <h3
                           style={{
@@ -450,7 +449,7 @@ export default async function BlogPostPage({
           </section>
         )}
 
-        <Footer />
+        <Footer dict={dict} />
       </main>
 
       <style>{`

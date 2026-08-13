@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { ShieldCheck, Globe, Link2, Mail, ExternalLink } from "lucide-react";
+import { ShieldCheck, Globe, Link2, Mail } from "lucide-react";
+import en from "../../dictionaries/en.json";
 
-export default function Footer() {
+/** `dict` comes from the locale dictionary; English routes fall back to en.json. */
+export default function Footer({ dict }: { dict?: any }) {
+  const t = dict?.footer ?? en.footer;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -269,56 +272,54 @@ export default function Footer() {
               </div>
               <span className="nuro-logo__text">Marya Bet</span>
             </Link>
-            <p className="site-footer__desc">
-              Precision odds analysis, verified promotional codes, and premium sportsbook insights for the professional bettor.
-            </p>
+            <p className="site-footer__desc">{t.desc}</p>
             <div className="site-footer__socials">
-              <a href="#" className="social-link" aria-label="Global"><Globe size={20} /></a>
-              <a href="#" className="social-link" aria-label="Connect"><Link2 size={20} /></a>
-              <a href="#" className="social-link" aria-label="Mail"><Mail size={20} /></a>
+              <a href="#" className="social-link" aria-label={t.platform}><Globe size={20} /></a>
+              <a href="#" className="social-link" aria-label={t.assistance}><Link2 size={20} /></a>
+              <a href="#" className="social-link" aria-label={t.support_center}><Mail size={20} /></a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="site-footer__col">
-            <h4 className="site-footer__title">Platform</h4>
+            <h4 className="site-footer__title">{t.platform}</h4>
             <nav className="site-footer__nav">
-              <Link href="/">Live Dashboard</Link>
-              <Link href="/promos">Bonus Tracker</Link>
-              <Link href="/guides">Market Analysis</Link>
-              <Link href="/blog">Expert Insights</Link>
+              <Link href="/">{t.live_dashboard}</Link>
+              <Link href="/promos">{t.bonus_tracker}</Link>
+              <Link href="/guides">{t.market_analysis}</Link>
+              <Link href="/blog">{t.expert_insights}</Link>
             </nav>
           </div>
 
           {/* Support */}
           <div className="site-footer__col">
-            <h4 className="site-footer__title">Assistance</h4>
+            <h4 className="site-footer__title">{t.assistance}</h4>
             <nav className="site-footer__nav">
-              <Link href="/faq">Support Center</Link>
-              <Link href="/terms">Compliance</Link>
-              <Link href="/privacy">Data Privacy</Link>
-              <Link href="/admin">Partner Login</Link>
+              <Link href="/faq">{t.support_center}</Link>
+              <Link href="/terms">{t.compliance}</Link>
+              <Link href="/privacy">{t.data_privacy}</Link>
+              <Link href="/admin">{t.partner_login}</Link>
             </nav>
           </div>
 
           {/* Compliance */}
           <div className="site-footer__col site-footer__compliance">
-            <h4 className="site-footer__title">Integrity & Responsibility</h4>
+            <h4 className="site-footer__title">{t.integrity}</h4>
             <div className="compliance-badges">
-              <span className="badge-18">18+ ONLY</span>
-              <span className="badge-secure"><ShieldCheck size={16} /> SSL SECURE</span>
+              <span className="badge-18">{t.age_badge}</span>
+              <span className="badge-secure"><ShieldCheck size={16} /> {t.ssl}</span>
             </div>
             <p className="site-footer__desc" style={{ fontSize: "0.85rem", color: "#d1e8ff", marginTop: "12px", maxWidth: "100%" }}>
-              Marya Bet advocates for responsible gambling. Betting should be entertaining, not a financial burden. If you need support, please contact <a href="https://www.begambleaware.org" target="_blank" rel="noreferrer" style={{ color: "var(--cyan)", textDecoration: "underline" }}>BeGambleAware.org</a>.
+              {t.responsible} <a href="https://www.begambleaware.org" target="_blank" rel="noreferrer" style={{ color: "var(--cyan)", textDecoration: "underline" }}>BeGambleAware.org</a>.
             </p>
           </div>
         </div>
 
         <div className="site-footer__bottom">
-          <p>© {currentYear} Marya Bet. Engineered for Excellence.</p>
+          <p>© {currentYear} {t.tagline}</p>
           <div className="site-footer__bottom-links">
-            <Link href="/cookies">Preferences</Link>
-            <Link href="/sitemap">Site Architecture</Link>
+            <Link href="/cookies">{t.preferences}</Link>
+            <Link href="/sitemap">{t.sitemap}</Link>
           </div>
         </div>
       </footer>

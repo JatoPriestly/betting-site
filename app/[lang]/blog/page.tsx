@@ -1,5 +1,7 @@
 import { getAllPosts } from "../../lib/posts";
 import { getActivePromos } from "../../lib/promos";
+import { languageAlternates, intlLocale } from "../../i18n";
+import { getDictionary } from "../../dictionaries";
 import Link from "next/link";
 import Footer from "../../components/Footer";
 import type { Metadata } from "next";
@@ -13,24 +15,23 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const dict = await getDictionary(lang);
   return {
-    title: "Blog — Betting Insights, Strategies & Tips",
-    description:
-      "Professional sports betting articles: strategies, analysis, bankroll management and the latest football tips written by expert analysts.",
+    title: dict.meta.blog_title,
+    description: dict.meta.blog_desc,
     alternates: {
       canonical: `/${lang}/blog`,
-      languages: { en: "/en/blog", fr: "/fr/blog", es: "/es/blog" },
+      languages: languageAlternates((locale) => `/${locale}/blog`),
     },
     openGraph: {
-      title: "Blog — Betting Insights, Strategies & Tips",
-      description:
-        "Professional sports betting articles: strategies, analysis, bankroll management and the latest football tips.",
+      title: dict.meta.blog_title,
+      description: dict.meta.blog_desc,
       type: "website",
       url: `/${lang}/blog`,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Blog — Betting Insights, Strategies & Tips",
+      title: dict.meta.blog_title,
     },
   };
 }
@@ -46,14 +47,14 @@ const CATEGORY_COLORS: Record<string, string> = {
   General: "#adb5bd",
 };
 
-function estimateReadTime(content: string): string {
+function estimateReadTime(content: string, unit: string): string {
   const words = content.replace(/<[^>]*>/g, "").split(/\s+/).length;
   const mins = Math.max(1, Math.round(words / 200));
-  return `${mins} min read`;
+  return `${mins} ${unit}`;
 }
 
-function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-US", {
+function formatDate(iso: string, lang: string): string {
+  return new Date(iso).toLocaleDateString(intlLocale(lang), {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -66,6 +67,7 @@ export default async function BlogPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  const dict = await getDictionary(lang);
   const posts = await getAllPosts();
   const promos = (await getActivePromos()).slice(0, 5);
 
@@ -105,7 +107,7 @@ export default async function BlogPage({
               marginBottom: "24px",
             }}
           >
-            Expert Analysis
+            {dict.blog.badge}
           </p>
           <h1
             style={{
@@ -116,9 +118,9 @@ export default async function BlogPage({
               marginBottom: "20px",
             }}
           >
-            Betting Insights &amp;
+            {dict.blog.title1}
             <br />
-            <span style={{ color: "var(--cyan)" }}>Winning Strategies</span>
+            <span style={{ color: "var(--cyan)" }}>{dict.blog.title2}</span>
           </h1>
           <p
             style={{
@@ -129,10 +131,9 @@ export default async function BlogPage({
               lineHeight: 1.7,
             }}
           >
-            Professional analysis, tactical breakdowns, and actionable tips from
-            our team of expert analysts.
+            {dict.blog.subtitle}
           </p>
-          <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
+          <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} dict={dict} />
         </section>
 
         {/* Post grid */}
@@ -152,7 +153,7 @@ export default async function BlogPage({
                 fontSize: "1.1rem",
               }}
             >
-              No posts published yet. Check back soon.
+              {dict.blog.empty}
             </div>
           ) : (
             <>
@@ -253,9 +254,9 @@ export default async function BlogPage({
                         letterSpacing: "0.06em",
                       }}
                     >
-                      <span>{formatDate(posts[0].publishedAt)}</span>
+                      <span>{formatDate(posts[0].publishedAt, lang)}</span>
                       <span>·</span>
-                      <span>{estimateReadTime(posts[0].content)}</span>
+                      <span>{estimateReadTime(posts[0].content, dict.blog.read_time)}</span>
                     </div>
                     <h2
                       style={{
@@ -289,7 +290,7 @@ export default async function BlogPage({
                         textTransform: "uppercase",
                       }}
                     >
-                      Read Article <span style={{ fontSize: "1.2rem" }}>→</span>
+                      {dict.blog.read_article} <span style={{ fontSize: "1.2rem" }}>→</span>
                     </div>
                   </div>
                 </article>
@@ -403,9 +404,9 @@ export default async function BlogPage({
                               letterSpacing: "0.06em",
                             }}
                           >
-                            <span>{formatDate(post.publishedAt)}</span>
+                            <span>{formatDate(post.publishedAt, lang)}</span>
                             <span>·</span>
-                            <span>{estimateReadTime(post.content)}</span>
+                            <span>{estimateReadTime(post.content, dict.blog.read_time)}</span>
                           </div>
                           <h2
                             style={{
@@ -440,7 +441,7 @@ export default async function BlogPage({
                               textTransform: "uppercase",
                             }}
                           >
-                            Read More <span>→</span>
+                            {dict.blog.read_more} <span>→</span>
                           </div>
                         </div>
                       </article>
@@ -452,7 +453,7 @@ export default async function BlogPage({
           )}
         </section>
 
-        <Footer />
+        <Footer dict={dict} />
       </main>
 
       <style>{`

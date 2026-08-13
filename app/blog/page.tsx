@@ -4,6 +4,7 @@ import Link from "next/link";
 import Footer from "@/app/components/Footer";
 import type { Metadata } from "next";
 import PromoCodeStrip from "@/app/components/PromoCodeStrip";
+import { languageAlternates } from "@/app/i18n";
 
 export const dynamic = "force-dynamic";
 
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     "Professional sports betting articles: strategies, analysis, bankroll management and the latest football tips written by expert analysts.",
   alternates: {
     canonical: "/blog",
-    languages: { en: "/en/blog", fr: "/fr/blog", es: "/es/blog" },
+    languages: languageAlternates((locale) => `/${locale}/blog`),
   },
   openGraph: {
     title: "Blog — Betting Insights, Strategies & Tips",

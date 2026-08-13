@@ -189,11 +189,11 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
 
                 <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                   {filteredMatches.map((match: any, index: number) => {
-                    const homeName = match.home?.name || "Home";
-                    const awayName = match.away?.name || "Away";
+                    const homeName = match.home?.name || dict.match.home_team;
+                    const awayName = match.away?.name || dict.match.away_team;
                     const homeLogo = match.home?.logo;
                     const awayLogo = match.away?.logo;
-                    const matchTime = match.time || "TBD";
+                    const matchTime = match.time || dict.match.tbd;
                     const status = match.status?.reason?.short || "NS";
 
                     return (
@@ -260,7 +260,7 @@ export default function SportsList({ initialLeagues, groupedFixtures, dict, lang
                             color: "var(--text-muted)",
                             border: "1px solid var(--border)"
                           }}>
-                            VS
+                            {dict.match.vs}
                           </div>
 
                           <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "flex-start", gap: "12px" }}>

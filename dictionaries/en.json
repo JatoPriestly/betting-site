@@ -77,5 +77,89 @@
     "select_platform": "Select Betting Platform",
     "bet_now": "BET ON",
     "secure": "SECURE TRANSACTION"
+  },
+  "common": {
+    "home": "Home",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copy_hint": "Click to copy",
+    "promo_code": "Promo Code"
+  },
+  "home": {
+    "badge": "Top 1% Exclusive · Verified Today",
+    "code_title": "1XBET PROMO CODE",
+    "pitch_pre": "Enter code",
+    "pitch_post": "at signup and unlock the industry's highest welcome bonus — exclusively negotiated for MARYA users. More value, lower wagering, instant activation.",
+    "claim_btn": "CLAIM BONUS NOW",
+    "view_all_btn": "VIEW ALL CODES",
+    "trust_no_deposit": "No Deposit Required to Register",
+    "trust_verified": "Verified",
+    "trust_instant": "Instant Activation",
+    "no_promos": "No active promo codes available right now."
+  },
+  "live": {
+    "now": "LIVE NOW",
+    "badge": "LIVE",
+    "empty": "No live matches currently in progress. Check back shortly.",
+    "view_upcoming": "View Upcoming Sports",
+    "other_matches": "Other Live Matches",
+    "view_stats": "View Live Stats",
+    "match_fallback": "Live Match",
+    "league_fallback": "League"
+  },
+  "match": {
+    "home_team": "Home",
+    "away_team": "Away",
+    "vs": "VS",
+    "tbd": "TBD"
+  },
+  "blog": {
+    "badge": "Expert Analysis",
+    "title1": "Betting Insights &",
+    "title2": "Winning Strategies",
+    "subtitle": "Professional analysis, tactical breakdowns, and actionable tips from our team of expert analysts.",
+    "empty": "No posts published yet. Check back soon.",
+    "read_article": "Read Article",
+    "read_more": "Read More",
+    "read_time": "min read",
+    "topics": "Topics",
+    "back": "Back to Blog",
+    "related": "Related Articles",
+    "no_content": "No content available for this post.",
+    "not_found": "Post Not Found"
+  },
+  "footer": {
+    "desc": "Precision odds analysis, verified promotional codes, and premium sportsbook insights for the professional bettor.",
+    "platform": "Platform",
+    "live_dashboard": "Live Dashboard",
+    "bonus_tracker": "Bonus Tracker",
+    "market_analysis": "Market Analysis",
+    "expert_insights": "Expert Insights",
+    "assistance": "Assistance",
+    "support_center": "Support Center",
+    "compliance": "Compliance",
+    "data_privacy": "Data Privacy",
+    "partner_login": "Partner Login",
+    "integrity": "Integrity & Responsibility",
+    "age_badge": "18+ ONLY",
+    "ssl": "SSL SECURE",
+    "responsible": "Marya Bet advocates for responsible gambling. Betting should be entertaining, not a financial burden. If you need support, please contact",
+    "tagline": "Marya Bet. Engineered for Excellence.",
+    "preferences": "Preferences",
+    "sitemap": "Site Architecture"
+  },
+  "widget": {
+    "vip_support": "VIP Support",
+    "support_line_pre": "Contact us for exclusive information & assistance with",
+    "support_line_strong": "large payouts",
+    "close": "Close",
+    "whatsapp_aria": "Contact us on WhatsApp",
+    "prefill": "Hello! I need information/assistance with payouts."
+  },
+  "meta": {
+    "home_title": "MARYA | Premium Sports Betting",
+    "home_desc": "Experience the ultimate edge in sports betting.",
+    "blog_title": "Blog — Betting Insights, Strategies & Tips",
+    "blog_desc": "Professional sports betting articles: strategies, analysis, bankroll management and the latest football tips written by expert analysts."
   }
 }

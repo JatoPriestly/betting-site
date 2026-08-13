@@ -5,10 +5,12 @@ import { X, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import type { SystemAd } from "../lib/ads";
+import { useDictionary } from "../i18n-client";
 
 function AdModal({ ad }: { ad: SystemAd }) {
   const [isOpen, setIsOpen] = useState(false);
   const [hasDismissed, setHasDismissed] = useState(true);
+  const t = useDictionary().widget;
 
   useEffect(() => {
     const dismissed = localStorage.getItem(`ad-dismissed-${ad.id}`);
@@ -196,7 +198,7 @@ function AdModal({ ad }: { ad: SystemAd }) {
 
       <div className={`tp-overlay ${isOpen ? 'is-open' : ''}`} onClick={handleClose}>
         <div className="tp-modal" onClick={(e) => e.stopPropagation()}>
-          <button className="tp-close-btn" onClick={handleClose} aria-label="Close modal">
+          <button className="tp-close-btn" onClick={handleClose} aria-label={t.close}>
             <X size={16} />
           </button>
           

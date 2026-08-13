@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
+import en from "../../dictionaries/en.json";
 
 interface PromoItem {
   id: string;
@@ -11,9 +12,11 @@ interface PromoItem {
 
 interface PromoCodeStripProps {
   promos: PromoItem[];
+  /** Locale dictionary; English routes fall back to en.json. */
+  dict?: any;
 }
 
-function PromoCodePill({ promo }: { promo: PromoItem }) {
+function PromoCodePill({ promo, t }: { promo: PromoItem; t: typeof en.common }) {
   const [copied, setCopied] = useState(false);
 
   async function handleCopy() {
@@ -51,7 +54,7 @@ function PromoCodePill({ promo }: { promo: PromoItem }) {
         flexShrink: 0,
         outline: "none",
       }}
-      title={`Click to copy ${promo.promoCode}`}
+      title={`${t.copy_hint} ${promo.promoCode}`}
     >
       {/* Bookmaker */}
       <span style={{
@@ -101,7 +104,7 @@ function PromoCodePill({ promo }: { promo: PromoItem }) {
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
               <polyline points="20 6 9 17 4 12" />
             </svg>
-            Copied
+            {t.copied}
           </>
         ) : (
           <>
@@ -109,7 +112,7 @@ function PromoCodePill({ promo }: { promo: PromoItem }) {
               <rect x="9" y="9" width="13" height="13" rx="2" />
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
             </svg>
-            Copy
+            {t.copy}
           </>
         )}
       </span>
@@ -117,9 +120,10 @@ function PromoCodePill({ promo }: { promo: PromoItem }) {
   );
 }
 
-export default function PromoCodeStrip({ promos }: PromoCodeStripProps) {
+export default function PromoCodeStrip({ promos, dict }: PromoCodeStripProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
+  const t = dict?.common ?? en.common;
 
   if (!promos || promos.length === 0) return null;
 
@@ -171,7 +175,7 @@ export default function PromoCodeStrip({ promos }: PromoCodeStripProps) {
         }}
       >
         {doubled.map((promo, i) => (
-          <PromoCodePill key={`${promo.id}-${i}`} promo={promo} />
+          <PromoCodePill key={`${promo.id}-${i}`} promo={promo} t={t} />
         ))}
       </div>
 

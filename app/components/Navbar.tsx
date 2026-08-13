@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Rye } from "next/font/google";
 import { useState } from "react";
+import { locales, localeLabels } from "../i18n";
 
 const rye = Rye({
   weight: "400",
@@ -166,9 +167,16 @@ export default function Navbar({ dict, lang }: { dict: any, lang: string }) {
 
         {/* Locale Switcher - Right (Desktop) or Bottom (Mobile) */}
         <div className="locale-switcher">
-          <Link href="/en" className="locale-link" style={{ color: lang === "en" ? "var(--cyan)" : "var(--text-muted)" }}>EN</Link>
-          <Link href="/fr" className="locale-link" style={{ color: lang === "fr" ? "var(--cyan)" : "var(--text-muted)" }}>FR</Link>
-          <Link href="/es" className="locale-link" style={{ color: lang === "es" ? "var(--cyan)" : "var(--text-muted)" }}>ES</Link>
+          {locales.map((locale) => (
+            <Link
+              key={locale}
+              href={`/${locale}`}
+              className="locale-link"
+              style={{ color: lang === locale ? "var(--cyan)" : "var(--text-muted)" }}
+            >
+              {localeLabels[locale]}
+            </Link>
+          ))}
         </div>
       </nav>
     </>

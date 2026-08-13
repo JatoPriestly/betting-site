@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getActivePromos } from "@/app/lib/promos";
 import PromoCodeStrip from "@/app/components/PromoCodeStrip";
+import { languageAlternates } from "@/app/i18n";
 
 export const dynamic = "force-dynamic";
 
@@ -27,11 +28,7 @@ export async function generateMetadata({
     authors: post.author ? [{ name: post.author }] : undefined,
     alternates: {
       canonical,
-      languages: {
-        en: `/en/blog/${slug}`,
-        fr: `/fr/blog/${slug}`,
-        es: `/es/blog/${slug}`,
-      },
+      languages: languageAlternates((locale) => `/${locale}/blog/${slug}`),
     },
     openGraph: {
       title: post.seoTitle || post.title,

@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "sports": "Sports",
+    "live": "Live",
+    "promos": "Promos",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title1": "ANG NANGUNGUNANG",
+    "title2": "SPORTS",
+    "title3": "BOOK.",
+    "desc": "Makuha ang pinakamalaking bentahe gamit ang eksklusibong odds, instant na payout, at ang pinakamataas na halaga ng promo code sa industriya.",
+    "btn": "SIMULAN ANG PANALO"
+  },
+  "ticker": {
+    "promos": "PROMOS",
+    "offers": "MGA ALOK",
+    "bonuses": "BONUS",
+    "codes": "MGA CODE",
+    "boosts": "BOOSTS",
+    "rewards": "GANTIMPALA"
+  },
+  "features": {
+    "title": "Bakit Piliin ang MARYA",
+    "subtitle": "Hindi lang kami naglilista ng mga code. Nakikipag-negosasyon kami para sa pinakamataas na welcome bonus sa bawat malaking betting platform para magsimula ka nang may bentahe.",
+    "feat1_title": "Eksklusibong Partnership",
+    "feat1_desc": "Ang aming mga code ay may mas mataas na match percentage at mas mababang wagering requirement kaysa sa karaniwang pampublikong alok.",
+    "feat2_title": "Beripikado Araw-araw",
+    "feat2_desc": "Bawat promo code ay sinusuri tuwing 24 oras. Walang expired na code, walang sirang link — puro agarang halaga lamang.",
+    "feat3_title": "Sakop ang Lahat ng Platform",
+    "feat3_desc": "Mas gusto mo man ang mga advanced na betting platform o tradisyunal na sportsbook, mayroon kaming master code para sa piniling platform mo.",
+    "feat4_title": "Touch Point na Withdrawal",
+    "feat4_desc": "Maranasan ang walang abalang access sa iyong panalo. Maaaring mag-withdraw ang mga user ng kanilang pondo nang direkta at ligtas sa pamamagitan ng aming Touch Point Support system."
+  },
+  "steps": {
+    "title": "Angkinin ang Iyong Bentahe",
+    "step1_title": "Piliin ang Iyong Platform",
+    "step1_desc": "Tingnan ang aming piling listahan ng mga nangungunang sportsbook at betting platform. Mga platform lamang na may napatunayang record ng payout at magandang odds ang aming itinatampok.",
+    "step2_title": "Kopyahin ang Master Code",
+    "step2_desc": "Kunin ang eksklusibong MARYA promo code. Ang code na ito ang nagbubukas ng mas mataas na antas ng bonus habang nagrerehistro ka.",
+    "step3_title": "Palakihin ang Iyong Bankroll",
+    "step3_desc": "I-paste ang code sa pag-sign up, gawin ang iyong unang deposit, at agad na matatanggap ang pinalaking bankroll. Handa ka nang manaig."
+  },
+  "leaderboard": {
+    "title": "Nangungunang Aktibong Code",
+    "subtitle": "Ang pinakamalaking halaga ng beripikadong promo code na available ngayon.",
+    "code1_name": "1XBET GLOBAL",
+    "code1_offer": "200% match sa unang deposit hanggang $130",
+    "code1_val": "MARYVIP",
+    "code2_name": "STAKE CASINO",
+    "code2_offer": "Instant na 5% rakeback + $25 na libreng laro",
+    "code2_val": "MARYA25",
+    "code3_name": "BETMGM SPORTS",
+    "code3_offer": "Hanggang $1500 na ibinabalik bilang bonus bets",
+    "code3_val": "MARYMGM"
+  },
+  "stats": {
+    "claimed": "Na-claim na Bonus",
+    "platforms": "Beripikadong Platform",
+    "bettors": "Aktibong Bettor"
+  },
+  "cta": {
+    "title": "Huwag Nang Tumaya Nang Mas Mababa sa Nararapat Sa Iyo.",
+    "btn": "TINGNAN ANG LAHAT NG PROMO CODE"
+  },
+  "map": {
+    "title": "Pandaigdigang Operasyon",
+    "subtitle": "Itinatampok ang aming mga pangunahing lisensyadong teritoryo sa Africa at sa buong mundo.",
+    "active": "LISENSYADONG TERITORYO",
+    "upcoming": "IBA PANG BAHAGI NG MUNDO"
+  },
+  "sports": {
+    "subtitle": "Tuklasin ang Pandaigdigang Fixtures at Iskedyul ng Match Day",
+    "no_fixtures": "Walang nakatakdang laro ngayong araw. Bumalik ka bukas.",
+    "games_count": "LARO",
+    "search_placeholder": "Maghanap ng team, liga...",
+    "select_platform": "Piliin ang Betting Platform",
+    "bet_now": "TUMAYA SA",
+    "secure": "LIGTAS NA TRANSAKSYON"
+  },
+  "common": {
+    "home": "Home",
+    "copy": "Kopyahin",
+    "copied": "Nakopya",
+    "copy_hint": "I-click para kopyahin",
+    "promo_code": "Promo Code"
+  },
+  "home": {
+    "badge": "Top 1% Eksklusibo · Beripikado Ngayon",
+    "code_title": "1XBET PROMO CODE",
+    "pitch_pre": "Ilagay ang code na",
+    "pitch_post": "sa pag-sign up at buksan ang pinakamataas na welcome bonus sa industriya — eksklusibong nakipag-negosasyon para sa mga user ng MARYA. Mas malaking halaga, mas mababang wagering, instant na aktibasyon.",
+    "claim_btn": "KUNIN ANG BONUS",
+    "view_all_btn": "TINGNAN LAHAT NG CODE",
+    "trust_no_deposit": "Walang deposit para magrehistro",
+    "trust_verified": "Beripikado",
+    "trust_instant": "Instant na aktibasyon",
+    "no_promos": "Wala pang aktibong promo code sa ngayon."
+  },
+  "live": {
+    "now": "LIVE NGAYON",
+    "badge": "LIVE",
+    "empty": "Walang kasalukuyang live na laro. Bumalik ka mamaya.",
+    "view_upcoming": "Tingnan ang mga paparating na laro",
+    "other_matches": "Iba pang live na laro",
+    "view_stats": "Tingnan ang live stats",
+    "match_fallback": "Live na laro",
+    "league_fallback": "Liga"
+  },
+  "match": {
+    "home_team": "Home",
+    "away_team": "Away",
+    "vs": "VS",
+    "tbd": "TBD"
+  },
+  "blog": {
+    "badge": "Pagsusuri ng Eksperto",
+    "title1": "Betting Insights at",
+    "title2": "Panalong Estratehiya",
+    "subtitle": "Propesyonal na pagsusuri, taktikal na breakdown, at mga praktikal na tip mula sa aming koponan ng eksperto.",
+    "empty": "Wala pang nailathalang artikulo. Bumalik ka agad.",
+    "read_article": "Basahin ang artikulo",
+    "read_more": "Magbasa pa",
+    "read_time": "min na pagbasa",
+    "topics": "Mga Paksa",
+    "back": "Bumalik sa Blog",
+    "related": "Kaugnay na mga Artikulo",
+    "no_content": "Walang available na nilalaman para sa post na ito.",
+    "not_found": "Hindi Natagpuan ang Post"
+  },
+  "footer": {
+    "desc": "Tumpak na pagsusuri ng odds, beripikadong promo codes, at premium na sportsbook insights para sa propesyonal na bettor.",
+    "platform": "Platform",
+    "live_dashboard": "Live Dashboard",
+    "bonus_tracker": "Bonus Tracker",
+    "market_analysis": "Pagsusuri ng Merkado",
+    "expert_insights": "Insights ng Eksperto",
+    "assistance": "Tulong",
+    "support_center": "Sentro ng Tulong",
+    "compliance": "Pagsunod",
+    "data_privacy": "Privacy ng Data",
+    "partner_login": "Login ng Partner",
+    "integrity": "Integridad at Responsibilidad",
+    "age_badge": "18+ LAMANG",
+    "ssl": "SSL SECURE",
+    "responsible": "Itinataguyod ng Marya Bet ang responsableng pagsusugal. Dapat nakakaaliw ang pagtaya, hindi pinansyal na pasanin. Kung kailangan mo ng tulong, makipag-ugnayan sa",
+    "tagline": "Marya Bet. Ginawa para sa Kahusayan.",
+    "preferences": "Mga Kagustuhan",
+    "sitemap": "Mapa ng Site"
+  },
+  "widget": {
+    "vip_support": "VIP Support",
+    "support_line_pre": "Kontakin kami para sa eksklusibong impormasyon at tulong sa",
+    "support_line_strong": "malalaking payout",
+    "close": "Isara",
+    "whatsapp_aria": "Kontakin kami sa WhatsApp",
+    "prefill": "Kumusta! Kailangan ko ng impormasyon o tulong tungkol sa payouts."
+  },
+  "meta": {
+    "home_title": "MARYA | Premium na Sports Betting",
+    "home_desc": "Maranasan ang pinakamalaking bentahe sa sports betting.",
+    "blog_title": "Blog — Betting Insights, Estratehiya at Tips",
+    "blog_desc": "Propesyonal na mga artikulo sa sports betting: estratehiya, pagsusuri, bankroll management, at pinakabagong football tips mula sa mga eksperto."
+  }
+}

@@ -77,5 +77,89 @@
     "select_platform": "Seleccionar plataforma",
     "bet_now": "APOSTAR EN",
     "secure": "TRANSACCIÓN SEGURA"
+  },
+  "common": {
+    "home": "Inicio",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "copy_hint": "Haz clic para copiar",
+    "promo_code": "Código Promo"
+  },
+  "home": {
+    "badge": "Top 1% Exclusivo · Verificado Hoy",
+    "code_title": "CÓDIGO PROMO 1XBET",
+    "pitch_pre": "Introduce el código",
+    "pitch_post": "al registrarte y desbloquea el bono de bienvenida más alto de la industria — negociado en exclusiva para los usuarios de MARYA. Más valor, menos requisitos de apuesta, activación instantánea.",
+    "claim_btn": "RECLAMAR BONO",
+    "view_all_btn": "VER TODOS LOS CÓDIGOS",
+    "trust_no_deposit": "Sin depósito para registrarse",
+    "trust_verified": "Verificado",
+    "trust_instant": "Activación instantánea",
+    "no_promos": "No hay códigos promocionales activos en este momento."
+  },
+  "live": {
+    "now": "EN VIVO AHORA",
+    "badge": "EN VIVO",
+    "empty": "No hay partidos en vivo en este momento. Vuelve pronto.",
+    "view_upcoming": "Ver próximos partidos",
+    "other_matches": "Otros partidos en vivo",
+    "view_stats": "Ver estadísticas en vivo",
+    "match_fallback": "Partido en vivo",
+    "league_fallback": "Liga"
+  },
+  "match": {
+    "home_team": "Local",
+    "away_team": "Visitante",
+    "vs": "VS",
+    "tbd": "POR DEFINIR"
+  },
+  "blog": {
+    "badge": "Análisis Experto",
+    "title1": "Análisis de Apuestas &",
+    "title2": "Estrategias Ganadoras",
+    "subtitle": "Análisis profesional, desgloses tácticos y consejos prácticos de nuestro equipo de analistas expertos.",
+    "empty": "Aún no hay artículos publicados. Vuelve pronto.",
+    "read_article": "Leer artículo",
+    "read_more": "Leer más",
+    "read_time": "min de lectura",
+    "topics": "Temas",
+    "back": "Volver al blog",
+    "related": "Artículos relacionados",
+    "no_content": "No hay contenido disponible para este artículo.",
+    "not_found": "Artículo no encontrado"
+  },
+  "footer": {
+    "desc": "Análisis preciso de cuotas, códigos promocionales verificados e información premium de casas de apuestas para el apostador profesional.",
+    "platform": "Plataforma",
+    "live_dashboard": "Panel en vivo",
+    "bonus_tracker": "Seguimiento de bonos",
+    "market_analysis": "Análisis de mercado",
+    "expert_insights": "Opiniones de expertos",
+    "assistance": "Asistencia",
+    "support_center": "Centro de ayuda",
+    "compliance": "Cumplimiento",
+    "data_privacy": "Privacidad de datos",
+    "partner_login": "Acceso de socios",
+    "integrity": "Integridad y Responsabilidad",
+    "age_badge": "SOLO +18",
+    "ssl": "SSL SEGURO",
+    "responsible": "Marya Bet promueve el juego responsable. Apostar debe ser entretenimiento, no una carga financiera. Si necesitas ayuda, contacta con",
+    "tagline": "Marya Bet. Diseñado para la excelencia.",
+    "preferences": "Preferencias",
+    "sitemap": "Mapa del sitio"
+  },
+  "widget": {
+    "vip_support": "Soporte VIP",
+    "support_line_pre": "Contáctanos para información exclusiva y asistencia con los",
+    "support_line_strong": "grandes pagos",
+    "close": "Cerrar",
+    "whatsapp_aria": "Contáctanos por WhatsApp",
+    "prefill": "¡Hola! Necesito información/asistencia con los pagos."
+  },
+  "meta": {
+    "home_title": "MARYA | Apuestas Deportivas Premium",
+    "home_desc": "Vive la máxima ventaja en las apuestas deportivas.",
+    "blog_title": "Blog — Análisis, estrategias y consejos de apuestas",
+    "blog_desc": "Artículos profesionales de apuestas deportivas: estrategias, análisis, gestión de bankroll y los últimos consejos de fútbol escritos por analistas expertos."
   }
 }

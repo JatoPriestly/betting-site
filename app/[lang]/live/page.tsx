@@ -1,5 +1,6 @@
 import { getLiveMatches, getAllLeagues } from "../../lib/footballApi";
 import { getDictionary } from "../../dictionaries";
+import { apiLang } from "../../i18n";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Link from "next/link";
@@ -13,12 +14,13 @@ export const dynamic = "force-dynamic";
 
 export default async function LivePage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang as any);
-  
+  const dict = await getDictionary(lang);
+  const feedLang = apiLang(lang);
+
   // Parallel fetch live matches, leagues and promos
   const [matchesData, allLeagues, activePromos] = await Promise.all([
-    getLiveMatches(lang),
-    getAllLeagues(lang),
+    getLiveMatches(feedLang),
+    getAllLeagues(feedLang),
     getActivePromos()
   ]);
   const promos = activePromos.slice(0, 5);
@@ -40,7 +42,7 @@ export default async function LivePage({ params }: { params: Promise<{ lang: str
   const groupedLiveMatches = matches.reduce((acc: any, match: any) => {
     const leagueId = match.leagueId;
     const metadata = getLeagueMetadata(leagueId, leagueMap);
-    let leagueName = metadata?.name || match.league?.name || match.leagueName || "Other Live Matches";
+    let leagueName = metadata?.name || match.league?.name || match.leagueName || dict.live.other_matches;
     leagueName = cleanLeagueName(leagueName);
     const leagueLogo = metadata?.logo || null;
 
@@ -64,17 +66,17 @@ export default async function LivePage({ params }: { params: Promise<{ lang: str
             {dict.nav.live}
           </h1>
           <div style={{ display: "inline-block", padding: "8px 20px", background: "rgba(255,0,0,0.1)", border: "1px solid rgba(255,0,0,0.3)", borderRadius: "9999px", color: "#ff4444", fontWeight: "700", fontSize: "0.9rem" }}>
-            ● LIVE NOW
+            ● {dict.live.now}
           </div>
-          <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
+          <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} dict={dict} />
         </header>
 
 
         {matches.length === 0 ? (
           <div style={{ textAlign: "center", padding: "100px 0", background: "rgba(255,255,255,0.02)", borderRadius: "24px", border: "1px solid var(--border)" }}>
-            <p style={{ color: "var(--text-muted)", fontSize: "1.2rem" }}>No live matches currently in progress. Check back shortly.</p>
+            <p style={{ color: "var(--text-muted)", fontSize: "1.2rem" }}>{dict.live.empty}</p>
             <Link href={`/${lang}/sports`} style={{ color: "#fff", textDecoration: "underline", marginTop: "20px", display: "inline-block" }}>
-              View Upcoming Sports
+              {dict.live.view_upcoming}
             </Link>
           </div>
         ) : (
@@ -106,16 +108,17 @@ export default async function LivePage({ params }: { params: Promise<{ lang: str
                       fontSize: "0.7rem", 
                       fontWeight: "900" 
                     }}>
-                      LIVE
+                      {dict.live.badge}
                     </span>
                   </div>
 
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))", gap: "24px" }}>
                     {leagueMatches.map((match: any, matchIdx: number) => (
-                      <LiveMatchCard 
-                        key={matchIdx} 
-                        match={match} 
-                        metadata={match.metadata} 
+                      <LiveMatchCard
+                        key={matchIdx}
+                        match={match}
+                        metadata={match.metadata}
+                        dict={dict}
                       />
                     ))}
                   </div>
@@ -125,7 +128,7 @@ export default async function LivePage({ params }: { params: Promise<{ lang: str
           </div>
         )}
       </div>
-      <Footer />
+      <Footer dict={dict} />
     </main>
     </>
   );

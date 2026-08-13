@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import en from "../../../dictionaries/en.json";
 
-export default function CopyButton({ code }: { code: string }) {
+export default function CopyButton({ code, dict }: { code: string; dict?: any }) {
   const [copied, setCopied] = useState(false);
+  const t = dict?.common ?? en.common;
 
   async function handleCopy() {
     try {
@@ -24,16 +26,16 @@ export default function CopyButton({ code }: { code: string }) {
       className="promo-code-box"
     >
       <div className="promo-code-box__coupon">
-        <span className="promo-code-box__label">Promo Code</span>
+        <span className="promo-code-box__label">{t.promo_code}</span>
         <span className="promo-code-box__value">{code}</span>
       </div>
-      <button className="promo-code-box__btn" type="button" aria-label="Copy promo code">
+      <button className="promo-code-box__btn" type="button" aria-label={`${t.copy} ${t.promo_code}`}>
         {copied ? (
           <>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <polyline points="20 6 9 17 4 12" />
             </svg>
-            Copied!
+            {t.copied}!
           </>
         ) : (
           <>
@@ -41,7 +43,7 @@ export default function CopyButton({ code }: { code: string }) {
               <rect x="9" y="9" width="13" height="13" rx="2" />
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
             </svg>
-            Copy
+            {t.copy}
           </>
         )}
       </button>

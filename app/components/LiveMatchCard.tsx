@@ -1,21 +1,28 @@
 "use client";
 
 import { cleanLeagueName } from "../lib/leagueUtils";
+import en from "../../dictionaries/en.json";
 
 interface LiveMatchCardProps {
   match: any;
   metadata: any;
+  dict?: any;
 }
 
-export default function LiveMatchCard({ match, metadata }: LiveMatchCardProps) {
+export default function LiveMatchCard({ match, metadata, dict }: LiveMatchCardProps) {
+  const t = dict ?? en;
   const leagueId = match.leagueId;
-  const homeName = match.home?.name || match.teams?.home?.name || "Home";
-  const awayName = match.away?.name || match.teams?.away?.name || "Away";
+  const homeName = match.home?.name || match.teams?.home?.name || t.match.home_team;
+  const awayName = match.away?.name || match.teams?.away?.name || t.match.away_team;
   const homeScore = match.home?.score ?? match.goals?.home ?? 0;
   const awayScore = match.away?.score ?? match.goals?.away ?? 0;
   const elapsed = match.status?.liveTime?.short || match.status?.elapsed || "0'";
   
-  let leagueName = metadata?.name || match.league?.name || match.leagueName || (leagueId ? `League ${leagueId}` : "Live Match");
+  let leagueName =
+    metadata?.name ||
+    match.league?.name ||
+    match.leagueName ||
+    (leagueId ? `${t.live.league_fallback} ${leagueId}` : t.live.match_fallback);
   leagueName = cleanLeagueName(leagueName);
   
   const homeLogo = match.home?.id ? `https://images.fotmob.com/image_resources/logo/teamlogo/${match.home.id}.png` : null;
@@ -88,7 +95,7 @@ export default function LiveMatchCard({ match, metadata }: LiveMatchCardProps) {
           textTransform: "uppercase",
           transition: "all 0.2s"
         }}>
-          View Live Stats
+          {t.live.view_stats}
         </button>
       </div>
     </div>

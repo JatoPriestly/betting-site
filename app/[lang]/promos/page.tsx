@@ -1,4 +1,6 @@
 import { getActivePromos } from "@/app/lib/promos";
+import { intlLocale } from "@/app/i18n";
+import { getDictionary } from "@/app/dictionaries";
 import type { Metadata } from "next";
 import Link from "next/link";
 import CopyButton from "./CopyButton";
@@ -18,11 +20,15 @@ export async function generateMetadata({
     en: "Best Betting Promo Codes 2026 | MaryaBet",
     es: "Mejores Códigos Promocionales de Apuestas 2026 | MaryaBet",
     fr: "Meilleurs Codes Promo Paris Sportifs 2026 | MaryaBet",
+    ru: "Лучшие промокоды букмекеров 2026 | MaryaBet",
+    tl: "Pinakamahusay na Betting Promo Codes 2026 | MaryaBet",
   };
   const descs: Record<string, string> = {
     en: "Exclusive verified promo codes from top bookmakers. Copy your code and claim your welcome bonus.",
     es: "Códigos promocionales verificados de los mejores bookmakers. Copia tu código y reclama tu bono.",
     fr: "Codes promo vérifiés des meilleurs bookmakers. Copiez votre code et réclamez votre bonus.",
+    ru: "Эксклюзивные проверенные промокоды от ведущих букмекеров. Скопируйте код и получите приветственный бонус.",
+    tl: "Eksklusibo at beripikadong promo codes mula sa mga nangungunang bookmaker. Kopyahin ang code at kunin ang welcome bonus mo.",
   };
   return { title: titles[lang] ?? titles.en, description: descs[lang] ?? descs.en };
 }
@@ -43,6 +49,11 @@ const t = {
     step4: "Enjoy your bonus — check T&Cs for wagering requirements.",
     responsible: "Gambling can be addictive. Bet responsibly. 18+ only.",
     noPromos: "No promo codes available yet. Check back soon!",
+    crumb: "Promos",
+    intro:
+      "A promo code is a short alphanumeric string entered during registration at an online bookmaker to unlock a welcome bonus — typically a deposit match, free bets, or a risk-free wager.",
+    stepByStep: "Step-by-step",
+    step: "Step",
   },
   es: {
     heading: "Mejores Códigos Promocionales",
@@ -59,6 +70,11 @@ const t = {
     step4: "Disfruta tu bono — revisa las condiciones de apuesta.",
     responsible: "El juego puede ser adictivo. Apuesta con responsabilidad. Solo +18.",
     noPromos: "Aún no hay códigos disponibles. ¡Vuelve pronto!",
+    crumb: "Promos",
+    intro:
+      "Un código promocional es una cadena alfanumérica corta que se introduce al registrarse en una casa de apuestas online para desbloquear un bono de bienvenida — normalmente un bono por depósito, apuestas gratis o una apuesta sin riesgo.",
+    stepByStep: "Paso a paso",
+    step: "Paso",
   },
   fr: {
     heading: "Meilleurs Codes Promo Paris Sportifs",
@@ -75,14 +91,61 @@ const t = {
     step4: "Profitez de votre bonus — vérifiez les conditions de mise.",
     responsible: "Les jeux peuvent être addictifs. Pariez de façon responsable. 18+ uniquement.",
     noPromos: "Aucun code disponible pour l'instant. Revenez bientôt !",
+    crumb: "Promos",
+    intro:
+      "Un code promo est une courte chaîne alphanumérique saisie lors de l'inscription chez un bookmaker en ligne pour débloquer un bonus de bienvenue — généralement un bonus sur dépôt, des paris gratuits ou un pari sans risque.",
+    stepByStep: "Étape par étape",
+    step: "Étape",
+  },
+  ru: {
+    heading: "Лучшие промокоды для ставок",
+    disclaimer: "Только для новых клиентов · 18+ · Действуют правила и условия",
+    rank: "Букмекер",
+    verified: "Проверено",
+    exclusive: "Эксклюзивное предложение",
+    validUntil: "Действует до",
+    seeOffer: "СМОТРЕТЬ ПРЕДЛОЖЕНИЕ",
+    howTitle: "Как использовать промокод",
+    step1: "Выберите букмекера и нажмите «СМОТРЕТЬ ПРЕДЛОЖЕНИЕ».",
+    step2: "Скопируйте промокод кнопкой копирования.",
+    step3: "Зарегистрируйтесь, вставьте код и внесите первый депозит.",
+    step4: "Пользуйтесь бонусом — проверьте условия отыгрыша.",
+    responsible: "Азартные игры вызывают зависимость. Играйте ответственно. Только 18+.",
+    noPromos: "Промокодов пока нет. Загляните позже!",
+    crumb: "Промо",
+    intro:
+      "Промокод — это короткая буквенно-цифровая комбинация, которую вводят при регистрации у онлайн-букмекера, чтобы получить приветственный бонус: как правило, бонус на депозит, фрибеты или ставку без риска.",
+    stepByStep: "Пошаговая инструкция",
+    step: "Шаг",
+  },
+  tl: {
+    heading: "Pinakamahusay na Betting Promo Codes",
+    disclaimer: "Bagong customer lamang · 18+ · May mga tuntunin at kundisyon",
+    rank: "Betting site",
+    verified: "Beripikado",
+    exclusive: "Eksklusibong Alok",
+    validUntil: "Balido hanggang",
+    seeOffer: "TINGNAN ANG ALOK",
+    howTitle: "Paano Gumamit ng Promo Code",
+    step1: "Piliin ang iyong bookmaker at i-click ang TINGNAN ANG ALOK.",
+    step2: "Kopyahin ang promo code gamit ang copy button.",
+    step3: "Magrehistro, i-paste ang code, at gawin ang iyong unang deposit.",
+    step4: "I-enjoy ang bonus mo — tingnan ang T&C para sa wagering requirements.",
+    responsible: "Nakakaadik ang pagsusugal. Tumaya nang responsable. 18+ lamang.",
+    noPromos: "Wala pang available na promo code. Bumalik ka agad!",
+    crumb: "Promos",
+    intro:
+      "Ang promo code ay isang maikling alphanumeric na string na inilalagay habang nagrerehistro sa isang online bookmaker upang buksan ang welcome bonus — karaniwang deposit match, libreng taya, o walang panganib na pustahan.",
+    stepByStep: "Hakbang-hakbang",
+    step: "Hakbang",
   },
 } as const;
 
 function formatDate(iso: string, lang: string) {
-  return new Date(iso).toLocaleDateString(
-    lang === "es" ? "es-ES" : lang === "fr" ? "fr-FR" : "en-GB",
-    { month: "long", year: "numeric" }
-  );
+  return new Date(iso).toLocaleDateString(intlLocale(lang), {
+    month: "long",
+    year: "numeric",
+  });
 }
 
 function StarRating({ rating }: { rating: number }) {
@@ -193,12 +256,12 @@ export default async function PromosPage({
 }) {
   const { lang } = await params;
   const dict = t[(lang as keyof typeof t)] ?? t.en;
+  const shared = await getDictionary(lang);
   const promos = await getActivePromos();
-  const monthYear = new Date().toLocaleDateString(
-
-    lang === "es" ? "es-ES" : lang === "fr" ? "fr-FR" : "en-GB",
-    { month: "long", year: "numeric" }
-  );
+  const monthYear = new Date().toLocaleDateString(intlLocale(lang), {
+    month: "long",
+    year: "numeric",
+  });
 
   return (
     <>
@@ -209,15 +272,15 @@ export default async function PromosPage({
         <section className="pp-hero">
           <div className="pp-hero-grid" />
           <nav className="pp-breadcrumb">
-            <Link href={`/${lang}`}>Home</Link>
+            <Link href={`/${lang}`}>{shared.common.home}</Link>
             <span>›</span>
-            <span>Promos</span>
+            <span>{dict.crumb}</span>
           </nav>
           <h1>
             {dict.heading} — <em>{monthYear}</em>
           </h1>
           <p className="pp-disclaimer">{dict.disclaimer}</p>
-          <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} />
+          <PromoCodeStrip promos={promos.map(p => ({ id: p.id, bookmaker: p.bookmaker, promoCode: p.promoCode, bonusAmount: p.bonusAmount }))} dict={shared} />
 
         </section>
 
@@ -270,7 +333,7 @@ export default async function PromosPage({
                       )}
                     </ul>
 
-                    <CopyButton code={promo.promoCode} />
+                    <CopyButton code={promo.promoCode} dict={shared} />
                   </div>
 
                   {/* Right */}
@@ -317,17 +380,13 @@ export default async function PromosPage({
         <section className="pp-seo">
           <div className="pp-seo__card">
             <h2>{dict.howTitle}</h2>
-            <p>
-              A promo code is a short alphanumeric string entered during registration
-              at an online bookmaker to unlock a welcome bonus — typically a deposit
-              match, free bets, or a risk-free wager.
-            </p>
-            <h3>Step-by-step</h3>
+            <p>{dict.intro}</p>
+            <h3>{dict.stepByStep}</h3>
             <ol>
-              <li><strong>Step 1.</strong> {dict.step1}</li>
-              <li><strong>Step 2.</strong> {dict.step2}</li>
-              <li><strong>Step 3.</strong> {dict.step3}</li>
-              <li><strong>Step 4.</strong> {dict.step4}</li>
+              <li><strong>{dict.step} 1.</strong> {dict.step1}</li>
+              <li><strong>{dict.step} 2.</strong> {dict.step2}</li>
+              <li><strong>{dict.step} 3.</strong> {dict.step3}</li>
+              <li><strong>{dict.step} 4.</strong> {dict.step4}</li>
             </ol>
             <div className="pp-seo__warn">
               ⚠️ {dict.responsible}{" "}
@@ -338,7 +397,7 @@ export default async function PromosPage({
           </div>
         </section>
 
-        <Footer />
+        <Footer dict={shared} />
       </div>
     </>
   );
