@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useDictionary } from "../i18n-client";
+import { whatsappUrl } from "../lib/contact";
 
 export default function WhatsAppWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,7 @@ export default function WhatsAppWidget() {
   const pathname = usePathname();
   const t = useDictionary().widget;
 
-  const phoneNumber = "+237654720955";
-  const message = encodeURIComponent(t.prefill);
-  const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}?text=${message}`;
+  const waUrl = whatsappUrl(t.prefill);
 
   useEffect(() => {
     // Show tooltip automatically after 5 seconds to grab attention
@@ -158,7 +157,7 @@ export default function WhatsAppWidget() {
         </div>
 
         <a 
-          href={whatsappUrl}
+          href={waUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="wa-button"

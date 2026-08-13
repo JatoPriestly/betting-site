@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import { getDictionary } from "../dictionaries";
 import { getActivePromos } from "@/app/lib/promos";
 import PromoCodeStrip from "../components/PromoCodeStrip";
+import TouchPointBand from "../components/TouchPointBand";
 import { intlLocale } from "../i18n";
 
 export const dynamic = "force-dynamic";
@@ -490,6 +491,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           <img src="/betpawa.png" alt="Betpawa" className="ticker-img" />
         </div>
       </section>
+
+      {/* 1b. TouchPoint payouts — always visible, no dismissal */}
+      <TouchPointBand dict={dict} />
 
       {/* 2. Features Section */}
       <section className="features-section">

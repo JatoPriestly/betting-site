@@ -148,6 +148,18 @@
     "preferences": "Preferencias",
     "sitemap": "Mapa del sitio"
   },
+  "touchpoint": {
+    "badge": "ACCESO VIP",
+    "title_brand": "TOUCHPOINT",
+    "title_rest": "RETIROS Y RECARGAS",
+    "desc": "Retira tus ganancias de forma directa y segura. Habla con nuestro administrador para el procesamiento prioritario de retiros grandes y recargas instantáneas.",
+    "point1": "Procesamiento prioritario de retiros grandes",
+    "point2": "Recargas de cuenta instantáneas",
+    "point3": "Soporte directo y seguro del administrador",
+    "cta": "CONTACTAR AL ADMIN",
+    "note": "Disponible 24/7 por WhatsApp",
+    "prefill": "¡Hola! Necesito información sobre los retiros y recargas de TouchPoint."
+  },
   "widget": {
     "vip_support": "Soporte VIP",
     "support_line_pre": "Contáctanos para información exclusiva y asistencia con los",

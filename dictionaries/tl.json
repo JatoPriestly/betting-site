@@ -148,6 +148,18 @@
     "preferences": "Mga Kagustuhan",
     "sitemap": "Mapa ng Site"
   },
+  "touchpoint": {
+    "badge": "VIP ACCESS",
+    "title_brand": "TOUCHPOINT",
+    "title_rest": "PAYOUT AT TOP-UP",
+    "desc": "I-withdraw ang iyong panalo nang direkta at ligtas. Kausapin ang aming admin para sa priority processing ng malalaking withdrawal at instant na top-up ng account.",
+    "point1": "Priority processing ng malalaking withdrawal",
+    "point2": "Instant na top-up ng account",
+    "point3": "Direkta at ligtas na suporta ng admin",
+    "cta": "KONTAKIN ANG ADMIN",
+    "note": "Bukas 24/7 sa WhatsApp",
+    "prefill": "Kumusta! Kailangan ko ng impormasyon tungkol sa TouchPoint payouts at top-ups."
+  },
   "widget": {
     "vip_support": "VIP Support",
     "support_line_pre": "Kontakin kami para sa eksklusibong impormasyon at tulong sa",

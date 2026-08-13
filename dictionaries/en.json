@@ -148,6 +148,18 @@
     "preferences": "Preferences",
     "sitemap": "Site Architecture"
   },
+  "touchpoint": {
+    "badge": "VIP ACCESS",
+    "title_brand": "TOUCHPOINT",
+    "title_rest": "PAYOUTS & TOP-UPS",
+    "desc": "Withdraw your winnings directly and securely. Talk to our admin for priority processing on large withdrawals and instant account top-ups.",
+    "point1": "Priority processing on large withdrawals",
+    "point2": "Instant account top-ups",
+    "point3": "Direct, secure admin support",
+    "cta": "CONTACT ADMIN",
+    "note": "Available 24/7 on WhatsApp",
+    "prefill": "Hello! I need information regarding TouchPoint payouts and top-ups."
+  },
   "widget": {
     "vip_support": "VIP Support",
     "support_line_pre": "Contact us for exclusive information & assistance with",
